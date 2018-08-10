@@ -1,12 +1,17 @@
 <h1 align="center">Pn</h1>
 
+<<<<<<< HEAD
 <p align="center">Pn: the very last word in instant messaging</p>
+=======
+<p align="center">Pn: a conversations fork</p>
+>>>>>>> d4bf7661a82f3a42b544189187b3ecc6c2204f41
 
 <p align="center">
     <a href="https://pn.eqee.de/j/pn@conference.eqee.de">
         <img src="https://inverse.chat/badge.svg?room=pn@conference.eqee.de"
              alt="chat on our conference room">
     </a>
+<<<<<<< HEAD
     <a href="https://travis-ci.org/eqee/Pn">
         <img src="https://travis-ci.org/eqee/Pn.svg?branch=master"
              alt="build status">
@@ -425,3 +430,13 @@ your XMPP server your file transfer doesn’t work as expected please always
 include a logcat debug output with your issue (see above).
 
 [issues]: https://github.com/eqee/Pn/issues
+=======
+    <a href="https://travis-ci.org/eQee/Pn">
+        <img src="https://travis-ci.org/eQee/Pn.svg?branch=master"
+             alt="build status">
+    </a>
+    <a href="https://bountysource.com/teams/eQee">
+        <img src="https://api.bountysource.com/badge/tracker?tracker_id=519483" alt="Bountysource">
+    </a>
+</p>
+>>>>>>> d4bf7661a82f3a42b544189187b3ecc6c2204f41
