@@ -13,6 +13,9 @@ signing.properties
 # Ignore Gradle GUI config
 gradle-app.setting
 
+# Local tools
+localtools/
+
 # https://github.com/github/gitignore/blob/master/Android.gitignore
 # Built application files
 *.apk
