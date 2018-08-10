@@ -43,5 +43,4 @@
 	<!-- scanner -->
 	<color name="scan_result_dots">#c04CAF50</color>
 
-	<color name="blue500">#ff2196f3</color>
 </resources>
