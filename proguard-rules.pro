@@ -1,6 +1,6 @@
 -dontobfuscate
 
--keep class eu.siacs.conversations.**
+-keep class de.eqee.pn.**
 
 -keep class org.whispersystems.**
 

@@ -22,7 +22,7 @@
   <string name="just_now">управо сад</string>
   <string name="minute_ago">пре минут</string>
   <string name="minutes_ago">пре %d минута</string>
-  <string name="unread_conversations">непрочитане преписке</string>
+  <string name="unread_pn">непрочитане преписке</string>
   <string name="sending">шаљем…</string>
   <string name="message_decrypting">Дешифрујем поруку, сачекајте…</string>
   <string name="pgp_message">ОпенПГП шифрована порука</string>
@@ -245,7 +245,7 @@
   <string name="pref_expert_options">Поставке за стручњаке</string>
   <string name="pref_expert_options_summary">Будите пажљиви са овим</string>
   <string name="title_activity_about">О Конверзацији</string>
-  <string name="pref_about_conversations_summary">Подаци о издању и лиценци</string>
+  <string name="pref_about_pn_summary">Подаци о издању и лиценци</string>
   <string name="title_pref_quiet_hours">Тихи сати</string>
   <string name="title_pref_quiet_hours_start_time">Време почетка</string>
   <string name="title_pref_quiet_hours_end_time">Време завршетка</string>
@@ -273,7 +273,7 @@
   <string name="account_details">Детаљи налога</string>
   <string name="confirm">Потврди</string>
   <string name="try_again">Покушај поново</string>
-  <string name="conversations_foreground_service">Конверзација</string>
+  <string name="pn_foreground_service">Конверзација</string>
   <string name="pref_keep_foreground_service">Држи сервис у првом плану</string>
   <string name="pref_keep_foreground_service_summary">Спречава оперативни систем да прекине вашу везу</string>
   <string name="pref_export_logs">Извези историјат</string>
@@ -340,7 +340,7 @@
   <string name="pdf_document">ПДФ документ</string>
   <string name="apk">Апликација за Андроид</string>
   <string name="vcard">Контакт</string>
-  <string name="touch_to_open_conversations">Тапните да отворите Конверзацију</string>
+  <string name="touch_to_open_pn">Тапните да отворите Конверзацију</string>
   <string name="avatar_has_been_published">Аватар је објављен!</string>
   <string name="sending_x_file">Шаљем %s</string>
   <string name="offering_x_file">Нудим %s</string>
@@ -448,7 +448,7 @@
   <string name="security_error_invalid_file_access">Безбедносна грешка: неисправан приступ фајлу</string>
   <string name="no_application_to_share_uri">Нема апликације за дељење веза</string>
   <string name="share_uri_with">Подели везу помоћу…</string>
-  <string name="magic_create_text">Водићемо вас кроз процес прављења налога на conversations.im.¹\nАко изаберете conversations.im за даваоца услуге моћи ћете да комуницирате са корисницима других сервера ако им дате ваш Џабер ИД.</string>
+  <string name="magic_create_text">Водићемо вас кроз процес прављења налога на pn.eqee.de.¹\nАко изаберете pn.eqee.de за даваоца услуге моћи ћете да комуницирате са корисницима других сервера ако им дате ваш Џабер ИД.</string>
   <string name="your_full_jid_will_be">Ваш пуни Џабер ИД ће бити: %s</string>
   <string name="create_account">Направи налог</string>
   <string name="use_own_provider">Користићу сопствени провајдер</string>
@@ -526,7 +526,7 @@
   <string name="pref_automatically_delete_messages_description">Аутоматско брисање порука са овог уређаја које су старије од постављеног времена.</string>
   <string name="encrypting_message">Шифрујем поруку</string>
   <string name="transcoding_video">Компресујем видео</string>
-  <string name="corresponding_conversations_closed">Одговарајуће преписке затворене.</string>
+  <string name="corresponding_pn_closed">Одговарајуће преписке затворене.</string>
   <string name="contact_blocked_past_tense">Контакт блокиран.</string>
   <string name="pref_notifications_from_strangers">Обавештења од непознатих</string>
   <string name="pref_notifications_from_strangers_summary">Обавештења за поруке од непознатих.</string>

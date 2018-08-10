@@ -47,7 +47,7 @@
 
     <attr name="unread_count" format="reference|color"/>
 
-    <attr name="conversations_overview_background" format="reference|color"/>
+    <attr name="pn_overview_background" format="reference|color"/>
 
     <attr name="icon_alpha" format="float"/>
 

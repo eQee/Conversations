@@ -22,7 +22,7 @@
   <string name="just_now">щойно</string>
   <string name="minute_ago">1 хвилину тому</string>
   <string name="minutes_ago">%d хвилин тому</string>
-  <string name="unread_conversations">не переглянуті розмови </string>
+  <string name="unread_pn">не переглянуті розмови </string>
   <string name="sending">відправляю…</string>
   <string name="message_decrypting">Розшифровую повідомлення. Зачекайте, будь ласка…</string>
   <string name="pgp_message">Повідомлення, зашифроване OpenPGP</string>
@@ -246,7 +246,7 @@
   <string name="pref_expert_options">Експертні налаштування</string>
   <string name="pref_expert_options_summary">Будь ласка, будьте обережними з цим</string>
   <string name="title_activity_about">Про Розмови</string>
-  <string name="pref_about_conversations_summary">Інформація про збірку та ліцензію</string>
+  <string name="pref_about_pn_summary">Інформація про збірку та ліцензію</string>
   <string name="title_pref_quiet_hours">Години тиші</string>
   <string name="title_pref_quiet_hours_start_time">Час початку</string>
   <string name="title_pref_quiet_hours_end_time">Час завершення</string>
@@ -274,7 +274,7 @@
   <string name="account_details">Деталі облікового запису</string>
   <string name="confirm">Підтвердити</string>
   <string name="try_again">Спробуйте ще</string>
-  <string name="conversations_foreground_service">Розмови</string>
+  <string name="pn_foreground_service">Розмови</string>
   <string name="pref_keep_foreground_service">Підтримувати сервіс на першому плані</string>
   <string name="pref_keep_foreground_service_summary">Не дає операційній системі припиняти Ваш зв\'язок</string>
   <string name="pref_export_logs">Експортувати історію</string>
@@ -342,7 +342,7 @@
   <string name="pdf_document">PDF документ</string>
   <string name="apk">програма Android</string>
   <string name="vcard">Контакт</string>
-  <string name="touch_to_open_conversations">Торкніться, щоб відкрити Розмови</string>
+  <string name="touch_to_open_pn">Торкніться, щоб відкрити Розмови</string>
   <string name="avatar_has_been_published">Аватар опубліковано!</string>
   <string name="sending_x_file">Відправка %s</string>
   <string name="offering_x_file">Пропозиція %s</string>
@@ -456,7 +456,7 @@
   <string name="security_error_invalid_file_access">Помилка безпеки: Недійсний доступ до файлу</string>
   <string name="no_application_to_share_uri">Не знайдено програми, щоб поділитися URI</string>
   <string name="share_uri_with">Поділитися URI з…</string>
-  <string name="magic_create_text">Ми допоможемо вам крок за кроком створити обліковий запис на conversations.im.¹\nОбравши conversations.im постачальником послуг, ви зможете спілкуватися з користувачами інших постачальників, надавши їм ваш повний Jabber ID.</string>
+  <string name="magic_create_text">Ми допоможемо вам крок за кроком створити обліковий запис на pn.eqee.de.¹\nОбравши pn.eqee.de постачальником послуг, ви зможете спілкуватися з користувачами інших постачальників, надавши їм ваш повний Jabber ID.</string>
   <string name="your_full_jid_will_be">Ваш повний Jabber ID буде: %s</string>
   <string name="create_account">Створити обліковий запис</string>
   <string name="use_own_provider">Використати мого власного провайдера</string>
@@ -508,8 +508,8 @@
   <string name="show_error_message">Показати повідомлення про помилку</string>
   <string name="error_message">Повідомлення про помилку</string>
   <string name="data_saver_enabled">Задіяно економію передачі данних</string>
-  <string name="data_saver_enabled_explained">Ваша операційна система обмежує програмі Conversations доступ до Інтернету, коли вона не на екрані. Щоб отримувати сповіщення про нові повідомлення, вам слід дозволити програмі Conversations необмежений доступ, коли включено економію передачі даних.\nПрограма Conversations все одно буде намагатися зекономити дані, коли це можливо.</string>
-  <string name="device_does_not_support_data_saver">Ваш пристрій не дає можливості вимкнути економію передачі даних з програми Conversations</string>
+  <string name="data_saver_enabled_explained">Ваша операційна система обмежує програмі Pn доступ до Інтернету, коли вона не на екрані. Щоб отримувати сповіщення про нові повідомлення, вам слід дозволити програмі Pn необмежений доступ, коли включено економію передачі даних.\nПрограма Pn все одно буде намагатися зекономити дані, коли це можливо.</string>
+  <string name="device_does_not_support_data_saver">Ваш пристрій не дає можливості вимкнути економію передачі даних з програми Pn</string>
   <string name="error_unable_to_create_temporary_file">Неможливо створити тимчасовий файл</string>
   <string name="this_device_has_been_verified">Цей пристрій перевірено</string>
   <string name="copy_fingerprint">Скопіювати відбиток</string>
@@ -539,7 +539,7 @@
   <string name="pref_automatically_delete_messages_description">Автоматично видаляти повідомлення з цього пристрою, старіші за вказаний часовий проміжок.</string>
   <string name="encrypting_message">Зашифровую повідомлення</string>
   <string name="not_fetching_history_retention_period">Повідомлення не завантажуються з огляду на локально встановлений строк зберігання.</string>
-  <string name="corresponding_conversations_closed">Відповідні розмови закрито.</string>
+  <string name="corresponding_pn_closed">Відповідні розмови закрито.</string>
   <string name="contact_blocked_past_tense">Контакт заблоковано.</string>
   <string name="pref_notifications_from_strangers">Сповіщення від незнайомців</string>
   <string name="pref_notifications_from_strangers_summary">Сповіщувати про повідомлення від незнайомців.</string>

@@ -70,9 +70,9 @@ android {
         versionCode 280
         versionName "2.2.8"
         archivesBaseName += "-$versionName"
-        applicationId "eu.siacs.conversations"
+        applicationId "de.eqee.pn"
         resValue "string", "applicationId", applicationId
-        resValue "string", "app_name", "Conversations"
+        resValue "string", "app_name", "Pn"
     }
 
     dataBinding {

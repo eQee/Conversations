@@ -14,7 +14,7 @@
 
             <Button
                 android:id="@+id/cancel_button"
-                style="@style/Widget.Conversations.Button.Borderless"
+                style="@style/Widget.Pn.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -29,7 +29,7 @@
 
             <Button
                 android:id="@+id/share_button"
-                style="@style/Widget.Conversations.Button.Borderless"
+                style="@style/Widget.Pn.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -42,6 +42,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:textAppearance="@style/TextAppearance.Conversations.Display2.Monospace"/>
+            android:textAppearance="@style/TextAppearance.Pn.Display2.Monospace"/>
     </RelativeLayout>
 </layout>

@@ -58,8 +58,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/account_settings_jabber_id"
-                                app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint"
-                                app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error">
+                                app:hintTextAppearance="@style/TextAppearance.Pn.Design.Hint"
+                                app:errorTextAppearance="@style/TextAppearance.Pn.Design.Error">
 
                                 <AutoCompleteTextView
                                     android:id="@+id/account_jid"
@@ -67,7 +67,7 @@
                                     android:layout_height="wrap_content"
                                     android:imeOptions="actionNext"
                                     android:inputType="textEmailAddress"
-                                    style="@style/Widget.Conversations.EditText"/>
+                                    style="@style/Widget.Pn.EditText"/>
                             </android.support.design.widget.TextInputLayout>
 
 
@@ -78,8 +78,8 @@
                                 app:passwordToggleDrawable="@drawable/visibility_toggle_drawable"
                                 app:passwordToggleEnabled="true"
                                 app:passwordToggleTint="?android:textColorSecondary"
-                                app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint"
-                                app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error">
+                                app:hintTextAppearance="@style/TextAppearance.Pn.Design.Hint"
+                                app:errorTextAppearance="@style/TextAppearance.Pn.Design.Error">
 
                                 <android.support.design.widget.TextInputEditText
                                     android:id="@+id/account_password"
@@ -88,7 +88,7 @@
                                     android:layout_alignParentTop="true"
                                     android:hint="@string/password"
                                     android:inputType="textPassword"
-                                    style="@style/Widget.Conversations.EditText"/>
+                                    style="@style/Widget.Pn.EditText"/>
                             </android.support.design.widget.TextInputLayout>
 
                             <LinearLayout
@@ -110,15 +110,15 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:hint="@string/account_settings_hostname"
-                                        app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint"
-                                        app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error">
+                                        app:hintTextAppearance="@style/TextAppearance.Pn.Design.Hint"
+                                        app:errorTextAppearance="@style/TextAppearance.Pn.Design.Error">
 
                                         <EditText
                                             android:id="@+id/hostname"
                                             android:layout_width="fill_parent"
                                             android:layout_height="wrap_content"
                                             android:inputType="textNoSuggestions"
-                                            style="@style/Widget.Conversations.EditText"/>
+                                            style="@style/Widget.Pn.EditText"/>
                                     </android.support.design.widget.TextInputLayout>
                                 </LinearLayout>
 
@@ -133,8 +133,8 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:hint="@string/account_settings_port"
-                                        app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint"
-                                        app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error">
+                                        app:hintTextAppearance="@style/TextAppearance.Pn.Design.Hint"
+                                        app:errorTextAppearance="@style/TextAppearance.Pn.Design.Error">
 
                                         <EditText
                                             android:id="@+id/port"
@@ -142,14 +142,14 @@
                                             android:layout_height="match_parent"
                                             android:inputType="number"
                                             android:maxLength="5"
-                                            style="@style/Widget.Conversations.EditText"/>
+                                            style="@style/Widget.Pn.EditText"/>
                                     </android.support.design.widget.TextInputLayout>
                                 </LinearLayout>
                             </LinearLayout>
 
                             <CheckBox
                                 android:id="@+id/account_register_new"
-                                style="@style/Widget.Conversations.CheckBox"
+                                style="@style/Widget.Pn.CheckBox"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
@@ -184,7 +184,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/battery_optimizations_enabled"
-                                android:textAppearance="@style/TextAppearance.Conversations.Title"/>
+                                android:textAppearance="@style/TextAppearance.Pn.Title"/>
 
                             <TextView
                                 android:id="@+id/os_optimization_body"
@@ -192,7 +192,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:text="@string/battery_optimizations_enabled_explained"
-                                android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                android:textAppearance="@style/TextAppearance.Pn.Body1"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -203,7 +203,7 @@
 
                             <Button
                                 android:id="@+id/os_optimization_disable"
-                                style="@style/Widget.Conversations.Button.Borderless"
+                                style="@style/Widget.Pn.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:minWidth="0dp"
@@ -249,7 +249,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_session_established"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/session_est"
@@ -257,7 +257,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:paddingLeft="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
                             </TableRow>
 
                         </TableLayout>
@@ -280,7 +280,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_pep"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/server_info_pep"
@@ -288,7 +288,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:paddingLeft="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"
                                     tools:ignore="RtlHardcoded"/>
                             </TableRow>
 
@@ -302,7 +302,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_blocking"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/server_info_blocking"
@@ -310,7 +310,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:paddingLeft="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"
                                     tools:ignore="RtlHardcoded"/>
                             </TableRow>
 
@@ -324,7 +324,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_stream_management"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/server_info_sm"
@@ -332,7 +332,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:paddingLeft="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"
                                     tools:ignore="RtlHardcoded"/>
                             </TableRow>
 
@@ -346,7 +346,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_roster_version"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/server_info_roster_version"
@@ -354,7 +354,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:paddingLeft="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"
                                     tools:ignore="RtlHardcoded"/>
                             </TableRow>
 
@@ -368,7 +368,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_carbon_messages"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/server_info_carbons"
@@ -376,7 +376,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:paddingLeft="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"
                                     tools:ignore="RtlHardcoded"/>
                             </TableRow>
 
@@ -390,7 +390,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_mam"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/server_info_mam"
@@ -398,7 +398,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:paddingLeft="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"
                                     tools:ignore="RtlHardcoded"/>
                             </TableRow>
 
@@ -412,7 +412,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_csi"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/server_info_csi"
@@ -420,7 +420,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:paddingLeft="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"
                                     tools:ignore="RtlHardcoded"/>
                             </TableRow>
 
@@ -435,7 +435,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_push"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/server_info_push"
@@ -443,7 +443,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:paddingLeft="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
                             </TableRow>
 
                             <TableRow
@@ -457,7 +457,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_http_upload"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/server_info_http_upload"
@@ -465,7 +465,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:paddingLeft="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
                             </TableRow>
                         </TableLayout>
 
@@ -487,14 +487,14 @@
                                     android:id="@+id/pgp_fingerprint"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Fingerprint"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Fingerprint"/>
 
                                 <TextView
                                     android:id="@+id/pgp_fingerprint_desc"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/openpgp_key_id"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Caption"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Caption"/>
                             </LinearLayout>
 
                             <ImageButton
@@ -528,13 +528,13 @@
                                     android:id="@+id/axolotl_fingerprint"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Fingerprint"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Fingerprint"/>
 
                                 <TextView
                                     android:id="@+id/own_fingerprint_desc"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Caption"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Caption"/>
                             </LinearLayout>
 
                             <LinearLayout
@@ -594,7 +594,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/list_padding"
                             android:text="@string/other_devices"
-                            android:textAppearance="@style/TextAppearance.Conversations.Title"/>
+                            android:textAppearance="@style/TextAppearance.Pn.Title"/>
 
                         <LinearLayout
                             android:id="@+id/other_device_keys"
@@ -604,7 +604,7 @@
 
                         <Button
                             android:id="@+id/clear_devices"
-                            style="@style/Widget.Conversations.Button.Borderless"
+                            style="@style/Widget.Pn.Button.Borderless"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -627,7 +627,7 @@
 
             <Button
                 android:id="@+id/cancel_button"
-                style="@style/Widget.Conversations.Button.Borderless"
+                style="@style/Widget.Pn.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -642,7 +642,7 @@
 
             <Button
                 android:id="@+id/save_button"
-                style="@style/Widget.Conversations.Button.Borderless"
+                style="@style/Widget.Pn.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

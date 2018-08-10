@@ -72,14 +72,14 @@
                                             android:id="@+id/muc_title"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:textAppearance="@style/TextAppearance.Conversations.Title"/>
+                                            android:textAppearance="@style/TextAppearance.Pn.Title"/>
 
                                         <TextView
                                             android:id="@+id/muc_subject"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:autoLink="web"
-                                            android:textAppearance="@style/TextAppearance.Conversations.Subhead"/>
+                                            android:textAppearance="@style/TextAppearance.Pn.Subhead"/>
                                     </LinearLayout>
 
 
@@ -95,29 +95,29 @@
                                         <android.support.design.widget.TextInputLayout
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error"
-                                            app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint">
+                                            app:errorTextAppearance="@style/TextAppearance.Pn.Design.Error"
+                                            app:hintTextAppearance="@style/TextAppearance.Pn.Design.Hint">
 
-                                            <eu.siacs.conversations.ui.widget.EmojiWrapperEditText
+                                            <de.eqee.pn.ui.widget.EmojiWrapperEditText
                                                 android:id="@+id/muc_edit_title"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:hint="@string/group_chat_name"
-                                                android:textAppearance="@style/Widget.Conversations.EditText"/>
+                                                android:textAppearance="@style/Widget.Pn.EditText"/>
                                         </android.support.design.widget.TextInputLayout>
 
                                         <android.support.design.widget.TextInputLayout
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error"
-                                            app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint">
+                                            app:errorTextAppearance="@style/TextAppearance.Pn.Design.Error"
+                                            app:hintTextAppearance="@style/TextAppearance.Pn.Design.Hint">
 
-                                            <eu.siacs.conversations.ui.widget.EmojiWrapperEditText
+                                            <de.eqee.pn.ui.widget.EmojiWrapperEditText
                                                 android:id="@+id/muc_edit_subject"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:hint="@string/topic"
-                                                android:textAppearance="@style/Widget.Conversations.EditText"/>
+                                                android:textAppearance="@style/Widget.Pn.EditText"/>
                                         </android.support.design.widget.TextInputLayout>
 
                                     </LinearLayout>
@@ -149,7 +149,7 @@
                                 android:layout_centerVertical="true"
                                 android:layout_toStartOf="@+id/change_conference_button"
                                 android:text="@string/private_conference"
-                                android:textAppearance="@style/TextAppearance.Conversations.Body1"
+                                android:textAppearance="@style/TextAppearance.Pn.Body1"
                                 />
 
                             <ImageButton
@@ -184,7 +184,7 @@
                                     android:ellipsize="end"
                                     android:singleLine="true"
                                     android:text="@string/server_info_mam"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
                                 <TextView
                                     android:id="@+id/muc_info_mam"
@@ -192,7 +192,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:paddingStart="4dp"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1"/>
                             </TableRow>
 
                         </TableLayout>
@@ -203,7 +203,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
                             android:layout_marginTop="32dp"
-                            android:textAppearance="@style/TextAppearance.Conversations.Caption"/>
+                            android:textAppearance="@style/TextAppearance.Pn.Caption"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -236,14 +236,14 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:singleLine="true"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Subhead"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Subhead"/>
 
                                 <TextView
                                     android:id="@+id/muc_role"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:singleLine="true"
-                                    android:textAppearance="@style/TextAppearance.Conversations.Body1.Secondary"/>
+                                    android:textAppearance="@style/TextAppearance.Pn.Body1.Secondary"/>
                             </LinearLayout>
 
                             <ImageButton
@@ -270,7 +270,7 @@
                                 android:layout_centerVertical="true"
                                 android:layout_toStartOf="@+id/notification_status_button"
                                 android:text="@string/notify_on_all_messages"
-                                android:textAppearance="@style/TextAppearance.Conversations.Body1"
+                                android:textAppearance="@style/TextAppearance.Pn.Body1"
                                 />
 
                             <ImageButton
@@ -294,7 +294,7 @@
                             android:layout_gravity="end"
                             android:layout_marginTop="32dp"
                             android:text="@string/using_account"
-                            android:textAppearance="@style/TextAppearance.Conversations.Caption"/>
+                            android:textAppearance="@style/TextAppearance.Pn.Caption"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -330,7 +330,7 @@
 
                             <Button
                                 android:id="@+id/invite"
-                                style="@style/Widget.Conversations.Button.Borderless"
+                                style="@style/Widget.Pn.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:minWidth="0dp"

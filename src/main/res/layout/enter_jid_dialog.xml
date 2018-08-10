@@ -27,12 +27,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/account_settings_jabber_id"
-            app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error"
-            app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint">
+            app:errorTextAppearance="@style/TextAppearance.Pn.Design.Error"
+            app:hintTextAppearance="@style/TextAppearance.Pn.Design.Hint">
 
             <AutoCompleteTextView
                 android:id="@+id/jid"
-                style="@style/Widget.Conversations.EditText"
+                style="@style/Widget.Pn.EditText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"/>

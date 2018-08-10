@@ -22,7 +22,7 @@
   <string name="just_now">sekarang</string>
   <string name="minute_ago">1 min lalu</string>
   <string name="minutes_ago">%d min lalu</string>
-  <string name="unread_conversations">Percakapan belum dibaca</string>
+  <string name="unread_pn">Percakapan belum dibaca</string>
   <string name="sending">mengirim...</string>
   <string name="message_decrypting">Mendekripsi pesan. Mohon tunggu…</string>
   <string name="pgp_message">Pesan terenkripsi OpenPGP</string>
@@ -53,7 +53,7 @@
   <string name="save">Simpan</string>
   <string name="ok">YA</string>
   <string name="crash_report_title">Percakapan terhenti</string>
-  <string name="crash_report_message">Dengan mengirimkan laporan kesalahan Anda membantu pengembangan Conversations\n&lt;b&gt;Perhatian:&lt;/&gt;Conversations akan menggunakan akun XMPP Anda untuk mengirim laporan kesalahan untuk pengembang.</string>
+  <string name="crash_report_message">Dengan mengirimkan laporan kesalahan Anda membantu pengembangan Pn\n&lt;b&gt;Perhatian:&lt;/&gt;Pn akan menggunakan akun XMPP Anda untuk mengirim laporan kesalahan untuk pengembang.</string>
   <string name="send_now">Kirim sekarang</string>
   <string name="send_never">Jangan tanya lagi</string>
   <string name="problem_connecting_to_account">Tidak terhubung ke akun</string>
@@ -76,14 +76,14 @@
   <string name="send_unencrypted">Kirim tidak terenkripsi</string>
   <string name="decryption_failed">Dekripsi gagal. Mungkin Anda tidak memiliki kunci pribadi yang tepat.</string>
   <string name="openkeychain_required">OpenKeychain</string>
-  <string name="openkeychain_required_long">Conversations menggunakan app pihak ke-3 bernama <b>OpenKeychain</b> untuk mengenkripsi dan menerjemahkan pesan dan mengorganisir kunci anda.\n\nOpenKeychain berlisensi GPLv3 dan tersedia fi F-Droid dan Google play.\n\n<small>(Silahkan mulai ulang Conversations setelah menginstall.)</small></string>
+  <string name="openkeychain_required_long">Pn menggunakan app pihak ke-3 bernama <b>OpenKeychain</b> untuk mengenkripsi dan menerjemahkan pesan dan mengorganisir kunci anda.\n\nOpenKeychain berlisensi GPLv3 dan tersedia fi F-Droid dan Google play.\n\n<small>(Silahkan mulai ulang Pn setelah menginstall.)</small></string>
   <string name="restart">Mulai ulang</string>
   <string name="install">Pasang</string>
   <string name="openkeychain_not_installed">Harap install OpenKeychain</string>
   <string name="offering">menawarkan...</string>
   <string name="waiting">menunggu...</string>
   <string name="no_pgp_key">Tidak ada kunci OpenPGP ditemukan</string>
-  <string name="contact_has_no_pgp_key">Conversations tidak dapat mengenkripsi pesan Anda karena kontak tidak mengumumkan kunci publiknya.\n\n<small>Silakan meminta kontak Anda untuk menyetel OpenPGP</small></string>
+  <string name="contact_has_no_pgp_key">Pn tidak dapat mengenkripsi pesan Anda karena kontak tidak mengumumkan kunci publiknya.\n\n<small>Silakan meminta kontak Anda untuk menyetel OpenPGP</small></string>
   <string name="no_pgp_keys">Tidak ada kunci OpenPGP ditemukan</string>
   <string name="contacts_have_no_pgp_keys">Percakapan tidak dapat mengenkripsi pesan Anda karena kontak tidak mengumumkan kunci publik mereka.\n\n<small>Silakan meminta kontak Anda untuk setup OpenPGP.</small></string>
   <string name="pref_general">Umum</string>
@@ -101,7 +101,7 @@
   <string name="pref_sound_summary">Deringkan ketika pesan masuk</string>
   <string name="pref_advanced_options">Lanjutan</string>
   <string name="pref_never_send_crash">Jangan kirim laporan kerusakan</string>
-  <string name="pref_never_send_crash_summary">Dengan mengirimkan kesalahan Anda membantu pengembangan Aplikasi Conversations</string>
+  <string name="pref_never_send_crash_summary">Dengan mengirimkan kesalahan Anda membantu pengembangan Aplikasi Pn</string>
   <string name="pref_confirm_messages">Konfirmasi Pesan</string>
   <string name="pref_ui_options">UI</string>
   <string name="openpgp_error">OpenKeychain melaporkan kesalahan</string>
@@ -211,8 +211,8 @@
   <string name="ignore">Abaikan</string>
   <string name="without_mutual_presence_updates"><b>Perhatian</b> Mengirim ini tanpa kehadiran sesama pembaruan bisa menyebabkan masalah tak terduga.\n\n<small>Pergi ke kontak untuk memverifikasi langganan kehadiran anda.</small></string>
   <string name="pref_expert_options_summary">Harap berhati-hati dengan ini</string>
-  <string name="title_activity_about">Tentang Conversations</string>
-  <string name="pref_about_conversations_summary">Build dan informasi lisensi</string>
+  <string name="title_activity_about">Tentang Pn</string>
+  <string name="pref_about_pn_summary">Build dan informasi lisensi</string>
   <string name="title_pref_quiet_hours">Waktu sunyi</string>
   <string name="title_pref_quiet_hours_start_time">Waktu mulai</string>
   <string name="title_pref_quiet_hours_end_time">Waktu selesai</string>
@@ -234,7 +234,7 @@
   <string name="account_details">Detil akun</string>
   <string name="confirm">Konfirmasi</string>
   <string name="try_again">Coba lagi</string>
-  <string name="conversations_foreground_service">Percakapan</string>
+  <string name="pn_foreground_service">Percakapan</string>
   <string name="pref_keep_foreground_service">Jaga layanan di latar depan</string>
   <string name="pref_keep_foreground_service_summary">Cegah sistem operasi mematikan koneksi</string>
   <string name="choose_file">Pilih berkas</string>
@@ -293,7 +293,7 @@
   <string name="pdf_document">Berkas PDF</string>
   <string name="apk">Apl Android</string>
   <string name="vcard">Kontak</string>
-  <string name="touch_to_open_conversations">Sentuh untuk membuka Conversations</string>
+  <string name="touch_to_open_pn">Sentuh untuk membuka Pn</string>
   <string name="avatar_has_been_published">Avatar telah diterbitkan!</string>
   <string name="sending_x_file">Mengirim %s</string>
   <string name="offering_x_file">Menawarkan %s</string>

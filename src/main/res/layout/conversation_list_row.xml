@@ -41,7 +41,7 @@
                     android:paddingRight="4dp"
                     android:maxLines="1"
                     android:ellipsize="end"
-                    android:textAppearance="@style/TextAppearance.Conversations.Subhead" />
+                    android:textAppearance="@style/TextAppearance.Pn.Subhead" />
 
                 <RelativeLayout
                     android:id="@+id/conversation_lastwrapper"
@@ -60,7 +60,7 @@
                         android:layout_alignParentLeft="true"
                         android:text="@string/me"
                         android:layout_marginRight="?attr/TextSeparation"
-                        android:textAppearance="@style/TextAppearance.Conversations.Body1.Secondary"
+                        android:textAppearance="@style/TextAppearance.Pn.Body1.Secondary"
                         android:visibility="visible"/>
 
                     <LinearLayout android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                             android:scrollHorizontally="false"
                             android:maxLines="1"
                             android:ellipsize="end"
-                            android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+                            android:textAppearance="@style/TextAppearance.Pn.Body1"/>
                     </LinearLayout>
                     <ImageView
                         android:visibility="visible"
@@ -100,7 +100,7 @@
                         android:alpha="?attr/icon_alpha"
                         android:src="?attr/icon_notifications"
                         />
-                    <eu.siacs.conversations.ui.widget.UnreadCountCustomView
+                    <de.eqee.pn.ui.widget.UnreadCountCustomView
                         android:id="@+id/unread_count"
                         android:layout_width="?attr/IconSize"
                         android:layout_height="?attr/IconSize"
@@ -121,7 +121,7 @@
                     android:layout_alignBaseline="@+id/conversation_name"
                     android:layout_alignParentRight="true"
                     android:gravity="right"
-                    android:textAppearance="@style/TextAppearance.Conversations.Caption"/>
+                    android:textAppearance="@style/TextAppearance.Pn.Caption"/>
             </RelativeLayout>
         </RelativeLayout>
     </FrameLayout>

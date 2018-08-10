@@ -26,7 +26,7 @@
   <string name="just_now">刚刚</string>
   <string name="minute_ago">1分钟前</string>
   <string name="minutes_ago">%d分钟前</string>
-  <string name="unread_conversations">未读会话</string>
+  <string name="unread_pn">未读会话</string>
   <string name="sending">正在发送…</string>
   <string name="message_decrypting">解密信息中. 请稍候…</string>
   <string name="pgp_message">OpenPGP 加密的信息</string>
@@ -61,8 +61,8 @@
   <string name="unblock">解除屏蔽</string>
   <string name="save">保存</string>
   <string name="ok">完成</string>
-  <string name="crash_report_title">Conversations已崩溃</string>
-  <string name="crash_report_message">通过发送堆栈跟踪，您可以帮助Conversations持续发展\n<b>警告：</b>这将使用您的XMPP帐户将堆栈跟踪发送给开发人员。</string>
+  <string name="crash_report_title">Pn已崩溃</string>
+  <string name="crash_report_message">通过发送堆栈跟踪，您可以帮助Pn持续发展\n<b>警告：</b>这将使用您的XMPP帐户将堆栈跟踪发送给开发人员。</string>
   <string name="send_now">立即发送</string>
   <string name="send_never">不再询问</string>
   <string name="problem_connecting_to_account">无法连接至账户</string>
@@ -91,16 +91,16 @@
   <string name="send_unencrypted">不加密发送</string>
   <string name="decryption_failed">解密失败，可能是私钥不正确。</string>
   <string name="openkeychain_required">OpenKeychain</string>
-  <string name="openkeychain_required_long">Conversations 使用了第三方app <b>OpenKeychain</b> 来加密、解密信息并管理您的密钥。\n\nOpenKeychain 遵循 GPLv3 并且可以在 F-Droid 和 Google Play 上获取。\n\n<small>（之后请重启 Conversations）</small></string>
+  <string name="openkeychain_required_long">Pn 使用了第三方app <b>OpenKeychain</b> 来加密、解密信息并管理您的密钥。\n\nOpenKeychain 遵循 GPLv3 并且可以在 F-Droid 和 Google Play 上获取。\n\n<small>（之后请重启 Pn）</small></string>
   <string name="restart">重启</string>
   <string name="install">安装</string>
   <string name="openkeychain_not_installed">请安装 OpenKeychain 以解密</string>
   <string name="offering">输入…</string>
   <string name="waiting">等待…</string>
   <string name="no_pgp_key">未发现 OpenPGP 密钥</string>
-  <string name="contact_has_no_pgp_key">Conversations 无法加密信息，因为联系人未提供他/她的公钥。\n\n<small>请通知联系人设置 OpenPGP。</small></string>
+  <string name="contact_has_no_pgp_key">Pn 无法加密信息，因为联系人未提供他/她的公钥。\n\n<small>请通知联系人设置 OpenPGP。</small></string>
   <string name="no_pgp_keys">未找到 OpenPGP 密钥</string>
-  <string name="contacts_have_no_pgp_keys">因您的联系人未公布公钥，Conversations未能成功加密您的信息.\n\n<small>请通知联系人设置OpenPGP.</small></string>
+  <string name="contacts_have_no_pgp_keys">因您的联系人未公布公钥，Pn未能成功加密您的信息.\n\n<small>请通知联系人设置OpenPGP.</small></string>
   <string name="pref_general">常规</string>
   <string name="pref_accept_files">接收文件</string>
   <string name="pref_accept_files_summary">自动接收小于 … 的文件</string>
@@ -117,10 +117,10 @@
   <string name="pref_sound">铃声</string>
   <string name="pref_sound_summary">收到新消息时响铃</string>
   <string name="pref_notification_grace_period">静默期限</string>
-  <string name="pref_notification_grace_period_summary">发现在其它设备上的活动后，Conversations保持安静的时间</string>
+  <string name="pref_notification_grace_period_summary">发现在其它设备上的活动后，Pn保持安静的时间</string>
   <string name="pref_advanced_options">高级</string>
   <string name="pref_never_send_crash">从不发送崩溃报告</string>
-  <string name="pref_never_send_crash_summary">通过发送堆栈跟踪，您可以帮助Conversations持续发展</string>
+  <string name="pref_never_send_crash_summary">通过发送堆栈跟踪，您可以帮助Pn持续发展</string>
   <string name="pref_confirm_messages">确认消息</string>
   <string name="pref_confirm_messages_summary">让对方知道你收到并阅读了他们的消息</string>
   <string name="pref_ui_options">用户界面</string>
@@ -267,8 +267,8 @@
   <string name="pref_allow_message_correction_summary">允许您的联系人追回编辑他们的信息</string>
   <string name="pref_expert_options">专家设置</string>
   <string name="pref_expert_options_summary">请谨慎使用</string>
-  <string name="title_activity_about">关于 Conversations</string>
-  <string name="pref_about_conversations_summary">编译及许可证信息</string>
+  <string name="title_activity_about">关于 Pn</string>
+  <string name="pref_about_pn_summary">编译及许可证信息</string>
   <string name="title_pref_quiet_hours">静默时间段</string>
   <string name="title_pref_quiet_hours_start_time">开始时间</string>
   <string name="title_pref_quiet_hours_end_time">结束时间</string>
@@ -308,11 +308,11 @@
   <string name="account_details">账户详情</string>
   <string name="confirm">确认</string>
   <string name="try_again">再试一遍</string>
-  <string name="conversations_foreground_service">Conversations</string>
+  <string name="pn_foreground_service">Pn</string>
   <string name="pref_keep_foreground_service">保持前台服务</string>
   <string name="pref_keep_foreground_service_summary">防止操作系统中断你的连接</string>
   <string name="pref_export_logs">导出历史记录</string>
-  <string name="pref_export_logs_summary">将 conversations 的历史日志写到 SD 卡</string>
+  <string name="pref_export_logs_summary">将 pn 的历史日志写到 SD 卡</string>
   <string name="notification_export_logs_title">正在将日志写入 SD 卡</string>
   <string name="choose_file">选择文件</string>
   <string name="receiving_x_file">接收中 %1$s (已完成 %2$d%%)</string>
@@ -393,7 +393,7 @@
   <string name="pdf_document">PDF文档</string>
   <string name="apk">Android应用</string>
   <string name="vcard">联系人</string>
-  <string name="touch_to_open_conversations">轻触打开 Conversations</string>
+  <string name="touch_to_open_pn">轻触打开 Pn</string>
   <string name="avatar_has_been_published">头像已经发布！</string>
   <string name="sending_x_file">正在发送%s</string>
   <string name="offering_x_file">提供中 %s</string>
@@ -483,10 +483,10 @@
   <string name="shared_image_with_x">图片已分享给%s</string>
   <string name="shared_images_with_x">多张图片已分享给%s</string>
   <string name="shared_text_with_x">文本已分享给%s</string>
-  <string name="no_storage_permission">Conversations 需要外部储存权限</string>
-  <string name="no_camera_permission">Conversations 需要摄像头权限</string>
+  <string name="no_storage_permission">Pn 需要外部储存权限</string>
+  <string name="no_camera_permission">Pn 需要摄像头权限</string>
   <string name="sync_with_contacts">同步联系人</string>
-  <string name="sync_with_contacts_long">Conversations需要将您的XMPP名单与您的联系人进行匹配，以显示他们的全名和头像。\n\nConversations只会读取你的联系人并在本地匹配，不会上传到你的服务器。\n\n您现在将被要求授予访问您联系人的权限。</string>
+  <string name="sync_with_contacts_long">Pn需要将您的XMPP名单与您的联系人进行匹配，以显示他们的全名和头像。\n\nPn只会读取你的联系人并在本地匹配，不会上传到你的服务器。\n\n您现在将被要求授予访问您联系人的权限。</string>
   <string name="notify_on_all_messages">为所有信息显示通知</string>
   <string name="notify_only_when_highlighted">只在被提到时通知</string>
   <string name="notify_never">禁用通知</string>
@@ -496,9 +496,9 @@
   <string name="always">总是</string>
   <string name="automatically">自动</string>
   <string name="battery_optimizations_enabled">启用节电模式</string>
-  <string name="battery_optimizations_enabled_explained">你的设备正在为Conversations进行电池优化，这可能导致通知的延迟甚至消息的丢失。
+  <string name="battery_optimizations_enabled_explained">你的设备正在为Pn进行电池优化，这可能导致通知的延迟甚至消息的丢失。
 建议不要这样做</string>
-  <string name="battery_optimizations_enabled_dialog">你的设备正在为Conversations进行电池优化，这可能导致通知的延迟甚至消息的丢失。
+  <string name="battery_optimizations_enabled_dialog">你的设备正在为Pn进行电池优化，这可能导致通知的延迟甚至消息的丢失。
 你将会被提示禁用该功能。</string>
   <string name="disable">禁用</string>
   <string name="selection_too_large">选择区域过大</string>
@@ -511,8 +511,8 @@
   <string name="security_error_invalid_file_access">安全错误：文件访问权限无效</string>
   <string name="no_application_to_share_uri">未找到可以分享此链接的应用</string>
   <string name="share_uri_with">分享链接……</string>
-  <string name="welcome_text">Jabber 是一个独立即时通讯网络服务商。无论您选择何种 Jabber 服务器，您都可使用本客户端\n但是为了让您更方便些，我们希望您在 conversations.im¹ 创建账号，它专门为 Conversations 服务。</string>
-  <string name="magic_create_text">我们将会引导你完成在 conversations.im¹ 上注册账号的过程。\n当获得了 conversations.im 提供的账号以后，你可以通过添加使用其他提供商的好友的完整 Jabber ID 来与他们联络。</string>
+  <string name="welcome_text">Jabber 是一个独立即时通讯网络服务商。无论您选择何种 Jabber 服务器，您都可使用本客户端\n但是为了让您更方便些，我们希望您在 pn.eqee.de¹ 创建账号，它专门为 Pn 服务。</string>
+  <string name="magic_create_text">我们将会引导你完成在 pn.eqee.de¹ 上注册账号的过程。\n当获得了 pn.eqee.de 提供的账号以后，你可以通过添加使用其他提供商的好友的完整 Jabber ID 来与他们联络。</string>
   <string name="your_full_jid_will_be">您完整的 Jabble ID 是：%s </string>
   <string name="create_account">创建账户</string>
   <string name="use_own_provider">使用我自己的服务端</string>
@@ -537,7 +537,7 @@
   <string name="gp_medium">中</string>
   <string name="gp_long">长</string>
   <string name="pref_broadcast_last_activity">广播最后打开该应用的时间</string>
-  <string name="pref_broadcast_last_activity_summary">让你的所有联系人知道你使用Conversations的时间</string>
+  <string name="pref_broadcast_last_activity_summary">让你的所有联系人知道你使用Pn的时间</string>
   <string name="pref_privacy">隐私</string>
   <string name="pref_theme_options">主题</string>
   <string name="pref_theme_options_summary">选择调色板</string>
@@ -620,7 +620,7 @@
   <string name="encrypting_message">消息加密中</string>
   <string name="not_fetching_history_retention_period">由于本地保留期限，因此无法提取消息。</string>
   <string name="transcoding_video">正在压缩视频</string>
-  <string name="corresponding_conversations_closed">相应的对话已关闭。</string>
+  <string name="corresponding_pn_closed">相应的对话已关闭。</string>
   <string name="contact_blocked_past_tense">联系人已屏蔽</string>
   <string name="pref_notifications_from_strangers">陌生人也通知</string>
   <string name="pref_notifications_from_strangers_summary">收到陌生人信息时通知</string>
@@ -649,7 +649,7 @@
   <string name="message">消息</string>
   <string name="private_messages_are_disabled">禁止私信</string>
   <string name="huawei_protected_apps">受保护的应用</string>
-  <string name="huawei_protected_apps_summary">为了在屏幕关闭时也可收到消息提醒，您需要将 Conversations 加入受保护的应用列表。</string>
+  <string name="huawei_protected_apps_summary">为了在屏幕关闭时也可收到消息提醒，您需要将 Pn 加入受保护的应用列表。</string>
   <string name="mtm_accept_cert">接受未知的证书？</string>
   <string name="mtm_trust_anchor">服务器证书未经已知证书机构签发。</string>
   <string name="mtm_accept_servername">接受不匹配的服务器名称？</string>
@@ -663,7 +663,7 @@
   <string name="edit_status_message_title">编辑状态信息</string>
   <string name="edit_status_message">编辑状态信息</string>
   <string name="disable_encryption">禁用加密</string>
-  <string name="error_trustkey_general">Conversations无法向%1$s发送加密信息。这可能是由于您的联系人使用了无法处理OMEMO的过时服务器或客户端。</string>
+  <string name="error_trustkey_general">Pn无法向%1$s发送加密信息。这可能是由于您的联系人使用了无法处理OMEMO的过时服务器或客户端。</string>
   <string name="error_trustkey_device_list">无法获取设备列表</string>
   <string name="error_trustkey_bundle">无法获取设备包</string>
   <string name="error_trustkey_hint_mutual">提示：某些情况下，可以将对方加入联系人列表，以解决此问题。</string>
@@ -695,7 +695,7 @@
   <string name="share">分享</string>
   <string name="unable_to_start_recording">无法开始记录</string>
   <string name="please_wait">请等待……</string>
-  <string name="no_microphone_permission">Conversations需要访问麦克风</string>
+  <string name="no_microphone_permission">Pn需要访问麦克风</string>
   <string name="search_messages">搜索消息</string>
   <string name="gif">GIF</string>
   <string name="view_conversation">查看对话</string>

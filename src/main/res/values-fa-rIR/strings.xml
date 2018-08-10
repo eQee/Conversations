@@ -26,7 +26,7 @@
   <string name="just_now">هم اکنون</string>
   <string name="minute_ago">1 دقیقه قبل</string>
   <string name="minutes_ago">%d  دقیقه قبل</string>
-  <string name="unread_conversations">گفتگو های خوانده نشده</string>
+  <string name="unread_pn">گفتگو های خوانده نشده</string>
   <string name="sending">در حال ارسال...</string>
   <string name="message_decrypting">در حال رمزگشایی پیام. لطفا صبور باشید...</string>
   <string name="pgp_message">پیام رمز شده به وسیله OpenPGP</string>
@@ -54,7 +54,7 @@
   <string name="unblock">از انسداد خارج کردن</string>
   <string name="save">ذخیره</string>
   <string name="ok">تایید</string>
-  <string name="crash_report_title">Conversations کرش کرده است</string>
+  <string name="crash_report_title">Pn کرش کرده است</string>
   <string name="send_now">هم اکنون ارسال کن</string>
   <string name="send_never">دیگر هرگز نپرس</string>
   <string name="problem_connecting_to_account">ناتوانی در اتصال به حساب کاربری</string>

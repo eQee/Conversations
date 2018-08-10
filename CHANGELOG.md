@@ -65,7 +65,7 @@
 * Removed slide out panel for conversation overview
 * Add ability to change status message
 * Highlight irregular unicode code blocks in Jabber IDs
-* Conversations now requires Android 4.4+
+* Pn now requires Android 4.4+
 
 ### Version 1.23.8
 * bug fixes
@@ -151,7 +151,7 @@
 ### Version 1.18.4
 * fixed UI freezes during connection timeout
 * fixed notification sound playing twice
-* fixed conversations being marked as read
+* fixed pn being marked as read
 * removed 'copy text' in favor of 'select text' and 'share with'
 
 ### Version 1.18.3
@@ -166,7 +166,7 @@
 * bug fixes
 
 ### Version 1.18.0
-* Conversations <1.16.0 will be unable to receive OMEMO encrypted messages
+* Pn <1.16.0 will be unable to receive OMEMO encrypted messages
 * OMEMO: put auth tag into key (verify auth tag as well)
 * offer to block entire domain in message from stranger snackbar 
 * treat URL as file if URL is in oob or contains key
@@ -330,7 +330,7 @@
 ### Version 1.12.3
 * make omemo default when all resources support it
 * show presence of other resources as template
-* start typing in StartConversationsActivity to search
+* start typing in StartPnActivity to search
 * various bug fixes and improvements
 
 ### Version 1.12.2
@@ -369,7 +369,7 @@
 * various bug fixes
 
 ### Version 1.11.1
-* fixed some bugs when sharing files with Conversations
+* fixed some bugs when sharing files with Pn
 
 ### Version 1.11.0
 * OMEMO encrypted conferences
@@ -384,7 +384,7 @@
 * introduced build flavors to make dependence on play-services optional
 
 ### Version 1.9.4
-* prevent cleared Conversations from reloading history with MAM
+* prevent cleared Pn from reloading history with MAM
 * various MAM fixes
 
 ### Version 1.9.3
@@ -404,7 +404,7 @@
 * Per conference notification settings
 * Let user decide whether to compress pictures
 * Support for XEP-0368
-* Ask user to exclude Conversations from battery optimizations
+* Ask user to exclude Pn from battery optimizations
 
 ### Version 1.8.4
 * prompt to trust own OMEMO devices
@@ -498,7 +498,7 @@
 * improved otr support
 
 ### Version 1.5.0
-* upload files to HTTP host and share them in MUCs. requires new [HttpUploadComponent](https://github.com/siacs/HttpUploadComponent) on server side
+* upload files to HTTP host and share them in MUCs. requires new [HttpUploadComponent](https://github.com/eqee/HttpUploadComponent) on server side
 
 ### Version 1.4.5
 * fixes to message parser to not display some ejabberd muc status messages
@@ -515,7 +515,7 @@
 * various bug fixes
 
 ### Version 1.3.0
-* swipe conversations to end them
+* swipe pn to end them
 * quickly enable / disable account via slider
 * share multiple images at once
 * expert option to distrust system CAs
@@ -523,7 +523,7 @@
 * bug fixes
 
 ### Version 1.2.0
-* Send current location. (requires [plugin](https://play.google.com/store/apps/details?id=eu.siacs.conversations.sharelocation))
+* Send current location. (requires [plugin](https://play.google.com/store/apps/details?id=de.eqee.pn.sharelocation))
 * Invite multiple contacts at once
 * performance improvements
 * bug fixes
@@ -572,7 +572,7 @@
 * more bug fixes
 
 ### Version 0.9.1
-* bug fixes including some that caused Conversations to crash on start
+* bug fixes including some that caused Pn to crash on start
 
 ### Version 0.9
 * arbitrary file transfer
@@ -621,7 +621,7 @@
 * Optionally use send button as status indicator
 
 ### Version 0.7
-* Ability to disable notifications for single conversations
+* Ability to disable notifications for single pn
 * Merge messages in chat bubbles
 * Fixes for OpenPGP and OTR (please republish your public key)
 * Improved reliability on sending messages
