@@ -26,7 +26,7 @@
   <string name="just_now">în acest moment</string>
   <string name="minute_ago">acum un minut</string>
   <string name="minutes_ago">acum %d minute</string>
-  <string name="unread_conversations">conversații necitite</string>
+  <string name="unread_pn">conversații necitite</string>
   <string name="sending">trimitere...</string>
   <string name="message_decrypting">Decriptez mesaj. Te rog așteaptă...</string>
   <string name="pgp_message">Mesaj criptat cu OpenPGP</string>
@@ -61,8 +61,8 @@
   <string name="unblock">Deblochează</string>
   <string name="save">Salvează</string>
   <string name="ok">BINE</string>
-  <string name="crash_report_title">Conversations s-a oprit neașteptat</string>
-  <string name="crash_report_message">Trimițând datele despre erori ajutați la continuarea dezvoltării aplicației Conversations\n<b>Atenție:</b> Se va utiliza contul XMPP pentru a trimite informațiile din jurnal către programatori.</string>
+  <string name="crash_report_title">Pn s-a oprit neașteptat</string>
+  <string name="crash_report_message">Trimițând datele despre erori ajutați la continuarea dezvoltării aplicației Pn\n<b>Atenție:</b> Se va utiliza contul XMPP pentru a trimite informațiile din jurnal către programatori.</string>
   <string name="send_now">Trimite acum</string>
   <string name="send_never">Nu mă mai întreba</string>
   <string name="problem_connecting_to_account">Nu mă pot conecta la cont</string>
@@ -91,16 +91,16 @@
   <string name="send_unencrypted">Trimite necriptat</string>
   <string name="decryption_failed">Decriptarea a eșuat. Poate nu aveții cheia privată corectă.</string>
   <string name="openkeychain_required">OpenKeychain</string>
-  <string name="openkeychain_required_long">Conversations utilizează o aplicație externă <b>OpenKeychain</b> pentru a cripta și decripta mesaje și a administra cheile publice.\n\nOpenKeychain este licențiat sub GPLv3 și se poate instala din F-Droid și Google Play.\n\n<small>(Vă rugăm să reporniți Conversations după)</small></string>
+  <string name="openkeychain_required_long">Pn utilizează o aplicație externă <b>OpenKeychain</b> pentru a cripta și decripta mesaje și a administra cheile publice.\n\nOpenKeychain este licențiat sub GPLv3 și se poate instala din F-Droid și Google Play.\n\n<small>(Vă rugăm să reporniți Pn după)</small></string>
   <string name="restart">Repornește</string>
   <string name="install">Instalare</string>
   <string name="openkeychain_not_installed">Va rugăm să instalați OpenKeychain</string>
   <string name="offering">transmit...</string>
   <string name="waiting">în așteptare...</string>
   <string name="no_pgp_key">Nu am găsit cheia OpenPGP</string>
-  <string name="contact_has_no_pgp_key">Conversations nu a putut să cripteze mesajele tale deoarece contactul nu își anunță cheia publică.\n\n<small>Rugați contactul să își configureze OpenPGP.</small></string>
+  <string name="contact_has_no_pgp_key">Pn nu a putut să cripteze mesajele tale deoarece contactul nu își anunță cheia publică.\n\n<small>Rugați contactul să își configureze OpenPGP.</small></string>
   <string name="no_pgp_keys">Nu am găsit chei OpenPGP</string>
-  <string name="contacts_have_no_pgp_keys">Conversations nu poate cripta mesajele tale către contactele tale care nu își anunță cheia publică.\n\n<small>Vă rugăm să cereți contactelor să configureze OpenPGP.</small></string>
+  <string name="contacts_have_no_pgp_keys">Pn nu poate cripta mesajele tale către contactele tale care nu își anunță cheia publică.\n\n<small>Vă rugăm să cereți contactelor să configureze OpenPGP.</small></string>
   <string name="pref_general">General</string>
   <string name="pref_accept_files">Acceptă fișiere</string>
   <string name="pref_accept_files_summary">Mai mici decât...</string>
@@ -117,10 +117,10 @@
   <string name="pref_sound">Sunet de notificare</string>
   <string name="pref_sound_summary">Notificare sonoră atunci când este primit un mesaj nou</string>
   <string name="pref_notification_grace_period">Perioadă de grație</string>
-  <string name="pref_notification_grace_period_summary">Durata de timp cât Conversations păstrează liniștea după ce a observat activitate pe un alt dispozitiv</string>
+  <string name="pref_notification_grace_period_summary">Durata de timp cât Pn păstrează liniștea după ce a observat activitate pe un alt dispozitiv</string>
   <string name="pref_advanced_options">Opțiuni avansate</string>
   <string name="pref_never_send_crash">Nu trimite rapoarte de erori</string>
-  <string name="pref_never_send_crash_summary">Trimițând datele despre erori ajutați la continuarea dezvoltării aplicației Conversations</string>
+  <string name="pref_never_send_crash_summary">Trimițând datele despre erori ajutați la continuarea dezvoltării aplicației Pn</string>
   <string name="pref_confirm_messages">Confirmă mesajele</string>
   <string name="pref_confirm_messages_summary">Contactele sunt notificate atunci când ați primit un mesaj și l-ați citit</string>
   <string name="pref_ui_options">Opțiuni interfață</string>
@@ -267,8 +267,8 @@
   <string name="pref_allow_message_correction_summary">Contactele pot să își editeze mesajele scrise în trecut</string>
   <string name="pref_expert_options">Opțiuni expert</string>
   <string name="pref_expert_options_summary">Vă rugăm să aveți grijă cu acestea</string>
-  <string name="title_activity_about">Despre Conversations</string>
-  <string name="pref_about_conversations_summary">Informații despre versiune și licență</string>
+  <string name="title_activity_about">Despre Pn</string>
+  <string name="pref_about_pn_summary">Informații despre versiune și licență</string>
   <string name="title_pref_quiet_hours">Ore de liniște</string>
   <string name="title_pref_quiet_hours_start_time">Ora de începere</string>
   <string name="title_pref_quiet_hours_end_time">Ora de terminare</string>
@@ -308,7 +308,7 @@
   <string name="account_details">Detalii cont</string>
   <string name="confirm">Confirmă</string>
   <string name="try_again">Încearcă din nou</string>
-  <string name="conversations_foreground_service">Conversations</string>
+  <string name="pn_foreground_service">Pn</string>
   <string name="pref_keep_foreground_service">Păstrează serviciul activ în prim-plan</string>
   <string name="pref_keep_foreground_service_summary">Previne închiderea conexiunii de către sistemul de operare</string>
   <string name="pref_export_logs">Exportă istoric</string>
@@ -393,7 +393,7 @@
   <string name="pdf_document">document PDF</string>
   <string name="apk">Aplicație Android</string>
   <string name="vcard">Contact</string>
-  <string name="touch_to_open_conversations">Atingeți pentru a deschide Conversations</string>
+  <string name="touch_to_open_pn">Atingeți pentru a deschide Pn</string>
   <string name="avatar_has_been_published">Avatarul a fost publicat!</string>
   <string name="sending_x_file">Trimit %s</string>
   <string name="offering_x_file">Ofer %s</string>
@@ -487,10 +487,10 @@
   <string name="shared_image_with_x">Partajează imaginea cu %s.</string>
   <string name="shared_images_with_x">Partajează imaginile cu %s.</string>
   <string name="shared_text_with_x">Partajează textul cu %s</string>
-  <string name="no_storage_permission">Conversations are nevoie de acces la stocarea externă</string>
-  <string name="no_camera_permission">Conversations are nevoie de acces la camera foto</string>
+  <string name="no_storage_permission">Pn are nevoie de acces la stocarea externă</string>
+  <string name="no_camera_permission">Pn are nevoie de acces la camera foto</string>
   <string name="sync_with_contacts">Sincronizează cu contactele</string>
-  <string name="sync_with_contacts_long">Conversations dorește să potrivească lista de contacte XMPP cu cea din dispozitiv pentru a putea afișa numele lor complete și avatarele.\n\nConversations doar va citi și potrivi local fără să le încarce pe vreun server.\n\nUrmează să fiți întrebați dacă doriți să permiteți accesul la contacte.</string>
+  <string name="sync_with_contacts_long">Pn dorește să potrivească lista de contacte XMPP cu cea din dispozitiv pentru a putea afișa numele lor complete și avatarele.\n\nPn doar va citi și potrivi local fără să le încarce pe vreun server.\n\nUrmează să fiți întrebați dacă doriți să permiteți accesul la contacte.</string>
   <string name="notify_on_all_messages">Notifică la toate mesajele</string>
   <string name="notify_only_when_highlighted">Notifică doar atunci când cineva vă menționează numele</string>
   <string name="notify_never">Notificări dezactivate</string>
@@ -500,9 +500,9 @@
   <string name="always">Mereu</string>
   <string name="automatically">Automat</string>
   <string name="battery_optimizations_enabled">Optimizare baterie activată</string>
-  <string name="battery_optimizations_enabled_explained">Dispozitivul dumneavoastră încearcă să optimizeze agresiv consumul bateriei pentru Conversations, asta poate duce la notificări întârziate sau chiar pierderea mesajelor.\nEste recomandat sa dezactivați aceste optimizări.</string>
+  <string name="battery_optimizations_enabled_explained">Dispozitivul dumneavoastră încearcă să optimizeze agresiv consumul bateriei pentru Pn, asta poate duce la notificări întârziate sau chiar pierderea mesajelor.\nEste recomandat sa dezactivați aceste optimizări.</string>
   <string name="battery_optimizations_enabled_dialog">Dispozitivul dumneavoastră încearcă să optimizeze agresiv consumul 
-bateriei pentru Conversations, asta poate duce la notificări întârziate 
+bateriei pentru Pn, asta poate duce la notificări întârziate 
 sau chiar pierderea mesajelor.\nÎn continuare veți fi rugați să dezactivați aceste optimizări.</string>
   <string name="disable">Dezactivează</string>
   <string name="selection_too_large">Zona selectată este prea mare</string>
@@ -515,8 +515,8 @@ sau chiar pierderea mesajelor.\nÎn continuare veți fi rugați să dezactivați
   <string name="security_error_invalid_file_access">Eroare de securitate.: Acces fișier invalid</string>
   <string name="no_application_to_share_uri">Nu s-a găsit nici o aplicație care să partajeze adresa</string>
   <string name="share_uri_with">Partajează adresa cu...</string>
-  <string name="welcome_text">Jabber este o rețea de mesagerie instant ce nu depinde de un anumit furnizor. Aveți posibilitatea să utilizați acest client cu orice server Jabber doriți.\nTotuși, pentru confortul dumneavoastră, am facilitat crearea unui cont pe conversations.im¹; un furnizor potrivit pentru utilizarea cu aplicația Conversations.</string>
-  <string name="magic_create_text">Vă vom ghida prin procesul de creare al unui cont pe conversations.im.¹\nCând alegeți conversations.im ca furnizor veți putea comunica cu utilizatorii altor furnizori oferindu-le ID-ul dumneavoastră Jabber.</string>
+  <string name="welcome_text">Jabber este o rețea de mesagerie instant ce nu depinde de un anumit furnizor. Aveți posibilitatea să utilizați acest client cu orice server Jabber doriți.\nTotuși, pentru confortul dumneavoastră, am facilitat crearea unui cont pe pn.eqee.de¹; un furnizor potrivit pentru utilizarea cu aplicația Pn.</string>
+  <string name="magic_create_text">Vă vom ghida prin procesul de creare al unui cont pe pn.eqee.de.¹\nCând alegeți pn.eqee.de ca furnizor veți putea comunica cu utilizatorii altor furnizori oferindu-le ID-ul dumneavoastră Jabber.</string>
   <string name="your_full_jid_will_be">ID-ul Jabber va fi: %s</string>
   <string name="create_account">Creează cont</string>
   <string name="use_own_provider">Folosește furnizorul meu</string>
@@ -541,7 +541,7 @@ sau chiar pierderea mesajelor.\nÎn continuare veți fi rugați să dezactivați
   <string name="gp_medium">Mediu</string>
   <string name="gp_long">Lung</string>
   <string name="pref_broadcast_last_activity">Anunță ultima interacțiune</string>
-  <string name="pref_broadcast_last_activity_summary">Contactele vă sunt anunțate atunci când folosiți Conversations</string>
+  <string name="pref_broadcast_last_activity_summary">Contactele vă sunt anunțate atunci când folosiți Pn</string>
   <string name="pref_privacy">Intimitate</string>
   <string name="pref_theme_options">Temă</string>
   <string name="pref_theme_options_summary">Selecție paletă culori interfață</string>
@@ -572,8 +572,8 @@ sau chiar pierderea mesajelor.\nÎn continuare veți fi rugați să dezactivați
   <string name="show_error_message">Arată mesaj de eroare</string>
   <string name="error_message">Mesaj de eroare</string>
   <string name="data_saver_enabled">Economizorul de date este activat</string>
-  <string name="data_saver_enabled_explained">Sistemul de operare restricționează accesul la Internet pentru Conversations atunci când este în fundal. Pentru a primii în continuare notificări pentru mesajele noi trebuie să acordați acces ne restricționat pentru Conversations atunci când Economizorul de date este activ.\nConversations totuși face eforturi ca să economisească consumul de date atunci când este posibil.</string>
-  <string name="device_does_not_support_data_saver">Dispozitivul nu suporta dezactivarea Economizorului de date pentru Conversations.</string>
+  <string name="data_saver_enabled_explained">Sistemul de operare restricționează accesul la Internet pentru Pn atunci când este în fundal. Pentru a primii în continuare notificări pentru mesajele noi trebuie să acordați acces ne restricționat pentru Pn atunci când Economizorul de date este activ.\nPn totuși face eforturi ca să economisească consumul de date atunci când este posibil.</string>
+  <string name="device_does_not_support_data_saver">Dispozitivul nu suporta dezactivarea Economizorului de date pentru Pn.</string>
   <string name="error_unable_to_create_temporary_file">Nu se poate crea un fișier temporar</string>
   <string name="this_device_has_been_verified">Acest dispozitiv a fost verificat</string>
   <string name="copy_fingerprint">Copiază amprenta</string>
@@ -636,7 +636,7 @@ sau chiar pierderea mesajelor.\nÎn continuare veți fi rugați să dezactivați
   <string name="encrypting_message">Mesajul se criptează</string>
   <string name="not_fetching_history_retention_period">Politica de retenție locală împiedică descărcarea altor mesaje.</string>
   <string name="transcoding_video">Se comprimă clipul video</string>
-  <string name="corresponding_conversations_closed">Conversațiile corespunzătoare au fost închise.</string>
+  <string name="corresponding_pn_closed">Conversațiile corespunzătoare au fost închise.</string>
   <string name="contact_blocked_past_tense">Contact blocat.</string>
   <string name="pref_notifications_from_strangers">Notificări de la persoane necunoscute</string>
   <string name="pref_notifications_from_strangers_summary">Nu veți fi deranjat(ă) atunci când o persoană care nu este în lista de contacte vă scrie.</string>
@@ -665,7 +665,7 @@ sau chiar pierderea mesajelor.\nÎn continuare veți fi rugați să dezactivați
   <string name="message">Mesaj</string>
   <string name="private_messages_are_disabled">Mesajele private sunt dezactivate</string>
   <string name="huawei_protected_apps">Aplicații protejate</string>
-  <string name="huawei_protected_apps_summary">Pentru a continua să primiți notificări, chiar și când ecranul este oprit, trebuie să adăugați Conversations în lista de aplicații protejate.</string>
+  <string name="huawei_protected_apps_summary">Pentru a continua să primiți notificări, chiar și când ecranul este oprit, trebuie să adăugați Pn în lista de aplicații protejate.</string>
   <string name="mtm_accept_cert">Acceptați certificatul necunoscut?</string>
   <string name="mtm_trust_anchor">Certificatul serverului nu este semnat de o autoritate de certificare (CA) cunoscută.</string>
   <string name="mtm_accept_servername">Acceptați numele serverului ce nu corespunde?</string>
@@ -679,7 +679,7 @@ sau chiar pierderea mesajelor.\nÎn continuare veți fi rugați să dezactivați
   <string name="edit_status_message_title">Editare mesaj de stare</string>
   <string name="edit_status_message">Editare mesaj de stare</string>
   <string name="disable_encryption">Dezactivează criptarea</string>
-  <string name="error_trustkey_general">Conversations nu poate trimite mesaje criptate către %1$s. Aceasta se poate întâmpla dacă acest contact folosește un server sau un client învechit ce nu suportă OMEMO.</string>
+  <string name="error_trustkey_general">Pn nu poate trimite mesaje criptate către %1$s. Aceasta se poate întâmpla dacă acest contact folosește un server sau un client învechit ce nu suportă OMEMO.</string>
   <string name="error_trustkey_device_list">Nu s-a putut descărca lista dispozitivelor</string>
   <string name="error_trustkey_bundle">Nu s-a putut descărca pachetul de dispozitive</string>
   <string name="error_trustkey_hint_mutual">Sugestie: În unele cazuri se poate rezolva dacă vă adăugați reciproc în lista de contacte.</string>
@@ -711,7 +711,7 @@ sau chiar pierderea mesajelor.\nÎn continuare veți fi rugați să dezactivați
   <string name="share">Partajare</string>
   <string name="unable_to_start_recording">Nu s-a putut porni înregistrarea</string>
   <string name="please_wait">Vă rugăm să așteptați...</string>
-  <string name="no_microphone_permission">Conversations are nevoie de acces la microfon</string>
+  <string name="no_microphone_permission">Pn are nevoie de acces la microfon</string>
   <string name="search_messages">Caută mesaje</string>
   <string name="gif">GIF</string>
   <string name="view_conversation">Arată conversația</string>

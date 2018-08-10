@@ -17,7 +17,7 @@
   <string name="action_unblock_domain">Desbloqueja el domini</string>
   <string name="title_activity_manage_accounts">Gestiona els comptes</string>
   <string name="title_activity_settings">Configuració</string>
-  <string name="title_activity_sharewith">Compartir amb Conversations</string>
+  <string name="title_activity_sharewith">Compartir amb Pn</string>
   <string name="title_activity_start_conversation">Comença una conversa</string>
   <string name="title_activity_choose_contact">Tria el contacte</string>
   <string name="title_activity_share_via_account">Comparteix mitjançant compte</string>
@@ -25,7 +25,7 @@
   <string name="just_now">Ara</string>
   <string name="minute_ago">fa 1 min</string>
   <string name="minutes_ago">fa %d mins</string>
-  <string name="unread_conversations">Converses sense llegir o no llegides</string>
+  <string name="unread_pn">Converses sense llegir o no llegides</string>
   <string name="sending">enviant…</string>
   <string name="message_decrypting">Desxifrant el missatge. Espereu ...</string>
   <string name="pgp_message">Missatge xifrat amb OpenPGP</string>
@@ -59,8 +59,8 @@
   <string name="unblock">Desbloqueja</string>
   <string name="save">Desa</string>
   <string name="ok">D\'acord</string>
-  <string name="crash_report_title">El Conversations s\'ha aturat</string>
-  <string name="crash_report_message">Amb l\'enviament de bolcats de pila ajudeu al desenvolupament del Conversations\n<b>Avís:</b> Això usarà el vostre compte XMPP per enviar el bolcat de pila al desenvolupador.</string>
+  <string name="crash_report_title">El Pn s\'ha aturat</string>
+  <string name="crash_report_message">Amb l\'enviament de bolcats de pila ajudeu al desenvolupament del Pn\n<b>Avís:</b> Això usarà el vostre compte XMPP per enviar el bolcat de pila al desenvolupador.</string>
   <string name="send_now">Envia ara</string>
   <string name="send_never">No preguntis de nou</string>
   <string name="problem_connecting_to_account">No s\'ha pogut connectar al compte</string>
@@ -89,14 +89,14 @@
   <string name="send_unencrypted">Envia sense xifrar</string>
   <string name="decryption_failed">El desxiframent ha fallat. Potser no teniu la clau privada apropiada.</string>
   <string name="openkeychain_required">OpenKeychain</string>
-  <string name="openkeychain_required_long">El Conversations utilitza una aplicació de tercers anomenada <b>OpenKeychain</b> per xifrar i desxifrar missatges i gestionar les vostres claus públiques.\n\nL\'OpenKeychain està publicat amb llicència GPLv3 i disponible a l\'F-Droid i la Google Play.\n\n<small>(Si us plau, reinicieu el Conversations després.)</small></string>
+  <string name="openkeychain_required_long">El Pn utilitza una aplicació de tercers anomenada <b>OpenKeychain</b> per xifrar i desxifrar missatges i gestionar les vostres claus públiques.\n\nL\'OpenKeychain està publicat amb llicència GPLv3 i disponible a l\'F-Droid i la Google Play.\n\n<small>(Si us plau, reinicieu el Pn després.)</small></string>
   <string name="restart">Reinicia</string>
   <string name="install">Instal·la</string>
   <string name="openkeychain_not_installed">Instal·leu l\'OpenKeychain</string>
   <string name="offering">s\'està oferint…</string>
   <string name="waiting">s\'està esperant...</string>
   <string name="no_pgp_key">No s\'ha trobat cap clau OpenPGP</string>
-  <string name="contact_has_no_pgp_key">El Conversations no pot xifrar els missatges perquè el vostre contacte no anuncia la seva clau pública.\n\n<small>Demaneu-li que configuri l\'OpenPGP.</small></string>
+  <string name="contact_has_no_pgp_key">El Pn no pot xifrar els missatges perquè el vostre contacte no anuncia la seva clau pública.\n\n<small>Demaneu-li que configuri l\'OpenPGP.</small></string>
   <string name="no_pgp_keys">No s\'ha trobat cap clau OpenPGP</string>
   <string name="contacts_have_no_pgp_keys">El Coversations no pot xifrar els missatges perquè els vostres contactes no anuncien les seves claus públiques.\n\n<small>Demaneu-los que configurin l\'OpenPGP .</small></string>
   <string name="pref_general">General</string>
@@ -115,10 +115,10 @@
   <string name="pref_sound">So d\'avís</string>
   <string name="pref_sound_summary">Reprodueix un so quan arribi un missatge nou</string>
   <string name="pref_notification_grace_period">Període de gràcia</string>
-  <string name="pref_notification_grace_period_summary">El temps que el Conversations guarda silenci després de veure activitat en un altre dispositiu</string>
+  <string name="pref_notification_grace_period_summary">El temps que el Pn guarda silenci després de veure activitat en un altre dispositiu</string>
   <string name="pref_advanced_options">Avançat</string>
   <string name="pref_never_send_crash">Mai enviïs informes d\'errors</string>
-  <string name="pref_never_send_crash_summary">Amb l\'enviament de traces d\'execució ajudeu al desenvolupament futur del Conversations</string>
+  <string name="pref_never_send_crash_summary">Amb l\'enviament de traces d\'execució ajudeu al desenvolupament futur del Pn</string>
   <string name="pref_confirm_messages">Confirma els missatges</string>
   <string name="pref_confirm_messages_summary">Feu saber als vostres contactes quan heu rebut i llegit els seus missatges</string>
   <string name="pref_ui_options">UI</string>
@@ -263,8 +263,8 @@
   <string name="pref_allow_message_correction_summary">Permet que els contactes editin de manera retroactiva els missatges</string>
   <string name="pref_expert_options">Configuració d\'experts</string>
   <string name="pref_expert_options_summary">Aneu amb cura</string>
-  <string name="title_activity_about">Quant al Conversations</string>
-  <string name="pref_about_conversations_summary">Informació sobre la construció i la seva llicència</string>
+  <string name="title_activity_about">Quant al Pn</string>
+  <string name="pref_about_pn_summary">Informació sobre la construció i la seva llicència</string>
   <string name="title_pref_quiet_hours">Hores de silenci</string>
   <string name="title_pref_quiet_hours_start_time">Hora d\'inici</string>
   <string name="title_pref_quiet_hours_end_time">Hora de finalització</string>
@@ -302,7 +302,7 @@
   <string name="account_details">Detalls del compte</string>
   <string name="confirm">Confirmar</string>
   <string name="try_again">Intenta una altra vegada</string>
-  <string name="conversations_foreground_service">Converses</string>
+  <string name="pn_foreground_service">Converses</string>
   <string name="pref_keep_foreground_service">Mantenir el servei en primer pla</string>
   <string name="pref_keep_foreground_service_summary">Evitar que el sistema operatiu desconnecti la connexió</string>
   <string name="pref_export_logs">Exportació de l\'historial</string>
@@ -390,7 +390,7 @@ mentrestant.</string>
   <string name="pdf_document">Document PDF</string>
   <string name="apk">Aplicació d\'Android</string>
   <string name="vcard">Contacte</string>
-  <string name="touch_to_open_conversations">Tocar per obrir les conversacions</string>
+  <string name="touch_to_open_pn">Tocar per obrir les conversacions</string>
   <string name="avatar_has_been_published">L\'avatar ha sigut publicat!</string>
   <string name="sending_x_file">Enviant %s</string>
   <string name="offering_x_file">Oferint %s</string>
@@ -482,11 +482,11 @@ mentrestant.</string>
   <string name="shared_image_with_x">Imatge compartida amb %s</string>
   <string name="shared_images_with_x">Imatges compartides amb %s</string>
   <string name="shared_text_with_x">Text compartit amb %s</string>
-  <string name="no_storage_permission">Conversations necessita accés a emmagatzematge extern</string>
-  <string name="no_camera_permission">Conversations necessita accés a la càmera</string>
+  <string name="no_storage_permission">Pn necessita accés a emmagatzematge extern</string>
+  <string name="no_camera_permission">Pn necessita accés a la càmera</string>
   <string name="sync_with_contacts">Sincronitza amb contactes</string>
-  <string name="sync_with_contacts_long">Conversations vol coincidir amb la vostra llista XMPP amb els vostres contactes per 
-mostrar els noms i avatars complets.\n\nConversations només 
+  <string name="sync_with_contacts_long">Pn vol coincidir amb la vostra llista XMPP amb els vostres contactes per 
+mostrar els noms i avatars complets.\n\nPn només 
 llegeix els vostres contactes i els relacionaran localment sense haver
  de penjar-les al vostre servidor.\n\nAra se us demanarà que 
 concediu permís per accedir als teus contactes.</string>
@@ -499,10 +499,10 @@ concediu permís per accedir als teus contactes.</string>
   <string name="always">Sempre</string>
   <string name="automatically">Automàticament</string>
   <string name="battery_optimizations_enabled">Optimitzacions de la bateria habilitades</string>
-  <string name="battery_optimizations_enabled_explained">El vostre dispositiu fa algunes optimitzacions pesades de la bateria i Conversations 
+  <string name="battery_optimizations_enabled_explained">El vostre dispositiu fa algunes optimitzacions pesades de la bateria i Pn 
 pot provocar notificacions retardades o fins i tot pèrdua de 
 missatges.\nEs recomana desactivar-les.</string>
-  <string name="battery_optimizations_enabled_dialog">El vostre dispositiu fa algunes optimitzacions pesades de la bateria i Conversations 
+  <string name="battery_optimizations_enabled_dialog">El vostre dispositiu fa algunes optimitzacions pesades de la bateria i Pn 
 pot provocar notificacions retardades o fins i tot pèrdua de 
 missatges.\n\nAra se us demanarà que desactiveu-las.</string>
   <string name="disable">Desactivar</string>
@@ -518,9 +518,9 @@ missatges.\n\nAra se us demanarà que desactiveu-las.</string>
   <string name="share_uri_with">Comparteix l\'URI amb...</string>
   <string name="welcome_text">Jabber és una xarxa de missatgeria instantània independent del proveïdor. Podeu
  utilitzar aquest client amb el servidor de Jabber que trieu.\nPerò 
-per a la seva comoditat hem facilitat crear un compte a converses.im¹; un proveïdor especialment indicat per a l\'ús amb Conversations.</string>
-  <string name="magic_create_text">Us guiarem pel procés de creació d\'un compte a conversations.im.¹\nQuan 
-trieu conversations.im com a proveïdor, podreu comunicar-vos amb els usuaris 
+per a la seva comoditat hem facilitat crear un compte a converses.im¹; un proveïdor especialment indicat per a l\'ús amb Pn.</string>
+  <string name="magic_create_text">Us guiarem pel procés de creació d\'un compte a pn.eqee.de.¹\nQuan 
+trieu pn.eqee.de com a proveïdor, podreu comunicar-vos amb els usuaris 
 d\'altres proveïdors donant-los la vostra ID Jabber completa.</string>
   <string name="your_full_jid_will_be">La vostra Jabber ID completa serà: %s</string>
   <string name="create_account">Crear compte</string>
@@ -546,7 +546,7 @@ d\'altres proveïdors donant-los la vostra ID Jabber completa.</string>
   <string name="gp_medium">Mitjà</string>
   <string name="gp_long">Llarg</string>
   <string name="pref_broadcast_last_activity">Difusió de la interacció de l\'usuari anterior</string>
-  <string name="pref_broadcast_last_activity_summary">Permet que tots els contactes sàpiguen quan utilitzis Conversations</string>
+  <string name="pref_broadcast_last_activity_summary">Permet que tots els contactes sàpiguen quan utilitzis Pn</string>
   <string name="pref_privacy">Privadesa</string>
   <string name="pref_theme_options">Tema</string>
   <string name="pref_theme_options_summary">Seleccioneu la paleta de colors</string>
@@ -577,9 +577,9 @@ d\'altres proveïdors donant-los la vostra ID Jabber completa.</string>
   <string name="show_error_message">Mostra el missatge d\'error</string>
   <string name="error_message">Missatge d\'error</string>
   <string name="data_saver_enabled">S\'ha activat el protector de dades</string>
-  <string name="data_saver_enabled_explained">El vostre sistema operatiu restringeix a Conversations d\'accedir a Internet quan en segon pla. Per
- rebre notificacions de missatges nous, haureu de permetre que l\'accés sense restriccions a Conversations quan el protector de dades estigui activat.\nConversations encara farà un esforç per guardar dades quan sigui possible.</string>
-  <string name="device_does_not_support_data_saver">El vostre dispositiu no suporta desactivar el protector de dades de Conversations</string>
+  <string name="data_saver_enabled_explained">El vostre sistema operatiu restringeix a Pn d\'accedir a Internet quan en segon pla. Per
+ rebre notificacions de missatges nous, haureu de permetre que l\'accés sense restriccions a Pn quan el protector de dades estigui activat.\nPn encara farà un esforç per guardar dades quan sigui possible.</string>
+  <string name="device_does_not_support_data_saver">El vostre dispositiu no suporta desactivar el protector de dades de Pn</string>
   <string name="error_unable_to_create_temporary_file">No es pot crear un fitxer temporal</string>
   <string name="this_device_has_been_verified">S\'ha verificat aquest dispositiu</string>
   <string name="copy_fingerprint">Copieu l\'empremta digital</string>
@@ -636,7 +636,7 @@ d\'altres proveïdors donant-los la vostra ID Jabber completa.</string>
   <string name="encrypting_message">Xifrant el missatge</string>
   <string name="not_fetching_history_retention_period">No es recullen missatges deguts al període de retenció local.</string>
   <string name="transcoding_video">S\'està comprimint el vídeo</string>
-  <string name="corresponding_conversations_closed">S\'han tancat les converses corresponents.</string>
+  <string name="corresponding_pn_closed">S\'han tancat les converses corresponents.</string>
   <string name="contact_blocked_past_tense">Contacte bloquejat.</string>
   <string name="pref_notifications_from_strangers">Notificacions d\'estranys</string>
   <string name="pref_notifications_from_strangers_summary">Notifica per als missatges rebuts d\'estrangers.</string>
@@ -713,7 +713,7 @@ que l\'administrador del servidor llegeixi els missatges, però pot ser l\'únic
   <string name="share">Compartir</string>
   <string name="unable_to_start_recording">No es pot iniciar l\'enregistrament</string>
   <string name="please_wait">Si us plau, esperi...</string>
-  <string name="no_microphone_permission">Conversations  necessita accés al micròfon</string>
+  <string name="no_microphone_permission">Pn  necessita accés al micròfon</string>
   <string name="search_messages">Buscar missatges</string>
   <string name="gif">GIF</string>
   <string name="view_conversation">Veure conversa</string>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="ConversationsTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/green600</item>
-        <item name="colorPrimaryDark">@color/green800</item>
+    <style name="PnTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue600</item>
+        <item name="colorPrimaryDark">@color/blue800</item>
         <item name="colorAccent">@color/blue_a200</item>
         <item name="popupOverlayStyle">@style/ThemeOverlay.AppCompat.Light</item>
 
@@ -11,7 +11,7 @@
         <item name="color_background_secondary">@color/grey200</item>
         <item name="color_background_tertiary">@color/grey300</item>
         <item name="color_warning">@color/red_a700</item>
-        <item name="TextColorOnline">@color/green600</item>
+        <item name="TextColorOnline">@color/blue600</item>
         <item name="TextColorError">@color/red800</item>
 
         <item name="activity_background_search">@drawable/search_background_light</item>
@@ -51,11 +51,11 @@
 
         <item type="reference" name="message_bubble_received_monochrome">@drawable/message_bubble_received_white</item>
         <item type="reference" name="message_bubble_sent">@drawable/message_bubble_sent</item>
-        <item type="reference" name="message_bubble_received_green">@drawable/message_bubble_received</item>
+        <item type="reference" name="message_bubble_received_blue">@drawable/message_bubble_received</item>
 
-        <item name="unread_count">@color/green700_desaturated</item>
+        <item name="unread_count">@color/blue700_desaturated</item>
 
-        <item name="conversations_overview_background">@color/green700</item>
+        <item name="pn_overview_background">@color/blue700</item>
 
         <item type="float" name="icon_alpha">0.54</item>
 
@@ -99,11 +99,11 @@
         <item type="reference" name="icon_enable_undecided_device">@drawable/ic_new_releases_black_24dp</item>
     </style>
 
-    <style name="ConversationsTheme.Dark" parent="ConversationsTheme.Dark.Base" />
+    <style name="PnTheme.Dark" parent="PnTheme.Dark.Base" />
 
-    <style name="ConversationsTheme.Dark.Base" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/green800</item>
-        <item name="colorPrimaryDark">@color/green900</item>
+    <style name="PnTheme.Dark.Base" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/blue800</item>
+        <item name="colorPrimaryDark">@color/blue900</item>
         <item name="colorAccent">@color/blue_a100</item>
         <item name="popupOverlayStyle">@style/ThemeOverlay.AppCompat.Dark</item>
 
@@ -115,7 +115,7 @@
         <item name="list_item_background">@drawable/list_item_background_dark</item>
         <item name="color_warning">@color/red_a100</item>
 
-        <item name="TextColorOnline">@color/green500</item>
+        <item name="TextColorOnline">@color/blue500</item>
         <item name="TextColorError">@color/red500</item>
 
         <item name="EmojiColor">@color/white</item>
@@ -151,11 +151,11 @@
 
         <item type="reference" name="message_bubble_received_monochrome">@drawable/message_bubble_received_grey</item>
         <item type="reference" name="message_bubble_sent">@drawable/message_bubble_sent_grey</item>
-        <item type="reference" name="message_bubble_received_green">@drawable/message_bubble_received_dark</item>
+        <item type="reference" name="message_bubble_received_blue">@drawable/message_bubble_received_dark</item>
 
-        <item name="unread_count">@color/green900_desaturated</item>
+        <item name="unread_count">@color/blue900_desaturated</item>
 
-        <item name="conversations_overview_background">@color/green900</item>
+        <item name="pn_overview_background">@color/blue900</item>
 
         <item type="float" name="icon_alpha">0.7</item>
 
@@ -199,7 +199,7 @@
         <item type="reference" name="icon_enable_undecided_device">@drawable/ic_new_releases_white_24dp</item>
     </style>
 
-    <style name="ConversationsTheme.Medium" parent="ConversationsTheme">
+    <style name="PnTheme.Medium" parent="PnTheme">
         <item name="TextSizeCaption">14sp</item>
         <item name="TextSizeBody1">16sp</item>
         <item name="TextSizeBody2">16sp</item>
@@ -210,7 +210,7 @@
         <item name="IconSize">20sp</item>
     </style>
 
-    <style name="ConversationsTheme.Dark.Medium" parent="ConversationsTheme.Dark">
+    <style name="PnTheme.Dark.Medium" parent="PnTheme.Dark">
         <item name="TextSizeCaption">14sp</item>
         <item name="TextSizeBody1">16sp</item>
         <item name="TextSizeBody2">16sp</item>
@@ -221,7 +221,7 @@
         <item name="IconSize">20sp</item>
     </style>
 
-    <style name="ConversationsTheme.Dark.Large" parent="ConversationsTheme.Dark">
+    <style name="PnTheme.Dark.Large" parent="PnTheme.Dark">
         <item name="TextSizeCaption">16sp</item>
         <item name="TextSizeBody1">18sp</item>
         <item name="TextSizeBody2">18sp</item>
@@ -232,7 +232,7 @@
         <item name="IconSize">22sp</item>
     </style>
 
-    <style name="ConversationsTheme.Large" parent="ConversationsTheme">
+    <style name="PnTheme.Large" parent="PnTheme">
         <item name="TextSizeCaption">16sp</item>
         <item name="TextSizeBody1">18sp</item>
         <item name="TextSizeBody2">18sp</item>
@@ -243,9 +243,9 @@
         <item name="IconSize">22sp</item>
     </style>
 
-    <style name="ConversationsTheme.FullScreen" parent="@style/Theme.AppCompat.Light">
-        <item name="colorPrimary">@color/green600</item>
-        <item name="colorPrimaryDark">@color/green700</item>
+    <style name="PnTheme.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/blue600</item>
+        <item name="colorPrimaryDark">@color/blue700</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
@@ -258,9 +258,9 @@
         <item name="android:windowBackground">@drawable/background</item>
     </style>
 
-    <style name="ConversationsTheme.Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
-        <item name="colorPrimary">@color/green600</item>
-        <item name="colorPrimaryDark">@color/green700</item>
+    <style name="PnTheme.Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/blue600</item>
+        <item name="colorPrimaryDark">@color/blue700</item>
         <item name="colorAccent">@color/blue_a200</item>
         <item name="color_background_primary">@color/grey50</item>
         <item name="divider">@color/black12</item>
@@ -269,9 +269,9 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
-    <style name="ConversationsTheme.Dark.Dialog" parent="@style/Theme.AppCompat.Dialog">
-        <item name="colorPrimary">@color/green800</item>
-        <item name="colorPrimaryDark">@color/green900</item>
+    <style name="PnTheme.Dark.Dialog" parent="@style/Theme.AppCompat.Dialog">
+        <item name="colorPrimary">@color/blue800</item>
+        <item name="colorPrimaryDark">@color/blue900</item>
         <item name="colorAccent">@color/blue_a100</item>
         <item name="color_background_primary">@color/grey800</item>
         <item name="divider">@color/white12</item>
@@ -280,22 +280,22 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
-    <style name="ConversationsTheme.Dialog.Medium" parent="ConversationsTheme.Dialog">
+    <style name="PnTheme.Dialog.Medium" parent="PnTheme.Dialog">
         <item name="TextSizeBody2">16sp</item>
         <item name="TextSizeDisplay2">51sp</item>
     </style>
 
-    <style name="ConversationsTheme.Dark.Dialog.Medium" parent="ConversationsTheme.Dark.Dialog">
+    <style name="PnTheme.Dark.Dialog.Medium" parent="PnTheme.Dark.Dialog">
         <item name="TextSizeBody2">16sp</item>
         <item name="TextSizeDisplay2">51sp</item>
     </style>
 
-    <style name="ConversationsTheme.Dialog.Large" parent="ConversationsTheme.Dialog">
+    <style name="PnTheme.Dialog.Large" parent="PnTheme.Dialog">
         <item name="TextSizeBody2">18sp</item>
         <item name="TextSizeDisplay2">56sp</item>
     </style>
 
-    <style name="ConversationsTheme.Dark.Dialog.Large" parent="ConversationsTheme.Dark.Dialog">
+    <style name="PnTheme.Dark.Dialog.Large" parent="PnTheme.Dark.Dialog">
         <item name="TextSizeBody2">18sp</item>
         <item name="TextSizeTitle">56sp</item>
     </style>

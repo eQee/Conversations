@@ -22,7 +22,7 @@
   <string name="just_now">mới đây</string>
   <string name="minute_ago">1 phút trước</string>
   <string name="minutes_ago">%d phút trước</string>
-  <string name="unread_conversations">Các hội thoại chưa đọc</string>
+  <string name="unread_pn">Các hội thoại chưa đọc</string>
   <string name="sending">đang gửi...</string>
   <string name="message_decrypting">Đang giải mã tin nhắn. Xin chờ...</string>
   <string name="pgp_message">Tin nhắn mã hoá bằng OpenPGP</string>
@@ -52,8 +52,8 @@
   <string name="unblock">Bỏ chặn</string>
   <string name="save">Lưu</string>
   <string name="ok">OK</string>
-  <string name="crash_report_title">Conversations đã đột ngột dừng</string>
-  <string name="crash_report_message">Bằng việc gửi báo cáo hoạt động, bạn đang hỗ trợ nhóm phát triển của Conversations\n<b>Cảnh báo:</b> Thao tác này sẽ sử dụng tài khoản XMPP của bạn để gửi báo cáo hoạt động đến nhà phát triển.</string>
+  <string name="crash_report_title">Pn đã đột ngột dừng</string>
+  <string name="crash_report_message">Bằng việc gửi báo cáo hoạt động, bạn đang hỗ trợ nhóm phát triển của Pn\n<b>Cảnh báo:</b> Thao tác này sẽ sử dụng tài khoản XMPP của bạn để gửi báo cáo hoạt động đến nhà phát triển.</string>
   <string name="send_now">Gửi ngay</string>
   <string name="send_never">Đừng hỏi lại nữa</string>
   <string name="problem_connecting_to_account">Không thể kết nối đến tài khoản</string>
@@ -81,16 +81,16 @@
   <string name="send_unencrypted">Gửi dạng không mã hoá</string>
   <string name="decryption_failed">Giải mã thất bại. Có lẽ bạn không có đúng khoá cá nhân.</string>
   <string name="openkeychain_required">OpenKeychain</string>
-  <string name="openkeychain_required_long">Conversations dùng ứng dụng bên thứ ba gọi là <b>OpenKeychain</b> để mã hoá và giải mã tin nhắn đồng thời quản lý khoá công cộng của bạn.\n\nOpenKeychain được cấp giấy phép GPLv3 và có thể tải về từ F-Droid cũng như Google Play.\n\n<small>(Xin khởi chạy lại Conversations sau đó.)</small></string>
+  <string name="openkeychain_required_long">Pn dùng ứng dụng bên thứ ba gọi là <b>OpenKeychain</b> để mã hoá và giải mã tin nhắn đồng thời quản lý khoá công cộng của bạn.\n\nOpenKeychain được cấp giấy phép GPLv3 và có thể tải về từ F-Droid cũng như Google Play.\n\n<small>(Xin khởi chạy lại Pn sau đó.)</small></string>
   <string name="restart">Khởi chạy lại</string>
   <string name="install">Cài đặt</string>
   <string name="openkeychain_not_installed">Xin cài đặt OpenKeychain</string>
   <string name="offering">đang đề xuất...</string>
   <string name="waiting">đang chờ...</string>
   <string name="no_pgp_key">Không tìm thấy khoá OpenPGP</string>
-  <string name="contact_has_no_pgp_key">Conversations không thể mã hoá tin nhắn vì liên hệ của bạn không thông báo khoá công cộng của anh/chị ấy.\n\n<small>Hãy yêu cầu liên hệ đó cài đặt OpenPGP.</small></string>
+  <string name="contact_has_no_pgp_key">Pn không thể mã hoá tin nhắn vì liên hệ của bạn không thông báo khoá công cộng của anh/chị ấy.\n\n<small>Hãy yêu cầu liên hệ đó cài đặt OpenPGP.</small></string>
   <string name="no_pgp_keys">Không tìm thấy các khoá OpenPGP</string>
-  <string name="contacts_have_no_pgp_keys">Conversations không thể mã hoá tin nhắn vì các liên hệ của bạn không thông báo khoá công cộng của họ.\n\n<small>Hãy yêu cầu họ cài đặt OpenPGP.</small></string>
+  <string name="contacts_have_no_pgp_keys">Pn không thể mã hoá tin nhắn vì các liên hệ của bạn không thông báo khoá công cộng của họ.\n\n<small>Hãy yêu cầu họ cài đặt OpenPGP.</small></string>
   <string name="pref_general">Tổng quan</string>
   <string name="pref_accept_files">Chấp thuận các tập tin</string>
   <string name="pref_accept_files_summary">Tự động chấp thuận các tập tin nhỏ hơn...</string>
@@ -107,10 +107,10 @@
   <string name="pref_sound">Âm báo</string>
   <string name="pref_sound_summary">Chơi nhạc báo khi có tin nhắn mới</string>
   <string name="pref_notification_grace_period">Thời gian gia hạn thông báo</string>
-  <string name="pref_notification_grace_period_summary">Khoảng thời gian Conversations giữ yên lặng sau khi xem hoạt động trên một thiết bị khác</string>
+  <string name="pref_notification_grace_period_summary">Khoảng thời gian Pn giữ yên lặng sau khi xem hoạt động trên một thiết bị khác</string>
   <string name="pref_advanced_options">Nâng cao</string>
   <string name="pref_never_send_crash">Không bao giờ gửi báo cáo dừng chạy</string>
-  <string name="pref_never_send_crash_summary">Bằng việc gửi báo cáo hoạt động, bạn đang hỗ trợ nhóm phát triển của Conversations</string>
+  <string name="pref_never_send_crash_summary">Bằng việc gửi báo cáo hoạt động, bạn đang hỗ trợ nhóm phát triển của Pn</string>
   <string name="pref_confirm_messages">Xác nhận tin nhắn</string>
   <string name="pref_confirm_messages_summary">Báo cho liên hệ của bạn biết khi bạn đã nhận và đọc tin nhắn</string>
   <string name="pref_ui_options">UI</string>
@@ -235,8 +235,8 @@
   <string name="ignore">Bỏ qua</string>
   <string name="without_mutual_presence_updates"><b>Cảnh báo:</b> Gửi mà không có cập nhật hiện diện của nhau có thể gây ra vấn đề khó lường.\n\n<small>Vào chi tiết liên hệ để xác minh đăng ký hiện diện của bạn.</small></string>
   <string name="pref_expert_options_summary">Xin hãy cẩn trọng với chúng</string>
-  <string name="title_activity_about">Thông tin về Conversations</string>
-  <string name="pref_about_conversations_summary">Thông tin bản dựng và giấy phép</string>
+  <string name="title_activity_about">Thông tin về Pn</string>
+  <string name="pref_about_pn_summary">Thông tin bản dựng và giấy phép</string>
   <string name="title_pref_quiet_hours">Giờ yên lặng</string>
   <string name="title_pref_quiet_hours_start_time">Thời gian bắt đầu</string>
   <string name="title_pref_quiet_hours_end_time">Thời gian kết thúc</string>
@@ -260,7 +260,7 @@
   <string name="account_details">Chi tiết tài khoản</string>
   <string name="confirm">Xác nhận</string>
   <string name="try_again">Thử lại</string>
-  <string name="conversations_foreground_service">Conversations</string>
+  <string name="pn_foreground_service">Pn</string>
   <string name="pref_keep_foreground_service">Giữ dịch vụ luôn chạy</string>
   <string name="pref_keep_foreground_service_summary">Ngăn hệ điều hành ngắt kết nối của bạn</string>
   <string name="notification_export_logs_title">Đang chép nhật ký vào thẻ SD</string>
@@ -322,7 +322,7 @@
   <string name="pdf_document">tài liệu PDF</string>
   <string name="apk">Ứng dụng Android</string>
   <string name="vcard">Liên hệ</string>
-  <string name="touch_to_open_conversations">Chạm để mở Conversations</string>
+  <string name="touch_to_open_pn">Chạm để mở Pn</string>
   <string name="avatar_has_been_published">Đã đăng tải ảnh đại diện!</string>
   <string name="sending_x_file">Đang gửi %s</string>
   <string name="offering_x_file">Đang đề xuất %s</string>
@@ -386,7 +386,7 @@
   <string name="shared_file_with_x">Chia sẻ tập tin với %s</string>
   <string name="shared_image_with_x">Chia sẻ hình với %s</string>
   <string name="sync_with_contacts">Đồng bộ với danh bạ</string>
-  <string name="sync_with_contacts_long">Conversations muốn so sánh danh sách bạn bè XMPP với danh bạ của bạn để hiện tên đầy đủ và ảnh đại diện của họ.\n\nConversations sẽ chỉ đọc danh bạ và so sánh trên thiết bị chứ không tải lên máy chủ.\n\nBây giờ, bạn sẽ được hỏi trao quyền truy cập danh bạ.</string>
+  <string name="sync_with_contacts_long">Pn muốn so sánh danh sách bạn bè XMPP với danh bạ của bạn để hiện tên đầy đủ và ảnh đại diện của họ.\n\nPn sẽ chỉ đọc danh bạ và so sánh trên thiết bị chứ không tải lên máy chủ.\n\nBây giờ, bạn sẽ được hỏi trao quyền truy cập danh bạ.</string>
   <string name="notify_on_all_messages">Thông báo tất cả tin nhắn</string>
   <string name="notify_never">Đã tắt thông báo</string>
   <string name="notify_paused">Đã dừng thông báo</string>
@@ -394,8 +394,8 @@
   <string name="always">Luôn luôn</string>
   <string name="automatically">Tự động</string>
   <string name="battery_optimizations_enabled">Đã bật tối ưu pin</string>
-  <string name="battery_optimizations_enabled_explained">Thiết bị đang thực hiện tối ưu hoá pin trên Conversations và nó có thể gây trì hoãn thông báo hay thậm chí làm mất tin nhắn.\nBạn nên tắt chế độ đó đi.</string>
-  <string name="battery_optimizations_enabled_dialog">Thiết bị đang thực hiện tối ưu hoá pin trên Conversations và nó có thể gây trì hoãn thông báo hay thậm chí làm mất tin nhắn.\n\nBây giờ, bạn sẽ được yêu cầu tắt chế độ đó đi.</string>
+  <string name="battery_optimizations_enabled_explained">Thiết bị đang thực hiện tối ưu hoá pin trên Pn và nó có thể gây trì hoãn thông báo hay thậm chí làm mất tin nhắn.\nBạn nên tắt chế độ đó đi.</string>
+  <string name="battery_optimizations_enabled_dialog">Thiết bị đang thực hiện tối ưu hoá pin trên Pn và nó có thể gây trì hoãn thông báo hay thậm chí làm mất tin nhắn.\n\nBây giờ, bạn sẽ được yêu cầu tắt chế độ đó đi.</string>
   <string name="disable">Tắt</string>
   <string name="selection_too_large">Khu vực chọn quá lớn</string>
 </resources>

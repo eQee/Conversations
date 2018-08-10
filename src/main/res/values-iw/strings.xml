@@ -15,13 +15,13 @@
   <string name="action_unblock_domain">בטל חסימת דומיין</string>
   <string name="title_activity_manage_accounts">נהל חשבונות</string>
   <string name="title_activity_settings">הגדרות</string>
-  <string name="title_activity_sharewith">שתף בעזרת Conversations</string>
+  <string name="title_activity_sharewith">שתף בעזרת Pn</string>
   <string name="title_activity_start_conversation">התחל דיון</string>
   <string name="title_activity_block_list">רשימת חסימה</string>
   <string name="just_now">ממש עכשיו</string>
   <string name="minute_ago">לפני דקה</string>
   <string name="minutes_ago">לפני %d דקות</string>
-  <string name="unread_conversations">שיחות שלא נקראו</string>
+  <string name="unread_pn">שיחות שלא נקראו</string>
   <string name="sending">שולח...</string>
   <string name="message_decrypting">כעת מפענח צופן הודעה. אנא המתן…</string>
   <string name="pgp_message">הודעה מוצפנת OpenPGP</string>
@@ -51,8 +51,8 @@
   <string name="unblock">בטל חסימה</string>
   <string name="save">שמור</string>
   <string name="ok">אישור</string>
-  <string name="crash_report_title">Conversations קרסה</string>
-  <string name="crash_report_message">על ידי שליחת Stacktraces אתה עוזר להתקדמות הפיתוח של Conversations\n<b>אזהרה:</b> פעולה זו תעשה שימוש בחשבון XMPP שלך כדי לשלוח עקבות מחסנית אל המפתח.</string>
+  <string name="crash_report_title">Pn קרסה</string>
+  <string name="crash_report_message">על ידי שליחת Stacktraces אתה עוזר להתקדמות הפיתוח של Pn\n<b>אזהרה:</b> פעולה זו תעשה שימוש בחשבון XMPP שלך כדי לשלוח עקבות מחסנית אל המפתח.</string>
   <string name="send_now">שלח עכשיו</string>
   <string name="send_never">לעולם אל תשאל שוב</string>
   <string name="problem_connecting_to_account">התחברות לחשבון נכשלה</string>
@@ -75,16 +75,16 @@
   <string name="send_unencrypted">שלח ללא הצפנה</string>
   <string name="decryption_failed">פענוח נכשל. אולי אין לך את המפתח הפרטי המתאים.</string>
   <string name="openkeychain_required">OpenKeychain</string>
-  <string name="openkeychain_required_long">Conversations מסתמכת על אפליקציית צד-שלישי הקרויה <b>OpenKeychain</b> כדי להצפין ולפענח הודעות וגם כדי לנהל את המפתחות הפומביים שלך.\n\nOpenKeychain הינה רשויה תחת GPLv3 וזמינה ב F-Droid וגם ב Google Play.\n\n<small>(אנא התחל מחדש את Conversations לאחר מכן.)</small></string>
+  <string name="openkeychain_required_long">Pn מסתמכת על אפליקציית צד-שלישי הקרויה <b>OpenKeychain</b> כדי להצפין ולפענח הודעות וגם כדי לנהל את המפתחות הפומביים שלך.\n\nOpenKeychain הינה רשויה תחת GPLv3 וזמינה ב F-Droid וגם ב Google Play.\n\n<small>(אנא התחל מחדש את Pn לאחר מכן.)</small></string>
   <string name="restart">התחל מחדש</string>
   <string name="install">התקן</string>
   <string name="openkeychain_not_installed">אנא התקן OpenKeychain</string>
   <string name="offering">מציע…</string>
   <string name="waiting">ממתין…</string>
   <string name="no_pgp_key">לא נמצא מפתח OpenPGP</string>
-  <string name="contact_has_no_pgp_key">Conversations אינה מסוגלת להצפין את הודעותיך משום שאיש הקשר שלך אינו מכריז על המפתח הפומבי שלו או שלה.\n\n<small>אנא בקש מאיש הקשר שלך להגדיר את OpenPGP.</small></string>
+  <string name="contact_has_no_pgp_key">Pn אינה מסוגלת להצפין את הודעותיך משום שאיש הקשר שלך אינו מכריז על המפתח הפומבי שלו או שלה.\n\n<small>אנא בקש מאיש הקשר שלך להגדיר את OpenPGP.</small></string>
   <string name="no_pgp_keys">לא נמצאו מפתחות OpenPGP</string>
-  <string name="contacts_have_no_pgp_keys">Conversations אינה מסוגלת להצפין את הודעותיך משום שאנשי הקשר שלך אינם מכריזים על המפתח הפומבי שלהם.\n\n<small>אנא בקש מאנשי הקשר שלך לארגן OpenPGP.</small></string>
+  <string name="contacts_have_no_pgp_keys">Pn אינה מסוגלת להצפין את הודעותיך משום שאנשי הקשר שלך אינם מכריזים על המפתח הפומבי שלהם.\n\n<small>אנא בקש מאנשי הקשר שלך לארגן OpenPGP.</small></string>
   <string name="pref_general">כללי</string>
   <string name="pref_accept_files">קבל קבצים</string>
   <string name="pref_accept_files_summary">קבל אוטומטית קבצים שגודלם קטן מ…</string>
@@ -92,7 +92,7 @@
   <string name="pref_notifications_summary">תודיע כאשר הודעה חדשה מגיעה</string>
   <string name="pref_vibrate">הרטט</string>
   <string name="pref_never_send_crash">לעולם אל תשלח דיווחי קריסה</string>
-  <string name="pref_never_send_crash_summary">על ידי שליחת עקבות מחסנית אתה עוזר להתקדמות הפיתוח של Conversations</string>
+  <string name="pref_never_send_crash_summary">על ידי שליחת עקבות מחסנית אתה עוזר להתקדמות הפיתוח של Pn</string>
   <string name="pref_confirm_messages">אשר הודעות</string>
   <string name="openpgp_error">אפליקציית OpenKeychain דיווחה על שגיאה</string>
   <string name="accept">קבל</string>
@@ -202,8 +202,8 @@
   <string name="ignore">התעלם</string>
   <string name="without_mutual_presence_updates"><b>אזהרה:</b>שליחה ללא הרשאות עדכוני נוכחות הדדיות עלולה לגרום לתוצאות בלתי צפויות.\n\n<small>השתמש בתפריט \"פרטי משתמש\" ואשר עדכוני נוכחות</small></string>
   <string name="pref_expert_options_summary">נא להיזהר!</string>
-  <string name="title_activity_about">אודות Conversations</string>
-  <string name="pref_about_conversations_summary">אודות גרסה ורישיון </string>
+  <string name="title_activity_about">אודות Pn</string>
+  <string name="pref_about_pn_summary">אודות גרסה ורישיון </string>
   <string name="title_pref_quiet_hours">שעות שקטות</string>
   <string name="title_pref_quiet_hours_start_time">זמן התחלה</string>
   <string name="title_pref_quiet_hours_end_time">זמן סיום</string>
@@ -286,7 +286,7 @@
   <string name="pdf_document">מסמך PDF</string>
   <string name="apk">אפליקציית אנדרויד</string>
   <string name="vcard">איש קשר</string>
-  <string name="touch_to_open_conversations">לחץ כדי לפתוח את Conversations</string>
+  <string name="touch_to_open_pn">לחץ כדי לפתוח את Pn</string>
   <string name="avatar_has_been_published">תמונת הפרופיל פורסמה!</string>
   <string name="sending_x_file">שולח %s</string>
   <string name="offering_x_file">מציע %s</string>
@@ -352,5 +352,5 @@
   <string name="shared_file_with_x">שתף קובץ בעזרת %s</string>
   <string name="shared_image_with_x">שתף תמונה בעזרת %s</string>
   <string name="sync_with_contacts">סנכרן עם אנשי קשר</string>
-  <string name="sync_with_contacts_long">‏Conversations מבקשת להתאים את רשימת XMPP שלך עם אנשי הקשר שלך כדי להציג את השמות המלאים שלהם כולל אווטארים.\n\nConversations רק תקרא את אנשי הקשר שלך ותתאים אותם באופן מקומי מבלי להעלות אותם לשרת שלך.\n\nכעת אתה תתבקש להעניק הרשאה כדי לגשת להתקן שלך.</string>
+  <string name="sync_with_contacts_long">‏Pn מבקשת להתאים את רשימת XMPP שלך עם אנשי הקשר שלך כדי להציג את השמות המלאים שלהם כולל אווטארים.\n\nPn רק תקרא את אנשי הקשר שלך ותתאים אותם באופן מקומי מבלי להעלות אותם לשרת שלך.\n\nכעת אתה תתבקש להעניק הרשאה כדי לגשת להתקן שלך.</string>
 </resources>

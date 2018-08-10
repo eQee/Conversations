@@ -12,13 +12,13 @@
         android:longClickable="true"
         android:scaleType="centerCrop"/>
 
-    <eu.siacs.conversations.ui.widget.CopyTextView
+    <de.eqee.pn.ui.widget.CopyTextView
         android:id="@+id/message_body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoLink="web"
         android:longClickable="true"
-        android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+        android:textAppearance="@style/TextAppearance.Pn.Body1"/>
 
     <Button
         android:id="@+id/download_button"
@@ -51,7 +51,7 @@
             android:layout_alignParentRight="true"
             android:paddingBottom="16dp"
             android:paddingRight="16dp"
-            android:textAppearance="@style/TextAppearance.Conversations.Caption"/>
+            android:textAppearance="@style/TextAppearance.Pn.Caption"/>
 
         <SeekBar
             android:id="@+id/progress"

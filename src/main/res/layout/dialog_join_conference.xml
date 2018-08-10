@@ -27,12 +27,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/conference_address"
-            app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error"
-            app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint">
+            app:errorTextAppearance="@style/TextAppearance.Pn.Design.Error"
+            app:hintTextAppearance="@style/TextAppearance.Pn.Design.Hint">
 
             <AutoCompleteTextView
                 android:id="@+id/jid"
-                style="@style/Widget.Conversations.EditText"
+                style="@style/Widget.Pn.EditText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"/>
@@ -40,7 +40,7 @@
 
         <CheckBox
             android:id="@+id/bookmark"
-            style="@style/Widget.Conversations.CheckBox"
+            style="@style/Widget.Pn.CheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
