@@ -519,8 +519,8 @@ missatges.\n\nAra se us demanarà que desactiveu-las.</string>
   <string name="welcome_text">Jabber és una xarxa de missatgeria instantània independent del proveïdor. Podeu
  utilitzar aquest client amb el servidor de Jabber que trieu.\nPerò 
 per a la seva comoditat hem facilitat crear un compte a converses.im¹; un proveïdor especialment indicat per a l\'ús amb Pn.</string>
-  <string name="magic_create_text">Us guiarem pel procés de creació d\'un compte a pn.eqee.de.¹\nQuan 
-trieu pn.eqee.de com a proveïdor, podreu comunicar-vos amb els usuaris 
+  <string name="magic_create_text">Us guiarem pel procés de creació d\'un compte a eqee.de.¹\nQuan 
+trieu eqee.de com a proveïdor, podreu comunicar-vos amb els usuaris 
 d\'altres proveïdors donant-los la vostra ID Jabber completa.</string>
   <string name="your_full_jid_will_be">La vostra Jabber ID completa serà: %s</string>
   <string name="create_account">Crear compte</string>

@@ -511,8 +511,8 @@
   <string name="security_error_invalid_file_access">Segurtasun akatsa: fitxategi sarrera baliogabea</string>
   <string name="no_application_to_share_uri">Ez da aplikaziorik aurkitu URIa partekatzeko</string>
   <string name="share_uri_with">URIa honekin partekatu...</string>
-  <string name="welcome_text">Jabber hornitzaleez independiente den protokolo bat da. Bezero hau aukeratzen duzun edozein Jabber zerbitzariarekin erabili dezakezu.\nHala ere zure erosotasunerako pn.eqee.de¹-en, Pnekin bereziki erabiltzeko egokia den hornitzaile batean, kontu bat sortzea erraz egin dugu.</string>
-  <string name="magic_create_text">pn.eqee.de-en kontu bat sortzeko prozesuan zehar gidatuko zaitugu.\npn.eqee.de¹ hornitzaile bezala aukeratzerakoan beste hornitzaileen erabiltzaileekin komunikatzeko gai izango zara haiei zure Jabber ID osoa emanez.</string>
+  <string name="welcome_text">Jabber hornitzaleez independiente den protokolo bat da. Bezero hau aukeratzen duzun edozein Jabber zerbitzariarekin erabili dezakezu.\nHala ere zure erosotasunerako eqee.de¹-en, Pnekin bereziki erabiltzeko egokia den hornitzaile batean, kontu bat sortzea erraz egin dugu.</string>
+  <string name="magic_create_text">eqee.de-en kontu bat sortzeko prozesuan zehar gidatuko zaitugu.\neqee.de¹ hornitzaile bezala aukeratzerakoan beste hornitzaileen erabiltzaileekin komunikatzeko gai izango zara haiei zure Jabber ID osoa emanez.</string>
   <string name="your_full_jid_will_be">Zure Jabber ID osoa %s izango da</string>
   <string name="create_account">Kontua sortu</string>
   <string name="use_own_provider">Nire hornitzale propioa erabili</string>

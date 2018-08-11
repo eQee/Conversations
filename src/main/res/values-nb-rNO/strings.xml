@@ -493,7 +493,7 @@
   <string name="security_error_invalid_file_access">Sikkerhetsfeil: Ugyldig filtilgang</string>
   <string name="no_application_to_share_uri">Fant inget program til deling av URI</string>
   <string name="share_uri_with">Del URI med…</string>
-  <string name="magic_create_text">Vi geleider deg gjennom prosessen med å opprette en konto på pn.eqee.de.¹\nNår du velger pn.eqee.de som tilbyder vil du kunne snakke med brukere fra andre tilbyder ved å gi dem din fulle XMPP-ID.</string>
+  <string name="magic_create_text">Vi geleider deg gjennom prosessen med å opprette en konto på eqee.de.¹\nNår du velger eqee.de som tilbyder vil du kunne snakke med brukere fra andre tilbyder ved å gi dem din fulle XMPP-ID.</string>
   <string name="your_full_jid_will_be">Din fulle Jabber-ID vil være: %s</string>
   <string name="create_account">Opprett konto</string>
   <string name="use_own_provider">Bruk min egen tilbyder</string>

@@ -515,8 +515,8 @@
   <string name="no_application_to_share_uri">Nie odnaleziono aplikacji skojarzonej z URI</string>
   <string name="share_uri_with">Udostępnij URI za pomocą...</string>
   <string name="welcome_text">Jabber to niezależna sieć komunikacji natychmiastowej. Możesz użyć tego klienta z dowolnym serwerem który wybierzesz.
-Dla twojej wygody ułatwiliśmy stworzenie konta na pn.eqee.de; serwerze dostosowanym do Pn.</string>
-  <string name="magic_create_text">Przeprowadzimy Cię przez proces tworzenia konta na pn.eqee.de.\nKiedy wybierzesz konto na serwerze pn.eqee.de, będziesz mógł komunikować się z użytkownikami na innych serwerach podając im swój pełen Jabber ID.</string>
+Dla twojej wygody ułatwiliśmy stworzenie konta na eqee.de; serwerze dostosowanym do Pn.</string>
+  <string name="magic_create_text">Przeprowadzimy Cię przez proces tworzenia konta na eqee.de.\nKiedy wybierzesz konto na serwerze eqee.de, będziesz mógł komunikować się z użytkownikami na innych serwerach podając im swój pełen Jabber ID.</string>
   <string name="your_full_jid_will_be">Twój pełen Jabber ID będzie następujący: %s</string>
   <string name="create_account">Utwórz konto</string>
   <string name="use_own_provider">Użyj innego serwera</string>

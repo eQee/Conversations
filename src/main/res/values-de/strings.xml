@@ -511,8 +511,8 @@
   <string name="security_error_invalid_file_access">Sicherheitsfehler: Dateizugriff nicht erlaubt</string>
   <string name="no_application_to_share_uri">Keine Anwendung zum Teilen der URI gefunden</string>
   <string name="share_uri_with">Teile URI mit…</string>
-  <string name="welcome_text">Jabber ist ein anbieterunabhängiges Instant Messaging Netzwerk. Du kannst diesen Client mit jedem beliebigen Jabber-Server nutzen.\nUm es dir leicht zu machen, haben wir die Möglichkeit geschaffen, ein Konto auf pn.eqee.de¹ anzulegen; ein Anbieter, der speziell für die Verwendung mit Pn geeignet ist.</string>
-  <string name="magic_create_text">Wir führen dich durch den Prozess der Kontoerstellung auf pn.eqee.de.¹\nWenn du pn.eqee.de als Provider wählst, kannst du mit Nutzern anderer Anbieter kommunizieren, indem du ihnen deine vollständige Jabber-ID gibst.</string>
+  <string name="welcome_text">Jabber ist ein anbieterunabhängiges Instant Messaging Netzwerk. Du kannst diesen Client mit jedem beliebigen Jabber-Server nutzen.\nUm es dir leicht zu machen, haben wir die Möglichkeit geschaffen, ein Konto auf eqee.de¹ anzulegen; ein Anbieter, der speziell für die Verwendung mit Pn geeignet ist.</string>
+  <string name="magic_create_text">Wir führen dich durch den Prozess der Kontoerstellung auf eqee.de.¹\nWenn du eqee.de als Provider wählst, kannst du mit Nutzern anderer Anbieter kommunizieren, indem du ihnen deine vollständige Jabber-ID gibst.</string>
   <string name="your_full_jid_will_be">Deine vollständige Jabber ID lautet: %s</string>
   <string name="create_account">Konto erstellen</string>
   <string name="use_own_provider">Nutze eigenen Provider</string>

@@ -515,8 +515,8 @@ sau chiar pierderea mesajelor.\nÎn continuare veți fi rugați să dezactivați
   <string name="security_error_invalid_file_access">Eroare de securitate.: Acces fișier invalid</string>
   <string name="no_application_to_share_uri">Nu s-a găsit nici o aplicație care să partajeze adresa</string>
   <string name="share_uri_with">Partajează adresa cu...</string>
-  <string name="welcome_text">Jabber este o rețea de mesagerie instant ce nu depinde de un anumit furnizor. Aveți posibilitatea să utilizați acest client cu orice server Jabber doriți.\nTotuși, pentru confortul dumneavoastră, am facilitat crearea unui cont pe pn.eqee.de¹; un furnizor potrivit pentru utilizarea cu aplicația Pn.</string>
-  <string name="magic_create_text">Vă vom ghida prin procesul de creare al unui cont pe pn.eqee.de.¹\nCând alegeți pn.eqee.de ca furnizor veți putea comunica cu utilizatorii altor furnizori oferindu-le ID-ul dumneavoastră Jabber.</string>
+  <string name="welcome_text">Jabber este o rețea de mesagerie instant ce nu depinde de un anumit furnizor. Aveți posibilitatea să utilizați acest client cu orice server Jabber doriți.\nTotuși, pentru confortul dumneavoastră, am facilitat crearea unui cont pe eqee.de¹; un furnizor potrivit pentru utilizarea cu aplicația Pn.</string>
+  <string name="magic_create_text">Vă vom ghida prin procesul de creare al unui cont pe eqee.de.¹\nCând alegeți eqee.de ca furnizor veți putea comunica cu utilizatorii altor furnizori oferindu-le ID-ul dumneavoastră Jabber.</string>
   <string name="your_full_jid_will_be">ID-ul Jabber va fi: %s</string>
   <string name="create_account">Creează cont</string>
   <string name="use_own_provider">Folosește furnizorul meu</string>

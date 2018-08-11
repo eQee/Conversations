@@ -511,8 +511,8 @@
   <string name="security_error_invalid_file_access">Beveiligingsfout: Ongeldige bestandstoegang</string>
   <string name="no_application_to_share_uri">Geen applicatie om URI te delen</string>
   <string name="share_uri_with">URI delen met…</string>
-  <string name="welcome_text">Jabber is een provider-onafhankelijk berichtennetwerk. Je kan deze cliënt gebruiken met elke willekeurige Jabber-server.\nOm het je gemakkelijker te maken kun je simpelweg een account aanmaken pn.eqee.de¹; een provider speciaal geschikt voor Pn.</string>
-  <string name="magic_create_text">We zullen je helpen een account op pn.eqee.de¹ aan te maken.\nWanneer je pn.eqee.de als je provider kiest kan je met gebruikers van andere providers communiceren door hen je volledige Jabber-ID te geven.</string>
+  <string name="welcome_text">Jabber is een provider-onafhankelijk berichtennetwerk. Je kan deze cliënt gebruiken met elke willekeurige Jabber-server.\nOm het je gemakkelijker te maken kun je simpelweg een account aanmaken eqee.de¹; een provider speciaal geschikt voor Pn.</string>
+  <string name="magic_create_text">We zullen je helpen een account op eqee.de¹ aan te maken.\nWanneer je eqee.de als je provider kiest kan je met gebruikers van andere providers communiceren door hen je volledige Jabber-ID te geven.</string>
   <string name="your_full_jid_will_be">Je volledige Jabber-ID zal %s zijn</string>
   <string name="create_account">Account aanmaken</string>
   <string name="use_own_provider">Gebruik mijn eigen provider</string>

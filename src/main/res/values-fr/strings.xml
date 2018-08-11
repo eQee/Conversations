@@ -510,8 +510,8 @@
   <string name="security_error_invalid_file_access">Erreur de sécurité : accès fichier non-valide</string>
   <string name="no_application_to_share_uri">Aucune application trouvée pour partager l\'URI</string>
   <string name="share_uri_with">Partager l\'URI avec...</string>
-  <string name="welcome_text">Jabber est un réseau de messagerie instantanée indépendant du fournisseur. Vous pouvez utiliser ce client avec n\'importe quel serveur Jabber que vous choisissez.\nToutefois, pour votre commodité, nous avons facilité la création d\'un compte sur pn.eqee.de¹ ; un fournisseur spécialement adapté à l\'utilisation avec Pn.</string>
-  <string name="magic_create_text">Nous vous guiderons pendant toute la procédure de création d\'un compte utilisateur sur pn.eqee.de.¹\nEn choisissant pn.eqee.de comme fournisseur, vous pourrez communiquer avec les utilisateurs d\'autres fournisseurs en leur transmettant votre Jabber ID complet. </string>
+  <string name="welcome_text">Jabber est un réseau de messagerie instantanée indépendant du fournisseur. Vous pouvez utiliser ce client avec n\'importe quel serveur Jabber que vous choisissez.\nToutefois, pour votre commodité, nous avons facilité la création d\'un compte sur eqee.de¹ ; un fournisseur spécialement adapté à l\'utilisation avec Pn.</string>
+  <string name="magic_create_text">Nous vous guiderons pendant toute la procédure de création d\'un compte utilisateur sur eqee.de.¹\nEn choisissant eqee.de comme fournisseur, vous pourrez communiquer avec les utilisateurs d\'autres fournisseurs en leur transmettant votre Jabber ID complet. </string>
   <string name="your_full_jid_will_be">Votre Jabber ID complet sera : %s</string>
   <string name="create_account">Créer un compte</string>
   <string name="use_own_provider">Utiliser votre propre fournisseur</string>

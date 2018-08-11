@@ -511,8 +511,8 @@
   <string name="security_error_invalid_file_access">安全错误：文件访问权限无效</string>
   <string name="no_application_to_share_uri">未找到可以分享此链接的应用</string>
   <string name="share_uri_with">分享链接……</string>
-  <string name="welcome_text">Jabber 是一个独立即时通讯网络服务商。无论您选择何种 Jabber 服务器，您都可使用本客户端\n但是为了让您更方便些，我们希望您在 pn.eqee.de¹ 创建账号，它专门为 Pn 服务。</string>
-  <string name="magic_create_text">我们将会引导你完成在 pn.eqee.de¹ 上注册账号的过程。\n当获得了 pn.eqee.de 提供的账号以后，你可以通过添加使用其他提供商的好友的完整 Jabber ID 来与他们联络。</string>
+  <string name="welcome_text">Jabber 是一个独立即时通讯网络服务商。无论您选择何种 Jabber 服务器，您都可使用本客户端\n但是为了让您更方便些，我们希望您在 eqee.de¹ 创建账号，它专门为 Pn 服务。</string>
+  <string name="magic_create_text">我们将会引导你完成在 eqee.de¹ 上注册账号的过程。\n当获得了 eqee.de 提供的账号以后，你可以通过添加使用其他提供商的好友的完整 Jabber ID 来与他们联络。</string>
   <string name="your_full_jid_will_be">您完整的 Jabble ID 是：%s </string>
   <string name="create_account">创建账户</string>
   <string name="use_own_provider">使用我自己的服务端</string>

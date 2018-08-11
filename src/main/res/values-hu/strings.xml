@@ -510,8 +510,8 @@
   <string name="security_error_invalid_file_access">Biztonsági hiba: Érvénytelen fájl hozzáférés</string>
   <string name="no_application_to_share_uri">Nem találtunk URI-t használó alkalmazást</string>
   <string name="share_uri_with">Megosztás URI-ként</string>
-  <string name="welcome_text">A Jabber egy szolgáltató független, azonnali üzenetküldő hálózat. Ezt az ügyfél programot bármelyik Jabber szerverhez használhatja.\nDe a könnyebbség kedvéért létrehozhat egy fiókot a pn.eqee.de¹ szolgáltatón is; ami kifejezetten a Pn programmal való használatra lett tervezve.</string>
-  <string name="magic_create_text">Végigvezetjük a fiók létrehozás folyamatán a pn.eqee.de-en.¹ \ nHa a pn.eqee.de-et választja szolgáltatójának, akkor képes lesz kommunikálni a más szolgáltatóknál lévő felhasználókkal, ha megadja nekik a teljes Jabber azonosítóját.</string>
+  <string name="welcome_text">A Jabber egy szolgáltató független, azonnali üzenetküldő hálózat. Ezt az ügyfél programot bármelyik Jabber szerverhez használhatja.\nDe a könnyebbség kedvéért létrehozhat egy fiókot a eqee.de¹ szolgáltatón is; ami kifejezetten a Pn programmal való használatra lett tervezve.</string>
+  <string name="magic_create_text">Végigvezetjük a fiók létrehozás folyamatán a eqee.de-en.¹ \ nHa a eqee.de-et választja szolgáltatójának, akkor képes lesz kommunikálni a más szolgáltatóknál lévő felhasználókkal, ha megadja nekik a teljes Jabber azonosítóját.</string>
   <string name="your_full_jid_will_be">A teljes Jabber azonosítód ez lesz: %s</string>
   <string name="create_account">Fiók létrehozása</string>
   <string name="use_own_provider">Saját szolgáltató használata</string>

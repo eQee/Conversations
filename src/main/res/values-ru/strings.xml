@@ -502,7 +502,7 @@
   <string name="security_error_invalid_file_access">Ошибка безопасности: недействительный доступ к файлу</string>
   <string name="no_application_to_share_uri">Не найдено приложения для отправки</string>
   <string name="share_uri_with">Отправить URI…</string>
-  <string name="magic_create_text">Мы поможем Вам создать аккаунт на pn.eqee.de¹.\nВыбрав pn.eqee.de в качестве провайдера, вы сможете общаться с пользователями других провайдеров, сообщив им свой полный Jabber ID.</string>
+  <string name="magic_create_text">Мы поможем Вам создать аккаунт на eqee.de¹.\nВыбрав eqee.de в качестве провайдера, вы сможете общаться с пользователями других провайдеров, сообщив им свой полный Jabber ID.</string>
   <string name="your_full_jid_will_be">Ваш полный Jabber ID: %s</string>
   <string name="create_account">Создать аккаунт</string>
   <string name="use_own_provider">Использовать свой провайдер</string>
