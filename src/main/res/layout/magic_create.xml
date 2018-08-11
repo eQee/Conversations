@@ -90,7 +90,7 @@
                 android:textColor="?android:textColorSecondary"
                 android:textSize="@dimen/fineprint_size"
                 android:maxLines="1"
-                android:text="@string/free_for_six_month"
+                android:text="@string/eqee_registered_trademark"
                 android:layout_centerHorizontal="true"/>
         </RelativeLayout>
     </ScrollView>
