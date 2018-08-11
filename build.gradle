@@ -68,11 +68,12 @@ android {
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 280
-        versionName "2.2.8"
+        versionName "3.0.0"
         archivesBaseName += "-$versionName"
         applicationId "de.eqee.pn"
         resValue "string", "applicationId", applicationId
         resValue "string", "app_name", "Pn"
+	resValue "string", "app_server", "pn.eqee.de"
     }
 
     dataBinding {
