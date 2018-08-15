@@ -45,3 +45,8 @@ proguard/
 
 import-summary.txt
 .navigation/
+
+freeCompat/
+freeSystem/
+playstoreCompat/
+playstoreSystem/
