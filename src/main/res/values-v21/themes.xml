@@ -3,4 +3,7 @@
     <style name="PnTheme.Dark" parent="PnTheme.Dark.Base">
         <item name="android:navigationBarColor">@color/black</item>
     </style>
+    <style name="PnTheme.Pink" parent="PnTheme.Pink.Base">
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
 </resources>

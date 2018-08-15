@@ -23,22 +23,32 @@
 	<color name="orange500">#ffff9800</color>
 	<color name="blue_a100">#82b1ff</color>
 	<color name="blue_a200">#ff448AFF</color>
+	<color name="pink_a100">#ff61ff</color>
+	<color name="pink_a200">#ffff1AFF</color>
 	<color name="green500">#ff4CAF50</color>
 	<color name="green600">#ff43A047</color>
 	<color name="green700">#ff388E3C</color>
 	<color name="green800">#ff2E7D32</color>
 	<color name="green900">#ff1B5E20</color>
-        <color name="blue500">#ff4C50AF</color>
-        <color name="blue600">#ff4347A0</color>
-        <color name="blue700">#ff383C8E</color>
-        <color name="blue800">#ff2E327D</color>
-        <color name="blue900">#ff1B205E</color>
+    <color name="blue500">#ff4C50AF</color>
+    <color name="blue600">#ff4347A0</color>
+    <color name="blue700">#ff383C8E</color>
+    <color name="blue800">#ff2E327D</color>
+    <color name="blue900">#ff1B205E</color>
+	<color name="pink500">#ffff50AF</color>
+	<color name="pink600">#ffff47A0</color>
+	<color name="pink700">#ffff3C8E</color>
+	<color name="pink800">#ffff327D</color>
+	<color name="pink900">#ff205e</color>
 
 	<color name="green700_desaturated">#4d8e50</color> <!-- desaturated by 15 -->
 	<color name="green900_desaturated">#ff295e2d</color> <!-- desaturated by 15 -->
 
-        <color name="blue700_desaturated">#4d508e</color> <!-- desaturated by 15 -->
-        <color name="blue900_desaturated">#ff292d5e</color> <!-- desaturated by 15 -->
+    <color name="blue700_desaturated">#4d508e</color> <!-- desaturated by 15 -->
+    <color name="blue900_desaturated">#ff292d5e</color> <!-- desaturated by 15 -->
+
+	<color name="pink700_desaturated">#ff508e</color> <!-- desaturated by 15 -->
+	<color name="pink900_desaturated">#ffff2d5e</color> <!-- desaturated by 15 -->
 
 	<!-- scanner -->
 	<color name="scan_result_dots">#c04CAF50</color>

@@ -49,14 +49,15 @@ public class ThemeHelper {
 		final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 		final Resources resources = context.getResources();
 		final boolean dark = sharedPreferences.getString(SettingsActivity.THEME, resources.getString(R.string.theme)).equals("dark");
+		final boolean pink = sharedPreferences.getString(SettingsActivity.THEME, "light").equals("pink");
 		final String fontSize = sharedPreferences.getString("font_size", resources.getString(R.string.default_font_size));
 		switch (fontSize) {
 			case "medium":
-				return dark ? R.style.PnTheme_Dark_Medium : R.style.PnTheme_Medium;
+				return pink ? R.style.PnTheme_Pink_Medium : dark ? R.style.PnTheme_Dark_Medium : R.style.PnTheme_Medium;
 			case "large":
-				return dark ? R.style.PnTheme_Dark_Large : R.style.PnTheme_Large;
+				return pink ? R.style.PnTheme_Pink_Large : dark ? R.style.PnTheme_Dark_Large : R.style.PnTheme_Large;
 			default:
-				return dark ? R.style.PnTheme_Dark : R.style.PnTheme;
+				return pink ? R.style.PnTheme_Pink : dark ? R.style.PnTheme_Dark : R.style.PnTheme;
 		}
 	}
 
@@ -64,14 +65,15 @@ public class ThemeHelper {
 		final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 		final Resources resources = context.getResources();
 		final boolean dark = sharedPreferences.getString(SettingsActivity.THEME, resources.getString(R.string.theme)).equals("dark");
+		final boolean pink = sharedPreferences.getString(SettingsActivity.THEME, "light").equals("pink");
 		final String fontSize = sharedPreferences.getString("font_size", resources.getString(R.string.default_font_size));
 		switch (fontSize) {
 			case "medium":
-				return dark ? R.style.PnTheme_Dark_Dialog_Medium : R.style.PnTheme_Dialog_Medium;
+				return pink ? R.style.PnTheme_Pink_Dialog_Medium : dark ? R.style.PnTheme_Dark_Dialog_Medium : R.style.PnTheme_Dialog_Medium;
 			case "large":
-				return dark ? R.style.PnTheme_Dark_Dialog_Large : R.style.PnTheme_Dialog_Large;
+				return pink ? R.style.PnTheme_Pink_Dialog_Large : dark ? R.style.PnTheme_Dark_Dialog_Large : R.style.PnTheme_Dialog_Large;
 			default:
-				return dark ? R.style.PnTheme_Dark_Dialog : R.style.PnTheme_Dialog;
+				return pink ? R.style.PnTheme_Pink_Dialog : dark ? R.style.PnTheme_Dark_Dialog : R.style.PnTheme_Dialog;
 		}
 	}
 
@@ -80,6 +82,17 @@ public class ThemeHelper {
 			case R.style.PnTheme_Dark:
 			case R.style.PnTheme_Dark_Large:
 			case R.style.PnTheme_Dark_Medium:
+				return true;
+			default:
+				return false;
+		}
+	}
+
+	public static boolean isPink(@StyleRes int id) {
+		switch (id) {
+			case R.style.PnTheme_Pink:
+			case R.style.PnTheme_Pink_Large:
+			case R.style.PnTheme_Pink_Medium:
 				return true;
 			default:
 				return false;

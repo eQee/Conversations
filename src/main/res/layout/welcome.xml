@@ -55,7 +55,7 @@
                     android:layout_width="192dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:background="@android:color/holo_green_light"
+                    android:background="@color/pink900"
                     android:text="@string/create_account"
                     android:textAppearance="@android:style/TextAppearance.Material.Small" />
 
