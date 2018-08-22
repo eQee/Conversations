@@ -10,6 +10,7 @@
         <item name="color_background_primary">@color/grey50</item>
         <item name="color_background_secondary">@color/grey200</item>
         <item name="color_background_tertiary">@color/grey300</item>
+        <item name="color_background_recording">@color/grey50</item>
         <item name="color_warning">@color/red_a700</item>
         <item name="TextColorOnline">@color/blue600</item>
         <item name="TextColorError">@color/red800</item>
@@ -111,6 +112,7 @@
         <item name="color_background_primary">@color/grey800</item>
         <item name="color_background_secondary">@color/grey900</item>
         <item name="color_background_tertiary">@color/grey700</item>
+        <item name="color_background_recording">@color/grey800</item>
         <item name="activity_background_search">@drawable/search_background_dark</item>
         <item name="activity_background_no_results">@drawable/no_results_background_dark</item>
         <item name="list_item_background">@drawable/list_item_background_dark</item>
@@ -212,6 +214,7 @@
         <item name="color_background_primary">@color/grey50</item>
         <item name="color_background_secondary">@color/grey200</item>
         <item name="color_background_tertiary">@color/grey300</item>
+        <item name="color_background_recording">@color/grey800</item>
         <item name="color_warning">@color/red_a700</item>
         <item name="TextColorOnline">@color/pink600</item>
         <item name="TextColorError">@color/red800</item>
@@ -388,6 +391,7 @@
         <item name="colorPrimaryDark">@color/blue700</item>
         <item name="colorAccent">@color/blue_a200</item>
         <item name="color_background_primary">@color/grey50</item>
+        <item name="color_background_recording">@color/grey50</item>
         <item name="divider">@color/black12</item>
         <item name="TextSizeBody2">14sp</item>
         <item name="TextSizeDisplay2">45sp</item>
@@ -399,6 +403,7 @@
         <item name="colorPrimaryDark">@color/blue900</item>
         <item name="colorAccent">@color/blue_a100</item>
         <item name="color_background_primary">@color/grey800</item>
+        <item name="color_background_recording">@color/grey800</item>
         <item name="divider">@color/white12</item>
         <item name="TextSizeBody2">14sp</item>
         <item name="TextSizeDisplay2">45sp</item>
@@ -408,8 +413,9 @@
     <style name="PnTheme.Pink.Dialog" parent="@style/Theme.AppCompat.Dialog">
         <item name="colorPrimary">@color/pink800</item>
         <item name="colorPrimaryDark">@color/pink900</item>
-        <item name="colorAccent">@color/pink_a100</item>
+        <item name="colorAccent">@color/pink_a200</item>
         <item name="color_background_primary">@color/grey50</item>
+        <item name="color_background_recording">@color/grey800</item>
         <item name="divider">@color/black12</item>
         <item name="TextSizeBody2">14sp</item>
         <item name="TextSizeDisplay2">45sp</item>
