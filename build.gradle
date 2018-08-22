@@ -19,6 +19,9 @@ repositories {
     maven {
         url "https://oss.sonatype.org/content/repositories/snapshots"
     }
+    maven {
+        url  "https://giphy.bintray.com/giphy-sdk"
+    }
 }
 
 configurations {
@@ -32,6 +35,9 @@ ext {
 }
 
 dependencies {
+    compile('com.giphy.sdk:core:1.0.2@aar') {
+        transitive=true
+    }
     playstoreImplementation('com.google.firebase:firebase-messaging:15.0.2') {
         exclude group: 'com.google.firebase', module: 'firebase-core'
     }
@@ -50,7 +56,7 @@ dependencies {
     implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
     implementation 'org.whispersystems:signal-protocol-java:2.6.2'
     implementation 'com.makeramen:roundedimageview:2.3.0'
-    implementation "com.wefika:flowlayout:0.4.1"
+    implementation 'com.wefika:flowlayout:0.4.1'
     implementation 'net.ypresto.androidtranscoder:android-transcoder:0.2.0'
     implementation 'rocks.xmpp:xmpp-addr:0.8.0-SNAPSHOT'
     implementation 'org.osmdroid:osmdroid-android:6.0.1'
