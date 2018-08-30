@@ -3,6 +3,7 @@ package de.eqee.pn.entities;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.text.SpannableStringBuilder;
+import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
 import java.net.MalformedURLException;
@@ -14,16 +15,23 @@ import java.util.List;
 import java.util.Set;
 
 import de.eqee.pn.Config;
+import de.eqee.pn.R;
 import de.eqee.pn.crypto.axolotl.FingerprintStatus;
 import de.eqee.pn.http.AesGcmURLStreamHandler;
+import de.eqee.pn.http.HttpConnectionManager;
+import de.eqee.pn.http.HttpDownloadConnection;
 import de.eqee.pn.ui.adapter.MessageAdapter;
+import de.eqee.pn.services.XmppConnectionService;
 import de.eqee.pn.utils.CryptoHelper;
 import de.eqee.pn.utils.Emoticons;
 import de.eqee.pn.utils.GeoHelper;
+import de.eqee.pn.utils.GiphyHelper;
 import de.eqee.pn.utils.MessageUtils;
 import de.eqee.pn.utils.MimeUtils;
 import de.eqee.pn.utils.UIHelper;
+import de.eqee.pn.xmpp.XmppConnection;
 import rocks.xmpp.addr.Jid;
+
 
 public class Message extends AbstractEntity {
 
@@ -51,6 +59,7 @@ public class Message extends AbstractEntity {
 	public static final int TYPE_FILE = 2;
 	public static final int TYPE_STATUS = 3;
 	public static final int TYPE_PRIVATE = 4;
+	public static final int TYPE_GIPHY = 5;
 
 	public static final String CONVERSATION = "conversationUuid";
 	public static final String COUNTERPART = "counterpart";
@@ -99,7 +108,8 @@ public class Message extends AbstractEntity {
 	private String errorMessage = null;
 	private Set<ReadByMarker> readByMarkers = new HashSet<>();
 
-	private Boolean isGeoUri = null;
+    private Boolean isGeoUri = null;
+    private Boolean isGiphyUri = null;
 	private Boolean isEmojisOnly = null;
 	private Boolean treatAsDownloadable = null;
 	private FileParams fileParams = null;
@@ -303,6 +313,7 @@ public class Message extends AbstractEntity {
 		}
 		this.body = body;
 		this.isGeoUri = null;
+		this.isGiphyUri = null;
 		this.isEmojisOnly = null;
 		this.treatAsDownloadable = null;
 		this.fileParams = null;
@@ -571,6 +582,8 @@ public class Message extends AbstractEntity {
 						this.getBody().length() + message.getBody().length() <= Config.MAX_DISPLAY_MESSAGE_CHARS &&
 						!message.isGeoUri() &&
 						!this.isGeoUri() &&
+                        !message.isGiphyUri() &&
+                        !this.isGiphyUri() &&
 						!message.treatAsDownloadable() &&
 						!this.treatAsDownloadable() &&
 						!message.getBody().startsWith(ME_COMMAND) &&
@@ -729,6 +742,13 @@ public class Message extends AbstractEntity {
 		return isGeoUri;
 	}
 
+    public synchronized boolean isGiphyUri() {
+        if (isGiphyUri == null) {
+            isGiphyUri = GiphyHelper.GIPHY_URI.matcher(body).matches();
+        }
+        return isGiphyUri;
+    }
+
 	public synchronized void resetFileParams() {
 		this.fileParams = null;
 	}
@@ -755,7 +775,15 @@ public class Message extends AbstractEntity {
 					fileParams.height = parseInt(parts[3]);
 				case 2:
 					fileParams.url = parseUrl(parts[0]);
-					fileParams.size = parseLong(parts[1]);
+
+					if (fileParams.url.getHost() == GiphyHelper.GIPHY_HOST)
+                    {
+                        fileParams.size = -1;
+                        fileParams.width = GiphyHelper.GIPHY_MEDIA_WIDTH;
+                        fileParams.height = GiphyHelper.GIPHY_MEDIA_HEIGHT;
+                    } else {
+                        fileParams.size = parseLong(parts[1]);
+                    }
 					break;
 				case 3:
 					fileParams.size = parseLong(parts[0]);
@@ -797,7 +825,7 @@ public class Message extends AbstractEntity {
 	}
 
 	public boolean isFileOrImage() {
-		return type == TYPE_FILE || type == TYPE_IMAGE;
+		return type == TYPE_FILE || type == TYPE_IMAGE || type == TYPE_GIPHY;
 	}
 
 	public boolean hasFileOnRemoteHost() {

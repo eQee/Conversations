@@ -36,6 +36,8 @@ public final class Config {
 
 	public static final String LOGTAG = "pn";
 
+	public static final String GIPHY_API_KEY = "";
+
 	public static final Jid BUG_REPORTS = Jid.of("bugs@eqee.de");
 
 

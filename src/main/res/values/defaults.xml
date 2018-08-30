@@ -43,5 +43,8 @@
     <string name="omemo_setting_default">default_on</string>
     <string name="default_font_size">small</string>
     <bool name="use_share_location_plugin">true</bool>
+    <bool name="position_tracking_enabled">true</bool>
+    <bool name="giphy_enabled">true</bool>
+    <bool name="giphy_show_auto">true</bool>
     <bool name="start_searching">false</bool>
 </resources>

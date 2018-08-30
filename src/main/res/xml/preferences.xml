@@ -310,6 +310,28 @@
                     android:summary="@string/pref_treat_vibrate_as_dnd_summary"
                     android:title="@string/pref_treat_vibrate_as_silent"/>
             </PreferenceCategory>
+            <PreferenceCategory android:title="@string/pref_position_tracking">
+            <CheckBoxPreference
+                android:defaultValue="@bool/position_tracking_enabled"
+                android:disableDependentsState="true"
+                android:key="position_tracking_enabled"
+                android:summary="@string/pref_position_tracking_enabled"
+                android:title="@string/pref_position_tracking_enabled"/>
+            </PreferenceCategory>
+            <PreferenceCategory android:title="@string/pref_giphy">
+                <CheckBoxPreference
+                    android:defaultValue="@bool/giphy_enabled"
+                    android:disableDependentsState="true"
+                    android:key="giphy_enabled"
+                    android:summary="@string/pref_giphy_enabled"
+                    android:title="@string/pref_giphy_enabled"/>
+                <CheckBoxPreference
+                    android:defaultValue="@bool/giphy_show_auto"
+                    android:disableDependentsState="true"
+                    android:key="giphy_show_auto"
+                    android:summary="@string/pref_giphy_show_auto"
+                    android:title="@string/pref_giphy_show_auto"/>
+            </PreferenceCategory>
             <PreferenceCategory android:title="@string/pref_expert_options_other">
                 <CheckBoxPreference
                     android:defaultValue="@bool/autojoin"

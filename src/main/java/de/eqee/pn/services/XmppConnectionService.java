@@ -469,6 +469,23 @@ public class XmppConnectionService extends Service {
 		}
 	}
 
+	public void attachGiphyToConversation(final Conversation conversation, final Uri uri, final UiCallback<Message> callback) {
+		int encryption = conversation.getNextEncryption();
+		if (encryption == Message.ENCRYPTION_PGP) {
+			encryption = Message.ENCRYPTION_DECRYPTED;
+		}
+		Message message = new Message(conversation, uri.toString(), encryption);
+		if (conversation.getNextCounterpart() != null) {
+			message.setCounterpart(conversation.getNextCounterpart());
+		}
+		if (encryption == Message.ENCRYPTION_DECRYPTED) {
+			getPgpEngine().encrypt(message, callback);
+		} else {
+			sendMessage(message);
+			callback.success(message);
+		}
+	}
+
 	public void attachFileToConversation(final Conversation conversation, final Uri uri, final String type, final UiCallback<Message> callback) {
 		if (FileBackend.weOwnFile(this, uri)) {
 			Log.d(Config.LOGTAG, "trying to attach file that belonged to us");

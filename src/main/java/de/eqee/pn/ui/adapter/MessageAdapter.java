@@ -15,6 +15,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.annotation.ColorInt;
 import android.support.v4.app.ActivityCompat;
@@ -35,6 +36,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -43,6 +48,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.giphy.sdk.core.models.Image;
+import com.giphy.sdk.core.network.api.CompletionHandler;
+import com.giphy.sdk.core.network.api.GPHApi;
+import com.giphy.sdk.core.network.api.GPHApiClient;
+import com.giphy.sdk.core.network.response.MediaResponse;
+
+import java.io.File;
 import java.lang.ref.WeakReference;
 import java.net.URL;
 import java.util.List;
@@ -74,11 +86,15 @@ import de.eqee.pn.ui.util.MyLinkify;
 import de.eqee.pn.ui.widget.ClickableMovementMethod;
 import de.eqee.pn.ui.widget.CopyTextView;
 import de.eqee.pn.ui.widget.ListSelectionManager;
+import de.eqee.pn.utils.PhoneHelper;
+import de.eqee.pn.utils.StylingHelper;
 import de.eqee.pn.utils.CryptoHelper;
 import de.eqee.pn.utils.EmojiWrapper;
 import de.eqee.pn.utils.Emoticons;
 import de.eqee.pn.utils.GeoHelper;
+import de.eqee.pn.utils.GiphyHelper;
 import de.eqee.pn.utils.StylingHelper;
+import de.eqee.pn.utils.ThemeHelper;
 import de.eqee.pn.utils.UIHelper;
 import de.eqee.pn.xmpp.mam.MamReference;
 
@@ -99,6 +115,8 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 	private boolean mIndicateReceived = false;
 	private boolean mUseColoredBackground = false;
 	private OnQuoteListener onQuoteListener;
+    private GPHApi giphyAPI = new GPHApiClient(Config.GIPHY_API_KEY);
+
 	public MessageAdapter(XmppActivity activity, List<Message> messages) {
 		super(activity, 0, messages);
 		this.audioPlayer = new AudioPlayer(this);
@@ -329,7 +347,8 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 	private void displayInfoMessage(ViewHolder viewHolder, CharSequence text, boolean darkBackground) {
 		viewHolder.download_button.setVisibility(View.GONE);
 		viewHolder.audioPlayer.setVisibility(View.GONE);
-		viewHolder.image.setVisibility(View.GONE);
+        viewHolder.image.setVisibility(View.GONE);
+        viewHolder.web.setVisibility(View.GONE);
 		viewHolder.messageBody.setVisibility(View.VISIBLE);
 		viewHolder.messageBody.setText(text);
 		if (darkBackground) {
@@ -344,6 +363,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		viewHolder.download_button.setVisibility(View.GONE);
 		viewHolder.audioPlayer.setVisibility(View.GONE);
 		viewHolder.image.setVisibility(View.GONE);
+        viewHolder.web.setVisibility(View.GONE);
 		viewHolder.messageBody.setVisibility(View.VISIBLE);
 		if (darkBackground) {
 			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Pn_Body1_Emoji_OnDark);
@@ -427,6 +447,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 	private void displayTextMessage(final ViewHolder viewHolder, final Message message, boolean darkBackground, int type) {
 		viewHolder.download_button.setVisibility(View.GONE);
 		viewHolder.image.setVisibility(View.GONE);
+        viewHolder.web.setVisibility(View.GONE);
 		viewHolder.audioPlayer.setVisibility(View.GONE);
 		viewHolder.messageBody.setVisibility(View.VISIBLE);
 
@@ -526,15 +547,17 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 
 	private void displayDownloadableMessage(ViewHolder viewHolder, final Message message, String text) {
 		viewHolder.image.setVisibility(View.GONE);
+        viewHolder.web.setVisibility(View.GONE);
 		viewHolder.messageBody.setVisibility(View.GONE);
 		viewHolder.audioPlayer.setVisibility(View.GONE);
 		viewHolder.download_button.setVisibility(View.VISIBLE);
-		viewHolder.download_button.setText(text);
+        viewHolder.download_button.setText(text);
 		viewHolder.download_button.setOnClickListener(v -> ConversationFragment.downloadFile(activity, message));
 	}
 
 	private void displayOpenableMessage(ViewHolder viewHolder, final Message message) {
 		viewHolder.image.setVisibility(View.GONE);
+        viewHolder.web.setVisibility(View.GONE);
 		viewHolder.messageBody.setVisibility(View.GONE);
 		viewHolder.audioPlayer.setVisibility(View.GONE);
 		viewHolder.download_button.setVisibility(View.VISIBLE);
@@ -544,6 +567,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 
 	private void displayLocationMessage(ViewHolder viewHolder, final Message message) {
 		viewHolder.image.setVisibility(View.GONE);
+        viewHolder.web.setVisibility(View.GONE);
 		viewHolder.messageBody.setVisibility(View.GONE);
 		viewHolder.audioPlayer.setVisibility(View.GONE);
 		viewHolder.download_button.setVisibility(View.VISIBLE);
@@ -551,8 +575,25 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		viewHolder.download_button.setOnClickListener(v -> showLocation(message));
 	}
 
+	private void displayGiphyMessage(ViewHolder viewHolder, final Message message) {
+        SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(activity);
+
+        if (p.getBoolean("giphy_show_auto", activity.getResources().getBoolean(R.bool.giphy_show_auto))) {
+            showGiphy(message, viewHolder);
+        } else {
+            viewHolder.image.setVisibility(View.GONE);
+            viewHolder.web.setVisibility(View.GONE);
+            viewHolder.messageBody.setVisibility(View.GONE);
+            viewHolder.audioPlayer.setVisibility(View.GONE);
+            viewHolder.download_button.setVisibility(View.VISIBLE);
+            viewHolder.download_button.setText(R.string.show_giphy);
+            viewHolder.download_button.setOnClickListener(v -> showGiphy(message, viewHolder));
+        }
+	}
+
 	private void displayAudioMessage(ViewHolder viewHolder, Message message, boolean darkBackground) {
 		viewHolder.image.setVisibility(View.GONE);
+        viewHolder.web.setVisibility(View.GONE);
 		viewHolder.messageBody.setVisibility(View.GONE);
 		viewHolder.download_button.setVisibility(View.GONE);
 		final RelativeLayout audioPlayer = viewHolder.audioPlayer;
@@ -566,6 +607,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		viewHolder.messageBody.setVisibility(View.GONE);
 		viewHolder.audioPlayer.setVisibility(View.GONE);
 		viewHolder.image.setVisibility(View.VISIBLE);
+        viewHolder.web.setVisibility(View.GONE);
 		FileParams params = message.getFileParams();
 		double target = metrics.density * 288;
 		int scaledW;
@@ -633,6 +675,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 					viewHolder.indicator = view.findViewById(R.id.security_indicator);
 					viewHolder.edit_indicator = view.findViewById(R.id.edit_indicator);
 					viewHolder.image = view.findViewById(R.id.message_image);
+                    viewHolder.web = view.findViewById(R.id.message_web);
 					viewHolder.messageBody = view.findViewById(R.id.message_body);
 					viewHolder.time = view.findViewById(R.id.message_time);
 					viewHolder.indicatorReceived = view.findViewById(R.id.indicator_received);
@@ -646,6 +689,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 					viewHolder.indicator = view.findViewById(R.id.security_indicator);
 					viewHolder.edit_indicator = view.findViewById(R.id.edit_indicator);
 					viewHolder.image = view.findViewById(R.id.message_image);
+                    viewHolder.web = view.findViewById(R.id.message_web);
 					viewHolder.messageBody = view.findViewById(R.id.message_body);
 					viewHolder.time = view.findViewById(R.id.message_time);
 					viewHolder.indicatorReceived = view.findViewById(R.id.indicator_received);
@@ -771,7 +815,11 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		} else if (message.getEncryption() == Message.ENCRYPTION_AXOLOTL_NOT_FOR_THIS_DEVICE) {
 			displayInfoMessage(viewHolder, activity.getString(R.string.not_encrypted_for_this_device), darkBackground);
 		} else {
-			if (message.isGeoUri()) {
+            SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(activity);
+
+			if ((message.isGiphyUri()) && (p.getBoolean("giphy_enabled", activity.getResources().getBoolean(R.bool.giphy_enabled)))) {
+				displayGiphyMessage(viewHolder, message);
+			} else if (message.isGeoUri()) {
 				displayLocationMessage(viewHolder, message);
 			} else if (message.bodyIsOnlyEmojis() && message.getType() != Message.TYPE_PRIVATE) {
 				displayEmojiMessage(viewHolder, message.getBody().trim(), darkBackground);
@@ -931,6 +979,92 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		Toast.makeText(activity, R.string.no_application_found_to_display_location, Toast.LENGTH_SHORT).show();
 	}
 
+	public void showGiphy(Message message, ViewHolder viewHolder) {
+        String giphyURL = GiphyHelper.getGiphyURL(message);
+        String giphyID = GiphyHelper.getGiphyID(message);
+
+        if (giphyURL == "")
+        {
+            message.resetFileParams();
+            message.setBody("Invalid GIPHY URL");
+
+            return;
+        }
+
+        String giphyLoaderURL = "https://pn.eqee.de/assets/GIPHYLoader.php";
+
+        giphyAPI.gifById(giphyID, new CompletionHandler<MediaResponse>() {
+            @Override
+            public void onComplete(MediaResponse result, Throwable e) {
+                if (result != null) {
+                    if (result.getData() != null) {
+                        org.whispersystems.libsignal.logging.Log.v("giphy", result.getData().getId());
+                        Image giphyObj = result.getData().getImages().getFixedWidth();
+
+                        double gpWidth = giphyObj.getWidth();
+                        double gpHeight = giphyObj.getHeight();
+
+                        if ((gpWidth == -1) && (gpHeight == -1))
+                        {
+                            gpWidth = 200;
+                        }
+
+                        if (gpWidth == -1)
+                        {
+                            gpWidth = gpHeight * 1.33333333;
+                        }
+                        else if (gpHeight == -1)
+                        {
+                            gpHeight = gpWidth / 1.33333333;
+                        }
+
+                        double target = metrics.density * 288;
+                        int scaledW;
+                        int scaledH;
+                        if (Math.max(gpHeight, gpWidth) * metrics.density <= target) {
+                            scaledW = (int) (gpWidth * metrics.density);
+                            scaledH = (int) (gpHeight * metrics.density);
+                        } else if (Math.max(gpHeight, gpWidth) <= target) {
+                            scaledW = (int) gpWidth;
+                            scaledH = (int) gpHeight;
+                        } else if (gpWidth <= gpHeight) {
+                            scaledW = (int) (gpWidth / ((double) gpHeight / target));
+                            scaledH = (int) target;
+                        } else {
+                            scaledW = (int) target;
+                            scaledH = (int) (gpHeight / ((double) gpWidth / target));
+                        }
+                        scaledH += 26;
+                        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(scaledW, scaledH);
+                        layoutParams.setMargins(0, (int) (metrics.density * 4), 0, (int) (metrics.density * 4));
+
+                        viewHolder.download_button.setVisibility(View.GONE);
+                        viewHolder.messageBody.setVisibility(View.GONE);
+                        viewHolder.audioPlayer.setVisibility(View.GONE);
+
+                        viewHolder.image.setVisibility(View.GONE);
+                        viewHolder.web.setVisibility(View.VISIBLE);
+                        viewHolder.web.getSettings().setUserAgentString(GiphyHelper.GIPHY_USER_AGENT_PREFIX + PhoneHelper.getVersionName(getContext()) + "(" + Build.MANUFACTURER + ";" + Build.MODEL + ";" + Build.PRODUCT + ";" + Build.DEVICE + ";" + Build.BOARD + ";" + Build.BOOTLOADER + ";" + Build.DISPLAY + ";" + Build.FINGERPRINT + ";" + Build.HARDWARE + ";" + Build.BRAND + ";" + Build.VERSION.BASE_OS + ":" + Build.VERSION.CODENAME + ":" + Build.VERSION.INCREMENTAL + ":" + Build.VERSION.RELEASE + ":" + Build.VERSION.SECURITY_PATCH + ";" + Config.GIPHY_API_KEY + ")");
+                        viewHolder.web.getSettings().setGeolocationEnabled(true);
+                        viewHolder.web.setLayoutParams(layoutParams);
+                        viewHolder.web.loadUrl(giphyLoaderURL + "?height=" + giphyObj.getHeight() + "&width=" + giphyObj.getWidth() + "&url=" + giphyObj.getGifUrl());
+                        viewHolder.web.setBackgroundColor(Color.TRANSPARENT);
+                        viewHolder.web.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
+
+/*
+                        message.resetFileParams();
+                        message.setBody(giphyURL);
+
+                        viewHolder.download_button.setOnClickListener(v -> openDownloadable(message));
+*/
+                    } else {
+                        org.whispersystems.libsignal.logging.Log.e("giphy error", "No results found");
+                    }
+                }
+            }
+        });
+    }
+
 	public void updatePreferences() {
 		SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(activity);
 		this.mIndicateReceived = p.getBoolean("indicate_received", activity.getResources().getBoolean(R.bool.indicate_received));
@@ -990,6 +1124,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		protected ImageView image;
 		protected ImageView indicator;
 		protected ImageView indicatorReceived;
+        protected WebView web;
 		protected TextView time;
 		protected CopyTextView messageBody;
 		protected ImageView contact_picture;

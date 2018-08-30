@@ -12,6 +12,17 @@
         android:longClickable="true"
         android:scaleType="centerCrop"/>
 
+    <WebView
+        android:id="@+id/message_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="@color/black87"
+        android:longClickable="true"
+        android:scaleType="centerCrop"/>
+
     <de.eqee.pn.ui.widget.CopyTextView
         android:id="@+id/message_body"
         android:layout_width="wrap_content"

@@ -58,6 +58,11 @@
                 android:id="@+id/attach_location"
                 android:title="@string/send_location"
                 android:icon="?attr/ic_attach_location"/>
+
+            <item
+                android:id="@+id/attach_giphy"
+                android:title="@string/choose_giphy"
+                android:icon="?attr/ic_attach_giphy"/>
         </menu>
     </item>
     <item

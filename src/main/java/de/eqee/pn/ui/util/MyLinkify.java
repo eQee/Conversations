@@ -36,6 +36,7 @@ import java.util.Locale;
 
 import de.eqee.pn.ui.text.FixedURLSpan;
 import de.eqee.pn.utils.GeoHelper;
+import de.eqee.pn.utils.GiphyHelper;
 import de.eqee.pn.utils.Patterns;
 import de.eqee.pn.utils.XmppUri;
 
@@ -99,6 +100,7 @@ public class MyLinkify {
         if (includeGeo) {
             Linkify.addLinks(body, GeoHelper.GEO_URI, "geo");
         }
+        Linkify.addLinks(body, GiphyHelper.GIPHY_URI, "giphy");
         FixedURLSpan.fix(body);
     }
 }

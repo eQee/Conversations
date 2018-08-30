@@ -130,6 +130,9 @@ public class ConversationAdapter extends RecyclerView.Adapter<ConversationAdapte
 				if (message.isGeoUri()) {
 					imageResource = activity.getThemeResource(R.attr.ic_attach_location, R.drawable.ic_attach_location);
 					showPreviewText = false;
+				} else if (message.isGiphyUri()){
+					imageResource = activity.getThemeResource(R.attr.ic_attach_giphy, R.drawable.ic_attach_giphy);
+					showPreviewText = false;
 				} else {
 					final String mime = message.getMimeType();
 					switch (mime == null ? "" : mime.split("/")[0]) {

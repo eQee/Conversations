@@ -46,6 +46,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -909,6 +911,11 @@ public abstract class XmppActivity extends ActionBarActivity {
 				}
 			}
 		}
+	}
+
+	public void loadAnimation(Message message, WebView webView) {
+			webView.loadUrl(message.getBody());
+			webView.setBackgroundColor(0x00000000);
 	}
 
 	protected interface OnValueEdited {

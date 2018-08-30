@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.Build;
+import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.IdRes;
@@ -97,6 +98,7 @@ import de.eqee.pn.ui.util.SendButtonTool;
 import de.eqee.pn.ui.util.ShareUtil;
 import de.eqee.pn.ui.widget.EditMessage;
 import de.eqee.pn.utils.GeoHelper;
+import de.eqee.pn.utils.GiphyHelper;
 import de.eqee.pn.utils.MessageUtils;
 import de.eqee.pn.utils.NickValidityChecker;
 import de.eqee.pn.utils.Patterns;
@@ -130,7 +132,8 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 	public static final int ATTACHMENT_CHOICE_RECORD_VOICE = 0x0304;
 	public static final int ATTACHMENT_CHOICE_LOCATION = 0x0305;
 	public static final int ATTACHMENT_CHOICE_INVALID = 0x0306;
-	public static final int ATTACHMENT_CHOICE_RECORD_VIDEO = 0x0307;
+    public static final int ATTACHMENT_CHOICE_RECORD_VIDEO = 0x0307;
+    public static final int ATTACHMENT_CHOICE_CHOOSE_GIPHY = 0x0308;
 
 	public static final String RECENTLY_USED_QUICK_ACTION = "recently_used_quick_action";
 	public static final String STATE_CONVERSATION_UUID = ConversationFragment.class.getName() + ".uuid";
@@ -602,6 +605,29 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 		}
 	}
 
+	private void attachGiphyToConversation(Conversation conversation, Uri uri) {
+	    if (conversation == null) {
+	        return;
+        }
+        activity.xmppConnectionService.attachGiphyToConversation(conversation, uri, new UiCallback<Message>() {
+
+            @Override
+            public void success(Message message) {
+
+            }
+
+            @Override
+            public void error(int errorCode, Message object) {
+                //TODO show possible pgp error
+            }
+
+            @Override
+            public void userInputRequried(PendingIntent pi, Message object) {
+
+            }
+        });
+    }
+
 	private void attachLocationToConversation(Conversation conversation, Uri uri) {
 		if (conversation == null) {
 			return;
@@ -842,6 +868,11 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 				Uri geo = Uri.parse("geo:" + String.valueOf(latitude) + "," + String.valueOf(longitude));
 				attachLocationToConversation(conversation, geo);
 				break;
+            case ATTACHMENT_CHOICE_CHOOSE_GIPHY:
+                String giphyID = data.getStringExtra("giphy");
+                Uri giphy = Uri.parse("giphy:" + String.valueOf(giphyID));
+				attachGiphyToConversation(conversation, giphy);
+                break;
 			case REQUEST_INVITE_TO_CONVERSATION:
 				XmppActivity.ConferenceInvite invite = XmppActivity.ConferenceInvite.parse(data);
 				if (invite != null) {
@@ -906,7 +937,18 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 		final MenuItem menuInviteContact = menu.findItem(R.id.action_invite);
 		final MenuItem menuMute = menu.findItem(R.id.action_mute);
 		final MenuItem menuUnmute = menu.findItem(R.id.action_unmute);
+		final MenuItem menuGiphy = menu.findItem(R.id.attach_giphy);
 
+        SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(activity);
+
+        if (p.getBoolean("giphy_enabled", activity.getResources().getBoolean(R.bool.giphy_enabled)))
+        {
+            menuGiphy.setVisible(true);
+        }
+        else
+        {
+            menuGiphy.setVisible(false);
+        }
 
 		if (conversation != null) {
 			if (conversation.getMode() == Conversation.MODE_MULTI) {
@@ -1182,6 +1224,7 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 			case R.id.attach_take_picture:
 			case R.id.attach_record_video:
 			case R.id.attach_choose_file:
+			case R.id.attach_giphy:
 			case R.id.attach_record_voice:
 			case R.id.attach_location:
 				handleAttachmentSelection(item);
@@ -1235,8 +1278,11 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 				attachFile(ATTACHMENT_CHOICE_RECORD_VIDEO);
 				break;
 			case R.id.attach_choose_file:
-				attachFile(ATTACHMENT_CHOICE_CHOOSE_FILE);
+                attachFile(ATTACHMENT_CHOICE_CHOOSE_FILE);
 				break;
+            case R.id.attach_giphy:
+                attachFile(ATTACHMENT_CHOICE_CHOOSE_GIPHY);
+                break;
 			case R.id.attach_record_voice:
 				attachFile(ATTACHMENT_CHOICE_RECORD_VOICE);
 				break;
@@ -1296,8 +1342,13 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 			if (!hasPermissions(attachmentChoice, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 				return;
 			}
-		}
-		try {
+		} else if (attachmentChoice != ATTACHMENT_CHOICE_CHOOSE_GIPHY) {
+            if (!hasPermissions(attachmentChoice, Manifest.permission.INTERNET)) {
+                return;
+            }
+        }
+
+        try {
 			activity.getPreferences().edit()
 					.putString(RECENTLY_USED_QUICK_ACTION, SendButtonAction.of(attachmentChoice).toString())
 					.apply();
@@ -1529,6 +1580,9 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 				case ATTACHMENT_CHOICE_LOCATION:
 					intent = GeoHelper.getFetchIntent(activity);
 					break;
+                case ATTACHMENT_CHOICE_CHOOSE_GIPHY:
+                    intent = GiphyHelper.getFetchIntent(activity);
+                    break;
 			}
 			if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
 				if (chooser) {

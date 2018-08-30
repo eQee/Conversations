@@ -50,6 +50,7 @@ import de.eqee.pn.ui.PnActivity;
 import de.eqee.pn.ui.ManageAccountActivity;
 import de.eqee.pn.ui.TimePreference;
 import de.eqee.pn.utils.GeoHelper;
+import de.eqee.pn.utils.GiphyHelper;
 import de.eqee.pn.utils.UIHelper;
 import de.eqee.pn.xmpp.XmppConnection;
 
@@ -442,6 +443,20 @@ public class NotificationService {
 						++addedActionsCount;
 					}
 				}
+				SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(mXmppConnectionService);
+				if ((addedActionsCount < 3) && (p.getBoolean("giphy_enabled", mXmppConnectionService.getResources().getBoolean(R.bool.giphy_enabled)))) {
+					final Message firstGiphyMessage = getFirstGiphyMessage(messages);
+					if (firstGiphyMessage != null) {
+						String label = mXmppConnectionService.getResources().getString(R.string.show_giphy);
+						// TODO - HERE - MESSAGE NOTIFICATION DISPLAY
+						NotificationCompat.Action giphyAction = new NotificationCompat.Action.Builder(
+								R.drawable.ic_room_white_24dp,
+								label,
+								null).build();
+						mBuilder.addAction(giphyAction);
+						++addedActionsCount;
+					}
+				}
 				if (addedActionsCount < 3) {
 					Message firstDownloadableMessage = getFirstDownloadableMessage(messages);
 					if (firstDownloadableMessage != null) {
@@ -586,6 +601,15 @@ public class NotificationService {
 	private Message getFirstLocationMessage(final Iterable<Message> messages) {
 		for (final Message message : messages) {
 			if (message.isGeoUri()) {
+				return message;
+			}
+		}
+		return null;
+	}
+
+	private Message getFirstGiphyMessage(final Iterable<Message> messages) {
+		for (final Message message : messages) {
+			if (message.isGiphyUri()) {
 				return message;
 			}
 		}
