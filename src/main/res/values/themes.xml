@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="PnTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/blue600</item>
-        <item name="colorPrimaryDark">@color/blue800</item>
-        <item name="colorAccent">@color/blue_a200</item>
+    <style name="PnTheme.Light.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="popupOverlayStyle">@style/ThemeOverlay.AppCompat.Light</item>
-
-        <item name="color_background_primary">@color/grey50</item>
-        <item name="color_background_secondary">@color/grey200</item>
-        <item name="color_background_tertiary">@color/grey300</item>
-        <item name="color_background_recording">@color/grey50</item>
-        <item name="color_warning">@color/red_a700</item>
-        <item name="TextColorOnline">@color/blue600</item>
-        <item name="TextColorError">@color/red800</item>
 
         <item name="activity_background_search">@drawable/search_background_light</item>
         <item name="activity_background_no_results">@drawable/no_results_background_light</item>
         <item name="list_item_background">@drawable/list_item_background_light</item>
-
-        <item name="EmojiColor">@color/black</item>
 
         <item name="windowActionModeOverlay">true</item>
         <item name="android:actionModeBackground">?colorPrimary</item>
@@ -32,8 +19,6 @@
         <item name="TextSizeInput">16sp</item>
         <item name="TextSeparation">5sp</item>
         <item name="IconSize">18sp</item>
-
-        <item name="divider">@color/black12</item>
 
         <item type="reference" name="ic_send_cancel_offline">@drawable/ic_send_cancel_offline</item>
         <item type="reference" name="ic_send_location_offline">@drawable/ic_send_location_offline</item>
@@ -53,12 +38,6 @@
 
         <item type="reference" name="message_bubble_received_monochrome">@drawable/message_bubble_received_white</item>
         <item type="reference" name="message_bubble_sent">@drawable/message_bubble_sent</item>
-        <item type="reference" name="message_bubble_received_blue">@drawable/message_bubble_received</item>
-        <item type="reference" name="message_bubble_received_pink">@drawable/message_bubble_received_pink</item>
-
-        <item name="unread_count">@color/blue700_desaturated</item>
-
-        <item name="pn_overview_background">@color/blue700</item>
 
         <item type="float" name="icon_alpha">0.54</item>
 
@@ -102,27 +81,12 @@
         <item type="reference" name="icon_enable_undecided_device">@drawable/ic_new_releases_black_24dp</item>
     </style>
 
-    <style name="PnTheme.Dark" parent="PnTheme.Dark.Base" />
-
     <style name="PnTheme.Dark.Base" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/blue800</item>
-        <item name="colorPrimaryDark">@color/blue900</item>
-        <item name="colorAccent">@color/blue_a100</item>
         <item name="popupOverlayStyle">@style/ThemeOverlay.AppCompat.Dark</item>
 
-        <item name="color_background_primary">@color/grey800</item>
-        <item name="color_background_secondary">@color/grey900</item>
-        <item name="color_background_tertiary">@color/grey700</item>
-        <item name="color_background_recording">@color/grey800</item>
         <item name="activity_background_search">@drawable/search_background_dark</item>
         <item name="activity_background_no_results">@drawable/no_results_background_dark</item>
         <item name="list_item_background">@drawable/list_item_background_dark</item>
-        <item name="color_warning">@color/red_a100</item>
-
-        <item name="TextColorOnline">@color/blue500</item>
-        <item name="TextColorError">@color/red500</item>
-
-        <item name="EmojiColor">@color/white</item>
 
         <item name="windowActionModeOverlay">true</item>
         <item name="android:actionModeBackground">?colorPrimary</item>
@@ -136,12 +100,11 @@
         <item name="TextSeparation">5sp</item>
         <item name="IconSize">18sp</item>
 
-        <item name="divider">@color/white12</item>
-
         <item type="reference" name="ic_send_cancel_offline">@drawable/ic_send_cancel_offline_white</item>
         <item type="reference" name="ic_send_location_offline">@drawable/ic_send_location_offline_white</item>
         <item type="reference" name="ic_send_photo_offline">@drawable/ic_send_photo_offline_white</item>
         <item type="reference" name="ic_send_picture_offline">@drawable/ic_send_picture_offline_white</item>
+
         <item type="reference" name="ic_send_text_offline">@drawable/ic_send_text_offline_white</item>
         <item type="reference" name="ic_send_videocam_offline">@drawable/ic_send_videocam_offline_white</item>
         <item type="reference" name="ic_send_voice_offline">@drawable/ic_send_voice_offline_white</item>
@@ -156,12 +119,6 @@
 
         <item type="reference" name="message_bubble_received_monochrome">@drawable/message_bubble_received_grey</item>
         <item type="reference" name="message_bubble_sent">@drawable/message_bubble_sent_grey</item>
-        <item type="reference" name="message_bubble_received_blue">@drawable/message_bubble_received_dark</item>
-        <item type="reference" name="message_bubble_received_pink">@drawable/message_bubble_received_pink</item>
-
-        <item name="unread_count">@color/blue900_desaturated</item>
-
-        <item name="pn_overview_background">@color/blue900</item>
 
         <item type="float" name="icon_alpha">0.7</item>
 
@@ -204,110 +161,7 @@
         <item type="reference" name="icon_notifications_none">@drawable/ic_notifications_none_white_24dp</item>
         <item type="reference" name="icon_enable_undecided_device">@drawable/ic_new_releases_white_24dp</item>
     </style>
-
-    <style name="PnTheme.Pink" parent="PnTheme.Pink.Base" />
-
-    <style name="PnTheme.Pink.Base" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/pink600</item>
-        <item name="colorPrimaryDark">@color/pink800</item>
-        <item name="colorAccent">@color/pink_a200</item>
-        <item name="popupOverlayStyle">@style/ThemeOverlay.AppCompat.Light</item>
-
-        <item name="color_background_primary">@color/grey50</item>
-        <item name="color_background_secondary">@color/grey200</item>
-        <item name="color_background_tertiary">@color/grey300</item>
-        <item name="color_background_recording">@color/grey800</item>
-        <item name="color_warning">@color/red_a700</item>
-        <item name="TextColorOnline">@color/pink600</item>
-        <item name="TextColorError">@color/red800</item>
-
-        <item name="activity_background_search">@drawable/search_background_light</item>
-        <item name="activity_background_no_results">@drawable/no_results_background_light</item>
-        <item name="list_item_background">@drawable/list_item_background_light</item>
-
-        <item name="EmojiColor">@color/black</item>
-
-        <item name="windowActionModeOverlay">true</item>
-        <item name="android:actionModeBackground">?colorPrimary</item>
-
-        <item name="TextSizeCaption">12sp</item>
-        <item name="TextSizeBody1">14sp</item>
-        <item name="TextSizeBody2">14sp</item>
-        <item name="TextSizeSubhead">16sp</item>
-        <item name="TextSizeTitle">20sp</item>
-        <item name="TextSizeInput">16sp</item>
-        <item name="TextSeparation">5sp</item>
-        <item name="IconSize">18sp</item>
-
-        <item name="divider">@color/black12</item>
-
-        <item type="reference" name="ic_send_cancel_offline">@drawable/ic_send_cancel_offline</item>
-        <item type="reference" name="ic_send_location_offline">@drawable/ic_send_location_offline</item>
-        <item type="reference" name="ic_send_photo_offline">@drawable/ic_send_photo_offline</item>
-        <item type="reference" name="ic_send_picture_offline">@drawable/ic_send_picture_offline</item>
-        <item type="reference" name="ic_send_text_offline">@drawable/ic_send_text_offline</item>
-        <item type="reference" name="ic_send_videocam_offline">@drawable/ic_send_videocam_offline</item>
-        <item type="reference" name="ic_send_voice_offline">@drawable/ic_send_voice_offline</item>
-
-        <item type="reference" name="ic_attach_camera">@drawable/ic_attach_camera</item>
-        <item type="reference" name="ic_attach_videocam">@drawable/ic_attach_videocam</item>
-        <item type="reference" name="ic_attach_document">@drawable/ic_attach_document</item>
-        <item type="reference" name="ic_attach_location">@drawable/ic_attach_location</item>
-        <item type="reference" name="ic_attach_photo">@drawable/ic_attach_photo</item>
-        <item type="reference" name="ic_attach_record">@drawable/ic_attach_record</item>
-        <item type="reference" name="ic_attach_giphy">@drawable/ic_attach_giphy</item>
-
-        <item type="reference" name="message_bubble_received_monochrome">@drawable/message_bubble_received_white</item>
-        <item type="reference" name="message_bubble_sent">@drawable/message_bubble_sent</item>
-        <item type="reference" name="message_bubble_received_blue">@drawable/message_bubble_received</item>
-        <item type="reference" name="message_bubble_received_pink">@drawable/message_bubble_received_pink</item>
-
-        <item name="unread_count">@color/pink700_desaturated</item>
-
-        <item name="pn_overview_background">@color/pink700</item>
-
-        <item type="float" name="icon_alpha">0.54</item>
-
-        <item name="dialog_horizontal_padding">24dp</item>
-        <item name="dialog_vertical_padding">16dp</item>
-
-        <item type="reference" name="icon_add_group">@drawable/ic_group_add_white_24dp</item>
-        <item type="reference" name="icon_add_person">@drawable/ic_person_add_white_24dp</item>
-        <item type="reference" name="icon_cancel">@drawable/ic_cancel_black_24dp</item>
-        <item type="reference" name="icon_copy">@drawable/ic_content_copy_black_24dp</item>
-        <item type="reference" name="icon_discard">@drawable/ic_delete_white_24dp</item>
-        <item type="reference" name="icon_download">@drawable/ic_file_download_white_24dp</item>
-        <item type="reference" name="icon_edit">@drawable/ic_edit_white_24dp</item>
-        <item type="reference" name="icon_edit_body">@drawable/ic_edit_black_24dp</item>
-        <item type="reference" name="icon_save">@drawable/ic_save_black_24dp</item>
-        <item type="reference" name="icon_done">@drawable/ic_done_black_24dp</item>
-        <item type="reference" name="icon_group">@drawable/ic_group_white_24dp</item>
-        <item type="reference" name="icon_new">@drawable/ic_add_white_24dp</item>
-        <item type="reference" name="icon_quote">@drawable/ic_reply_white_24dp</item>
-        <item type="reference" name="icon_refresh">@drawable/ic_refresh_black_24dp</item>
-        <item type="reference" name="icon_new_attachment">@drawable/ic_attach_file_white_24dp</item>
-        <item type="reference" name="icon_not_secure">@drawable/ic_lock_open_white_24dp</item>
-        <item type="reference" name="icon_remove">@drawable/ic_delete_black_24dp</item>
-        <item type="reference" name="icon_search">@drawable/ic_search_white_24dp</item>
-        <item type="reference" name="icon_secure">@drawable/ic_lock_open_white_24dp</item>
-        <item type="reference" name="icon_settings">@drawable/ic_settings_black_24dp</item>
-        <item type="reference" name="icon_import_export">@drawable/ic_import_export_white_24dp</item>
-        <item type="reference" name="icon_share">@drawable/ic_share_white_24dp</item>
-        <item type="reference" name="icon_scan_qr_code">@drawable/ic_qr_code_scan_white_24dp</item>
-        <item type="reference" name="icon_scroll_down">@drawable/ic_scroll_to_end_black</item>
-
-        <item type="reference" name="icon_gps_not_fixed">@drawable/ic_gps_not_fixed_black_24dp</item>
-        <item type="reference" name="icon_gps_fixed">@drawable/ic_gps_fixed_black_24dp</item>
-        <item type="reference" name="icon_directions">@drawable/ic_directions_black_24dp</item>
-        <item type="reference" name="icon_copy_bar">@drawable/ic_content_copy_white_24dp</item>
-
-        <item type="reference" name="icon_notifications">@drawable/ic_notifications_black_24dp</item>
-        <item type="reference" name="icon_notifications_off">@drawable/ic_notifications_off_black_24dp</item>
-        <item type="reference" name="icon_notifications_paused">@drawable/ic_notifications_paused_black_24dp</item>
-        <item type="reference" name="icon_notifications_none">@drawable/ic_notifications_none_black_24dp</item>
-        <item type="reference" name="icon_enable_undecided_device">@drawable/ic_new_releases_black_24dp</item>
-    </style>
-
+    
     <style name="PnTheme.Medium" parent="PnTheme">
         <item name="TextSizeCaption">14sp</item>
         <item name="TextSizeBody1">16sp</item>
@@ -317,50 +171,6 @@
         <item name="TextSizeInput">18sp</item>
         <item name="TextSeparation">6sp</item>
         <item name="IconSize">20sp</item>
-    </style>
-
-    <style name="PnTheme.Dark.Medium" parent="PnTheme.Dark">
-        <item name="TextSizeCaption">14sp</item>
-        <item name="TextSizeBody1">16sp</item>
-        <item name="TextSizeBody2">16sp</item>
-        <item name="TextSizeSubhead">18sp</item>
-        <item name="TextSizeTitle">22sp</item>
-        <item name="TextSizeInput">18sp</item>
-        <item name="TextSeparation">6sp</item>
-        <item name="IconSize">20sp</item>
-    </style>
-
-    <style name="PnTheme.Dark.Large" parent="PnTheme.Dark">
-        <item name="TextSizeCaption">16sp</item>
-        <item name="TextSizeBody1">18sp</item>
-        <item name="TextSizeBody2">18sp</item>
-        <item name="TextSizeSubhead">20sp</item>
-        <item name="TextSizeTitle">24sp</item>
-        <item name="TextSizeInput">20sp</item>
-        <item name="TextSeparation">7sp</item>
-        <item name="IconSize">22sp</item>
-    </style>
-
-    <style name="PnTheme.Pink.Medium" parent="PnTheme.Pink">
-        <item name="TextSizeCaption">14sp</item>
-        <item name="TextSizeBody1">16sp</item>
-        <item name="TextSizeBody2">16sp</item>
-        <item name="TextSizeSubhead">18sp</item>
-        <item name="TextSizeTitle">22sp</item>
-        <item name="TextSizeInput">18sp</item>
-        <item name="TextSeparation">6sp</item>
-        <item name="IconSize">20sp</item>
-    </style>
-
-    <style name="PnTheme.Pink.Large" parent="PnTheme.Pink">
-        <item name="TextSizeCaption">16sp</item>
-        <item name="TextSizeBody1">18sp</item>
-        <item name="TextSizeBody2">18sp</item>
-        <item name="TextSizeSubhead">20sp</item>
-        <item name="TextSizeTitle">24sp</item>
-        <item name="TextSizeInput">20sp</item>
-        <item name="TextSeparation">7sp</item>
-        <item name="IconSize">22sp</item>
     </style>
 
     <style name="PnTheme.Large" parent="PnTheme">
@@ -374,52 +184,14 @@
         <item name="IconSize">22sp</item>
     </style>
 
-    <style name="PnTheme.FullScreen" parent="@style/Theme.AppCompat.Light">
-        <item name="colorPrimary">@color/blue600</item>
-        <item name="colorPrimaryDark">@color/blue700</item>
+    <style name="PnTheme.FullScreen.Base" parent="@style/Theme.AppCompat">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowBackground">@android:color/black</item>
     </style>
 
-    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimaryDark">@color/grey300</item>
-        <item name="android:windowBackground">@drawable/background</item>
-    </style>
-
-    <style name="PnTheme.Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
-        <item name="colorPrimary">@color/blue600</item>
-        <item name="colorPrimaryDark">@color/blue700</item>
-        <item name="colorAccent">@color/blue_a200</item>
-        <item name="color_background_primary">@color/grey50</item>
-        <item name="color_background_recording">@color/grey50</item>
-        <item name="divider">@color/black12</item>
-        <item name="TextSizeBody2">14sp</item>
-        <item name="TextSizeDisplay2">45sp</item>
-        <item name="android:windowNoTitle">true</item>
-    </style>
-
-    <style name="PnTheme.Dark.Dialog" parent="@style/Theme.AppCompat.Dialog">
-        <item name="colorPrimary">@color/blue800</item>
-        <item name="colorPrimaryDark">@color/blue900</item>
-        <item name="colorAccent">@color/blue_a100</item>
-        <item name="color_background_primary">@color/grey800</item>
-        <item name="color_background_recording">@color/grey800</item>
-        <item name="divider">@color/white12</item>
-        <item name="TextSizeBody2">14sp</item>
-        <item name="TextSizeDisplay2">45sp</item>
-        <item name="android:windowNoTitle">true</item>
-    </style>
-
-    <style name="PnTheme.Pink.Dialog" parent="@style/Theme.AppCompat.Dialog">
-        <item name="colorPrimary">@color/pink800</item>
-        <item name="colorPrimaryDark">@color/pink900</item>
-        <item name="colorAccent">@color/pink_a200</item>
-        <item name="color_background_primary">@color/grey50</item>
-        <item name="color_background_recording">@color/grey800</item>
-        <item name="divider">@color/black12</item>
+    <style name="PnTheme.Dialog.Base" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="TextSizeBody2">14sp</item>
         <item name="TextSizeDisplay2">45sp</item>
         <item name="android:windowNoTitle">true</item>
@@ -430,29 +202,302 @@
         <item name="TextSizeDisplay2">51sp</item>
     </style>
 
-    <style name="PnTheme.Dark.Dialog.Medium" parent="PnTheme.Dark.Dialog">
-        <item name="TextSizeBody2">16sp</item>
-        <item name="TextSizeDisplay2">51sp</item>
-    </style>
-
-    <style name="PnTheme.Pink.Dialog.Medium" parent="PnTheme.Pink.Dialog">
-        <item name="TextSizeBody2">16sp</item>
-        <item name="TextSizeDisplay2">51sp</item>
-    </style>
-
     <style name="PnTheme.Dialog.Large" parent="PnTheme.Dialog">
         <item name="TextSizeBody2">18sp</item>
         <item name="TextSizeDisplay2">56sp</item>
     </style>
 
-    <style name="PnTheme.Dark.Dialog.Large" parent="PnTheme.Dark.Dialog">
-        <item name="TextSizeBody2">18sp</item>
-        <item name="TextSizeTitle">56sp</item>
+    <style name="SplashTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background</item>
+    </style>
+    
+    <style name="SplashTheme" parent="SplashTheme.Blue.Light"/>
+    <style name="PnTheme.FullScreen" parent="PnTheme.Blue.Light.FullScreen"/>
+    <style name="PnTheme.Dialog" parent="PnTheme.Blue.Light.Dialog"/>
+    <style name="PnTheme" parent="PnTheme.Blue.Light"/>
+
+    <style name="PnTheme.Blue.Light" parent="PnTheme.Light.Base">
+        <item name="colorPrimary">@color/blue600</item>
+        <item name="colorPrimaryDark">@color/blue800</item>
+        <item name="colorAccent">@color/blue_a200</item>
+
+        <item name="color_background_primary">@color/grey50</item>
+        <item name="color_background_secondary">@color/grey200</item>
+        <item name="color_background_tertiary">@color/grey300</item>
+        <item name="color_background_recording">@color/grey50</item>
+        <item name="color_warning">@color/red_a700</item>
+
+        <item type="reference" name="message_bubble_received">@drawable/message_bubble_received</item>
+        <item type="reference" name="location_marker_icon">@drawable/marker</item>
+
+        <item name="TextColorOnline">@color/blue600</item>
+        <item name="TextColorError">@color/red800</item>
+
+        <item name="EmojiColor">@color/black</item>
+
+        <item name="divider">@color/black12</item>
+
+        <item name="pn_overview_background">@color/blue700</item>
     </style>
 
-    <style name="PnTheme.Pink.Dialog.Large" parent="PnTheme.Pink.Dialog">
-        <item name="TextSizeBody2">18sp</item>
-        <item name="TextSizeTitle">56sp</item>
+    <style name="PnTheme.Blue.Dark" parent="PnTheme.Dark.Base">
+        <item name="colorPrimary">@color/blue800</item>
+        <item name="colorPrimaryDark">@color/blue900</item>
+        <item name="colorAccent">@color/blue_a100</item>
+
+        <item name="color_background_primary">@color/grey800</item>
+        <item name="color_background_secondary">@color/grey900</item>
+        <item name="color_background_tertiary">@color/grey700</item>
+        <item name="color_background_recording">@color/grey800</item>
+        <item name="color_warning">@color/red_a100</item>
+
+        <item type="reference" name="message_bubble_received">@drawable/message_bubble_received_dark</item>
+        <item type="reference" name="location_marker_icon">@drawable/marker</item>
+
+        <item name="TextColorOnline">@color/blue500</item>
+        <item name="TextColorError">@color/red500</item>
+
+        <item name="EmojiColor">@color/white</item>
+
+        <item name="divider">@color/white12</item>
+
+        <item name="unread_count">@color/blue900_desaturated</item>
+
+        <item name="pn_overview_background">@color/blue900</item>
     </style>
 
+    <style name="PnTheme.Blue.Light.Medium" parent="PnTheme.Blue.Light" />
+    <style name="PnTheme.Blue.Light.Large" parent="PnTheme.Blue.Light" />
+    <style name="PnTheme.Blue.Dark.Medium" parent="PnTheme.Blue.Dark" />
+    <style name="PnTheme.Blue.Dark.Large" parent="PnTheme.Blue.Dark" />
+
+    <style name="PnTheme.Blue.Light.FullScreen" parent="PnTheme.FullScreen.Base">
+        <item name="colorPrimary">@color/blue600</item>
+        <item name="colorPrimaryDark">@color/blue700</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="colorAccent">@color/blue_a200</item>
+    </style>
+
+    <style name="PnTheme.Blue.Dark.FullScreen" parent="PnTheme.FullScreen.Base">
+        <item name="colorPrimary">@color/blue800</item>
+        <item name="colorPrimaryDark">@color/blue900</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="colorAccent">@color/blue_a100</item>
+    </style>
+
+    <style name="PnTheme.Blue.Light.Dialog" parent="PnTheme.Dialog.Base">
+        <item name="colorPrimary">@color/blue600</item>
+        <item name="colorPrimaryDark">@color/blue700</item>
+        <item name="colorAccent">@color/blue_a200</item>
+        <item name="color_background_primary">@color/grey50</item>
+        <item name="color_background_recording">@color/grey50</item>
+        <item name="divider">@color/black12</item>
+    </style>
+
+    <style name="PnTheme.Blue.Dark.Dialog" parent="PnTheme.Dialog.Base">
+        <item name="colorPrimary">@color/blue800</item>
+        <item name="colorPrimaryDark">@color/blue900</item>
+        <item name="colorAccent">@color/blue_a100</item>
+        <item name="color_background_primary">@color/grey800</item>
+        <item name="color_background_recording">@color/grey800</item>
+        <item name="divider">@color/white12</item>
+    </style>
+
+    <style name="SplashTheme.Blue.Light" parent="SplashTheme.Base">
+        <item name="colorPrimaryDark">@color/grey300</item>
+    </style>
+
+    <style name="SplashTheme.Blue.Dark" parent="SplashTheme.Base">
+        <item name="colorPrimaryDark">@color/grey300</item>
+    </style>
+
+    <style name="PnTheme.Pink.Light" parent="PnTheme.Light.Base">
+        <item name="colorPrimary">@color/pink600</item>
+        <item name="colorPrimaryDark">@color/pink800</item>
+        <item name="colorAccent">@color/pink_a200</item>
+
+        <item name="color_background_primary">@color/grey50</item>
+        <item name="color_background_secondary">@color/grey200</item>
+        <item name="color_background_tertiary">@color/grey300</item>
+        <item name="color_background_recording">@color/grey50</item>
+        <item name="color_warning">@color/red_a700</item>
+
+        <item type="reference" name="message_bubble_received">@drawable/message_bubble_received_pink</item>
+        <item type="reference" name="location_marker_icon">@drawable/marker_pink</item>
+
+        <item name="TextColorOnline">@color/pink600</item>
+        <item name="TextColorError">@color/red800</item>
+
+        <item name="EmojiColor">@color/black</item>
+
+        <item name="divider">@color/black12</item>
+
+        <item name="pn_overview_background">@color/pink700</item>
+    </style>
+
+    <style name="PnTheme.Pink.Dark" parent="PnTheme.Dark.Base">
+        <item name="colorPrimary">@color/pink800</item>
+        <item name="colorPrimaryDark">@color/pink900</item>
+        <item name="colorAccent">@color/pink_a100</item>
+
+        <item name="color_background_primary">@color/grey800</item>
+        <item name="color_background_secondary">@color/grey900</item>
+        <item name="color_background_tertiary">@color/grey700</item>
+        <item name="color_background_recording">@color/grey800</item>
+        <item name="color_warning">@color/red_a100</item>
+
+        <item type="reference" name="message_bubble_received">@drawable/message_bubble_received_pink</item>
+        <item type="reference" name="location_marker_icon">@drawable/marker_pink</item>
+
+        <item name="TextColorOnline">@color/pink500</item>
+        <item name="TextColorError">@color/red500</item>
+
+        <item name="EmojiColor">@color/white</item>
+
+        <item name="divider">@color/white12</item>
+
+        <item name="unread_count">@color/pink900_desaturated</item>
+
+        <item name="pn_overview_background">@color/pink900</item>
+    </style>
+
+    <style name="PnTheme.Pink.Light.Medium" parent="PnTheme.Pink.Light" />
+    <style name="PnTheme.Pink.Light.Large" parent="PnTheme.Pink.Light" />
+    <style name="PnTheme.Pink.Dark.Medium" parent="PnTheme.Pink.Dark" />
+    <style name="PnTheme.Pink.Dark.Large" parent="PnTheme.Pink.Dark" />
+
+    <style name="PnTheme.Pink.Light.FullScreen" parent="PnTheme.FullScreen.Base">
+        <item name="colorPrimary">@color/pink600</item>
+        <item name="colorPrimaryDark">@color/pink700</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="colorAccent">@color/pink_a200</item>
+    </style>
+
+    <style name="PnTheme.Pink.Dark.FullScreen" parent="PnTheme.FullScreen.Base">
+        <item name="colorPrimary">@color/pink800</item>
+        <item name="colorPrimaryDark">@color/pink900</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="colorAccent">@color/pink_a100</item>
+    </style>
+
+    <style name="PnTheme.Pink.Light.Dialog" parent="PnTheme.Dialog.Base">
+        <item name="colorPrimary">@color/pink600</item>
+        <item name="colorPrimaryDark">@color/pink700</item>
+        <item name="colorAccent">@color/pink_a200</item>
+        <item name="color_background_primary">@color/grey50</item>
+        <item name="color_background_recording">@color/grey50</item>
+        <item name="divider">@color/black12</item>
+    </style>
+
+    <style name="PnTheme.Pink.Dark.Dialog" parent="PnTheme.Dialog.Base">
+        <item name="colorPrimary">@color/pink800</item>
+        <item name="colorPrimaryDark">@color/pink900</item>
+        <item name="colorAccent">@color/pink_a100</item>
+        <item name="color_background_primary">@color/grey800</item>
+        <item name="color_background_recording">@color/grey800</item>
+        <item name="divider">@color/white12</item>
+    </style>
+
+    <style name="SplashTheme.Pink.Light" parent="SplashTheme.Base">
+        <item name="colorPrimaryDark">@color/grey300</item>
+    </style>
+
+    <style name="SplashTheme.Pink.Dark" parent="SplashTheme.Base">
+        <item name="colorPrimaryDark">@color/grey300</item>
+    </style>
+
+    <style name="PnTheme.Grey.Light" parent="PnTheme.Light.Base">
+        <item name="colorPrimary">@color/grey600</item>
+        <item name="colorPrimaryDark">@color/grey800</item>
+        <item name="colorAccent">@color/grey_a200</item>
+
+        <item name="color_background_primary">@color/grey50</item>
+        <item name="color_background_secondary">@color/grey200</item>
+        <item name="color_background_tertiary">@color/grey300</item>
+        <item name="color_background_recording">@color/grey50</item>
+        <item name="color_warning">@color/red_a700</item>
+
+        <item type="reference" name="message_bubble_received">@drawable/message_bubble_received_grey</item>
+        <item type="reference" name="location_marker_icon">@drawable/marker</item>
+
+        <item name="TextColorOnline">@color/grey600</item>
+        <item name="TextColorError">@color/red800</item>
+
+        <item name="EmojiColor">@color/black</item>
+
+        <item name="divider">@color/black12</item>
+
+        <item name="pn_overview_background">@color/grey700</item>
+    </style>
+
+    <style name="PnTheme.Grey.Dark" parent="PnTheme.Dark.Base">
+        <item name="colorPrimary">@color/grey800</item>
+        <item name="colorPrimaryDark">@color/grey900</item>
+        <item name="colorAccent">@color/grey_a100</item>
+
+        <item name="color_background_primary">@color/grey800</item>
+        <item name="color_background_secondary">@color/grey900</item>
+        <item name="color_background_tertiary">@color/grey700</item>
+        <item name="color_background_recording">@color/grey800</item>
+        <item name="color_warning">@color/red_a100</item>
+
+        <item type="reference" name="message_bubble_received">@drawable/message_bubble_received_grey</item>
+        <item type="reference" name="location_marker_icon">@drawable/marker</item>
+
+        <item name="TextColorOnline">@color/grey500</item>
+        <item name="TextColorError">@color/red500</item>
+
+        <item name="EmojiColor">@color/white</item>
+
+        <item name="divider">@color/white12</item>
+
+        <item name="unread_count">@color/grey900_desaturated</item>
+
+        <item name="pn_overview_background">@color/grey900</item>
+    </style>
+
+    <style name="PnTheme.Grey.Light.Medium" parent="PnTheme.Grey.Light" />
+    <style name="PnTheme.Grey.Light.Large" parent="PnTheme.Grey.Light" />
+    <style name="PnTheme.Grey.Dark.Medium" parent="PnTheme.Grey.Dark" />
+    <style name="PnTheme.Grey.Dark.Large" parent="PnTheme.Grey.Dark" />
+
+    <style name="PnTheme.Grey.Light.FullScreen" parent="PnTheme.FullScreen.Base">
+        <item name="colorPrimary">@color/grey600</item>
+        <item name="colorPrimaryDark">@color/grey700</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="colorAccent">@color/grey_a200</item>
+    </style>
+
+    <style name="PnTheme.Grey.Dark.FullScreen" parent="PnTheme.FullScreen.Base">
+        <item name="colorPrimary">@color/grey800</item>
+        <item name="colorPrimaryDark">@color/grey900</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="colorAccent">@color/grey_a100</item>
+    </style>
+
+    <style name="PnTheme.Grey.Light.Dialog" parent="PnTheme.Dialog.Base">
+        <item name="colorPrimary">@color/grey600</item>
+        <item name="colorPrimaryDark">@color/grey700</item>
+        <item name="colorAccent">@color/grey_a200</item>
+        <item name="color_background_primary">@color/grey50</item>
+        <item name="color_background_recording">@color/grey50</item>
+        <item name="divider">@color/black12</item>
+    </style>
+
+    <style name="PnTheme.Grey.Dark.Dialog" parent="PnTheme.Dialog.Base">
+        <item name="colorPrimary">@color/grey800</item>
+        <item name="colorPrimaryDark">@color/grey900</item>
+        <item name="colorAccent">@color/grey_a100</item>
+        <item name="color_background_primary">@color/grey800</item>
+        <item name="color_background_recording">@color/grey800</item>
+        <item name="divider">@color/white12</item>
+    </style>
+
+    <style name="SplashTheme.Grey.Light" parent="SplashTheme.Base">
+        <item name="colorPrimaryDark">@color/grey300</item>
+    </style>
+
+    <style name="SplashTheme.Grey.Dark" parent="SplashTheme.Base">
+        <item name="colorPrimaryDark">@color/grey300</item>
+    </style>
 </resources>

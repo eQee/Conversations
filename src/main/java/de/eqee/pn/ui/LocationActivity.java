@@ -59,10 +59,6 @@ public abstract class LocationActivity extends ActionBarActivity implements Loca
 	protected Bitmap marker_icon;
 	protected int mTheme;
 
-	protected boolean isPinkTheme() {
-		return ThemeHelper.isPink(mTheme);
-	}
-
 	protected void clearMarkers() {
 		synchronized (this.map.getOverlays()) {
 			for (final Overlay overlay : this.map.getOverlays()) {
@@ -97,7 +93,7 @@ public abstract class LocationActivity extends ActionBarActivity implements Loca
 				packageManager.hasSystemFeature(PackageManager.FEATURE_LOCATION_GPS) ||
 				packageManager.hasSystemFeature(PackageManager.FEATURE_LOCATION_NETWORK);
 		this.locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-		this.marker_icon = BitmapFactory.decodeResource(ctx.getResources(), this.isPinkTheme() ? R.drawable.marker_pink : R.drawable.marker);
+		this.marker_icon = BitmapFactory.decodeResource(ctx.getResources(), R.attr.location_marker_icon);
 
 		// Ask for location permissions if location services are enabled and we're
 		// just starting the activity (we don't want to keep pestering them on every

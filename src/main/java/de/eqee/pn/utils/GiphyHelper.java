@@ -31,17 +31,16 @@ import de.eqee.pn.ui.XmppActivity;
 public class GiphyHelper {
 
     public static Pattern GIPHY_URI = Pattern.compile("giphy:(?:[\\w-_.!~*'()]|%[\\da-f][\\da-f])*", Pattern.CASE_INSENSITIVE);
-    public static String GIPHY_USER_AGENT_PREFIX = "Pn Messenger ";
-    public static String GIPHY_HOST = "media.giphy.com";
-    public static String GIPHY_SCHEME = "https";
-    public static String GIPHY_PATH = "/media";
-    public static String GIPHY_MEDIA_TYPE = "gif";
-    public static String GIPHY_MEDIA_SIZING = "200w_d";
-    public static int GIPHY_MEDIA_WIDTH = 200;
-    public static int GIPHY_MEDIA_HEIGHT = -1;
 
-    public static String getImageURL(String giphyID) {
-        return GIPHY_SCHEME + "://" + GIPHY_HOST + GIPHY_PATH + "/" + giphyID + "/" + GIPHY_MEDIA_SIZING + "." + GIPHY_MEDIA_TYPE;
+    public static String GIPHY_USER_AGENT_PREFIX = "Pn Messenger ";
+    public static String GIPHY_HOST = "pn.eqee.de";
+    public static String GIPHY_SCHEME = "https";
+    public static String GIPHY_LOADER_PATH = "/assets/GIPHYLoader.php";
+    public static String GIPHY_TAG = "giphy";
+    public static String GIPHY_TAG_ERROR = "giphy error";
+
+    public static String getLoaderURL(int width, int height, String giphyURL) {
+        return GIPHY_SCHEME + "://" + GIPHY_HOST + GIPHY_LOADER_PATH + "?width=" + width + "&height=" + height + "&url=" + giphyURL;
     }
 
     public static String getGiphyID(Message message)
@@ -61,19 +60,6 @@ public class GiphyHelper {
         }
 
         return giphyID;
-    }
-
-    public static String getGiphyURL(Message message)
-    {
-        String giphyID = getGiphyID(message);
-
-        if (giphyID == "") {
-            return "";
-        }
-
-        String giphyURL = getImageURL(giphyID);
-
-        return giphyURL;
     }
 
     public static Intent getFetchIntent(Context context) {

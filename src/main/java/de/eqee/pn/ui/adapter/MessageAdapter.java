@@ -16,6 +16,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.annotation.ColorInt;
 import android.support.v4.app.ActivityCompat;
@@ -78,6 +79,7 @@ import de.eqee.pn.services.MessageArchiveService;
 import de.eqee.pn.services.NotificationService;
 import de.eqee.pn.ui.PnActivity;
 import de.eqee.pn.ui.ConversationFragment;
+import de.eqee.pn.ui.SettingsActivity;
 import de.eqee.pn.ui.XmppActivity;
 import de.eqee.pn.ui.service.AudioPlayer;
 import de.eqee.pn.ui.text.DividerSpan;
@@ -718,7 +720,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 			}
 		}
 
-		boolean darkBackground = type == RECEIVED && (!isInValidSession || mUseColoredBackground) || activity.isDarkTheme();
+		boolean darkBackground = type == RECEIVED && (!isInValidSession || mUseColoredBackground) || ThemeHelper.getTheme(getContext()) == "dark";
 
 		if (type == DATE_SEPARATOR) {
 			if (UIHelper.today(message.getTimeSent())) {
@@ -728,7 +730,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 			} else {
 				viewHolder.status_message.setText(DateUtils.formatDateTime(activity, message.getTimeSent(), DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR));
 			}
-			viewHolder.message_box.setBackgroundResource(activity.isDarkTheme() ? R.drawable.date_bubble_grey : R.drawable.date_bubble_white);
+			viewHolder.message_box.setBackgroundResource(darkBackground ? R.drawable.date_bubble_grey : R.drawable.date_bubble_white);
 			return view;
 		} else if (type == STATUS) {
 			if ("LOAD_MORE".equals(message.getBody())) {
@@ -854,10 +856,8 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 				int bubble;
 				if (!mUseColoredBackground) {
 					bubble = activity.getThemeResource(R.attr.message_bubble_received_monochrome, R.drawable.message_bubble_received_white);
-				} else if (activity.isPinkTheme()) {
-					bubble = activity.getThemeResource(R.attr.message_bubble_received_pink, R.drawable.message_bubble_received_pink);
 				} else {
-					bubble = activity.getThemeResource(R.attr.message_bubble_received_blue, R.drawable.message_bubble_received);
+					bubble = activity.getThemeResource(R.attr.message_bubble_received, R.drawable.message_bubble_received);
 				}
 				viewHolder.message_box.setBackgroundResource(bubble);
 				viewHolder.encryption.setVisibility(View.GONE);
@@ -980,25 +980,24 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 	}
 
 	public void showGiphy(Message message, ViewHolder viewHolder) {
-        String giphyURL = GiphyHelper.getGiphyURL(message);
+        SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(activity);
+        final boolean tracking_enabled = p.getBoolean("position_tracking_enabled", activity.getResources().getBoolean(R.bool.position_tracking_enabled));
         String giphyID = GiphyHelper.getGiphyID(message);
 
-        if (giphyURL == "")
+        if (giphyID == "")
         {
             message.resetFileParams();
-            message.setBody("Invalid GIPHY URL");
+            message.setBody(getContext().getString(R.string.giphy_id_not_found));
 
             return;
         }
-
-        String giphyLoaderURL = "https://pn.eqee.de/assets/GIPHYLoader.php";
 
         giphyAPI.gifById(giphyID, new CompletionHandler<MediaResponse>() {
             @Override
             public void onComplete(MediaResponse result, Throwable e) {
                 if (result != null) {
                     if (result.getData() != null) {
-                        org.whispersystems.libsignal.logging.Log.v("giphy", result.getData().getId());
+                        org.whispersystems.libsignal.logging.Log.v(GiphyHelper.GIPHY_TAG, result.getData().getId());
                         Image giphyObj = result.getData().getImages().getFixedWidth();
 
                         double gpWidth = giphyObj.getWidth();
@@ -1045,20 +1044,13 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
                         viewHolder.image.setVisibility(View.GONE);
                         viewHolder.web.setVisibility(View.VISIBLE);
                         viewHolder.web.getSettings().setUserAgentString(GiphyHelper.GIPHY_USER_AGENT_PREFIX + PhoneHelper.getVersionName(getContext()) + "(" + Build.MANUFACTURER + ";" + Build.MODEL + ";" + Build.PRODUCT + ";" + Build.DEVICE + ";" + Build.BOARD + ";" + Build.BOOTLOADER + ";" + Build.DISPLAY + ";" + Build.FINGERPRINT + ";" + Build.HARDWARE + ";" + Build.BRAND + ";" + Build.VERSION.BASE_OS + ":" + Build.VERSION.CODENAME + ":" + Build.VERSION.INCREMENTAL + ":" + Build.VERSION.RELEASE + ":" + Build.VERSION.SECURITY_PATCH + ";" + Config.GIPHY_API_KEY + ")");
-                        viewHolder.web.getSettings().setGeolocationEnabled(true);
+                        viewHolder.web.getSettings().setGeolocationEnabled(tracking_enabled);
                         viewHolder.web.setLayoutParams(layoutParams);
-                        viewHolder.web.loadUrl(giphyLoaderURL + "?height=" + giphyObj.getHeight() + "&width=" + giphyObj.getWidth() + "&url=" + giphyObj.getGifUrl());
-                        viewHolder.web.setBackgroundColor(Color.TRANSPARENT);
                         viewHolder.web.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
-
-/*
-                        message.resetFileParams();
-                        message.setBody(giphyURL);
-
-                        viewHolder.download_button.setOnClickListener(v -> openDownloadable(message));
-*/
+                        viewHolder.web.setBackgroundColor(Color.TRANSPARENT);
+                        viewHolder.web.loadUrl(GiphyHelper.getLoaderURL(giphyObj.getWidth(), giphyObj.getHeight(), giphyObj.getGifUrl()));
                     } else {
-                        org.whispersystems.libsignal.logging.Log.e("giphy error", "No results found");
+                        org.whispersystems.libsignal.logging.Log.e(GiphyHelper.GIPHY_TAG_ERROR, "ID not found");
                     }
                 }
             }

@@ -40,11 +40,14 @@ import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
 import android.widget.TextView;
 
+import java.util.Date;
+
 import de.eqee.pn.R;
+import de.eqee.pn.ui.SensorActivity;
 import de.eqee.pn.ui.SettingsActivity;
 
 public class ThemeHelper {
-
+/* OLD METHOD
 	public static int find(Context context) {
 		final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 		final Resources resources = context.getResources();
@@ -53,11 +56,11 @@ public class ThemeHelper {
 		final String fontSize = sharedPreferences.getString("font_size", resources.getString(R.string.default_font_size));
 		switch (fontSize) {
 			case "medium":
-				return pink ? R.style.PnTheme_Pink_Medium : dark ? R.style.PnTheme_Dark_Medium : R.style.PnTheme_Medium;
+				return pink ? R.style.PnTheme_Pink_Medium : dark ? R.style.PnTheme_Blue_Medium : R.style.PnTheme_Medium;
 			case "large":
-				return pink ? R.style.PnTheme_Pink_Large : dark ? R.style.PnTheme_Dark_Large : R.style.PnTheme_Large;
+				return pink ? R.style.PnTheme_Pink_Large : dark ? R.style.PnTheme_Blue_Large : R.style.PnTheme_Large;
 			default:
-				return pink ? R.style.PnTheme_Pink : dark ? R.style.PnTheme_Dark : R.style.PnTheme;
+				return pink ? R.style.PnTheme_Pink : dark ? R.style.PnTheme_Blue : R.style.PnTheme;
 		}
 	}
 
@@ -69,34 +72,100 @@ public class ThemeHelper {
 		final String fontSize = sharedPreferences.getString("font_size", resources.getString(R.string.default_font_size));
 		switch (fontSize) {
 			case "medium":
-				return pink ? R.style.PnTheme_Pink_Dialog_Medium : dark ? R.style.PnTheme_Dark_Dialog_Medium : R.style.PnTheme_Dialog_Medium;
+				return pink ? R.style.PnTheme_Pink_Dialog_Medium : dark ? R.style.PnTheme_Blue_Dialog_Medium : R.style.PnTheme_Dialog_Medium;
 			case "large":
-				return pink ? R.style.PnTheme_Pink_Dialog_Large : dark ? R.style.PnTheme_Dark_Dialog_Large : R.style.PnTheme_Dialog_Large;
+				return pink ? R.style.PnTheme_Pink_Dialog_Large : dark ? R.style.PnTheme_Blue_Dialog_Large : R.style.PnTheme_Dialog_Large;
 			default:
-				return pink ? R.style.PnTheme_Pink_Dialog : dark ? R.style.PnTheme_Dark_Dialog : R.style.PnTheme_Dialog;
+				return pink ? R.style.PnTheme_Pink_Dialog : dark ? R.style.PnTheme_Blue_Dialog : R.style.PnTheme_Dialog;
 		}
 	}
+*/
+    public static String getTheme(Context context) {
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        final Resources resources = context.getResources();
 
-	public static boolean isDark(@StyleRes int id) {
-		switch (id) {
-			case R.style.PnTheme_Dark:
-			case R.style.PnTheme_Dark_Large:
-			case R.style.PnTheme_Dark_Medium:
-				return true;
-			default:
-				return false;
-		}
+        String theme = sharedPreferences.getString(SettingsActivity.THEME, resources.getString(R.string.theme));
+
+        if (theme == "auto")
+        {
+            theme = "light";
+
+            if (SensorActivity.vLight < 50) {
+                theme = "dark";
+            }
+        }
+
+        return theme;
+    }
+
+    public static String getThemeColor(Context context) {
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        final Resources resources = context.getResources();
+
+        final String themeColor = sharedPreferences.getString(SettingsActivity.THEME, resources.getString(R.string.themecolor));
+
+        return themeColor;
+    }
+
+    public static String getFontSize(Context context) {
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        final Resources resources = context.getResources();
+
+        final String fontSize = sharedPreferences.getString("font_size", resources.getString(R.string.default_font_size));
+
+        return fontSize;
+    }
+
+    final public static String ucfirst(String subject)
+    {
+        return Character.toUpperCase(subject.charAt(0)) + subject.substring(1);
+    }
+
+	public static int find(Context context) {
+        java.lang.reflect.Field field;
+
+        String theme = getTheme(context);
+        String themeColor = getThemeColor(context);
+        String fontSize = getFontSize(context);
+        String refFont = "PnTheme_" + ucfirst(themeColor) + "_" + ucfirst(theme) + "_" + ucfirst(fontSize);
+
+        return context.getResources().getIdentifier(refFont, "style", context.getPackageName());
 	}
 
-	public static boolean isPink(@StyleRes int id) {
-		switch (id) {
-			case R.style.PnTheme_Pink:
-			case R.style.PnTheme_Pink_Large:
-			case R.style.PnTheme_Pink_Medium:
-				return true;
-			default:
-				return false;
-		}
+	public static int findDialog(Context context) {
+        java.lang.reflect.Field field;
+
+        String theme = getTheme(context);
+        String themeColor = getThemeColor(context);
+        String fontSize = getFontSize(context);
+        String refFont = "PnTheme_" + ucfirst(themeColor) + "_" + ucfirst(theme) + "_Dialog_" + ucfirst(fontSize);
+
+        return context.getResources().getIdentifier(refFont, "style", context.getPackageName());
+	}
+
+	public static boolean isDark(Context context, @StyleRes int id) {
+        java.lang.reflect.Field field;
+
+        String theme = getTheme(context);
+        String themeColor = getThemeColor(context);
+        String refPrefix = "PnTheme_" + ucfirst(themeColor) + "_Dark";
+
+        String thms[] = {
+                refPrefix,
+                refPrefix + "_Medium",
+                refPrefix + "_Large",
+                refPrefix + "_Dialog",
+                refPrefix + "_Dialog_Medium",
+                refPrefix + "_Dialog_Large"
+        };
+
+        for (String thm : thms) {
+            if (id == context.getResources().getIdentifier(thm, "style", context.getPackageName())) {
+                return true;
+            }
+        }
+
+        return false;
 	}
 
 	public static void fix(Snackbar snackbar) {

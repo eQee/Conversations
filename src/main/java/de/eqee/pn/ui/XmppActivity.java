@@ -403,14 +403,6 @@ public abstract class XmppActivity extends ActionBarActivity {
 		return this.isCameraFeatureAvailable;
 	}
 
-	public boolean isDarkTheme() {
-		return ThemeHelper.isDark(mTheme);
-	}
-
-	public boolean isPinkTheme() {
-		return ThemeHelper.isPink(mTheme);
-	}
-
 	public int getThemeResource(int r_attr_name, int r_drawable_def) {
 		int[] attrs = {r_attr_name};
 		TypedArray ta = this.getTheme().obtainStyledAttributes(attrs);

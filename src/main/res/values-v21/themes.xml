@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="PnTheme.Dark" parent="PnTheme.Dark.Base">
+    <style name="PnTheme.Blue.Light" parent="PnTheme.Light.Base">
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+    <style name="PnTheme.Blue.Dark" parent="PnTheme.Dark.Base">
         <item name="android:navigationBarColor">@color/black</item>
     </style>
-    <style name="PnTheme.Pink" parent="PnTheme.Pink.Base">
+    <style name="PnTheme.Pink.Light" parent="PnTheme.Light.Base">
         <item name="android:navigationBarColor">@color/white</item>
+    </style>
+    <style name="PnTheme.Pink.Dark" parent="PnTheme.Dark.Base">
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+    <style name="PnTheme.Grey.Light" parent="PnTheme.Light.Base">
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+    <style name="PnTheme.Grey.Dark" parent="PnTheme.Dark.Base">
+        <item name="android:navigationBarColor">@color/black</item>
     </style>
 </resources>

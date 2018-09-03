@@ -13,6 +13,7 @@
 	<color name="grey200">#ffeeeeee</color>
 	<color name="grey300">#ffe0e0e0</color>
 	<color name="grey500">#ff9e9e9e</color>
+	<color name="grey600">#ff878787</color>
 	<color name="grey700">#ff616161</color>
 	<color name="grey800">#ff424242</color>
 	<color name="grey900">#ff282828</color>
@@ -25,6 +26,8 @@
 	<color name="blue_a200">#ff448AFF</color>
 	<color name="pink_a100">#ff61ff</color>
 	<color name="pink_a200">#ffff1AFF</color>
+	<color name="grey_a100">#616161</color>
+	<color name="grey_a200">#ff1a1A1a</color>
 	<color name="green500">#ff4CAF50</color>
 	<color name="green600">#ff43A047</color>
 	<color name="green700">#ff388E3C</color>
@@ -49,6 +52,9 @@
 
 	<color name="pink700_desaturated">#ff508e</color> <!-- desaturated by 15 -->
 	<color name="pink900_desaturated">#ffff2d5e</color> <!-- desaturated by 15 -->
+
+	<color name="grey700_desaturated">#505050</color> <!-- desaturated by 15 -->
+	<color name="grey900_desaturated">#ff2d2d2d</color> <!-- desaturated by 15 -->
 
 	<!-- scanner -->
 	<color name="scan_result_dots">#c04CAF50</color>

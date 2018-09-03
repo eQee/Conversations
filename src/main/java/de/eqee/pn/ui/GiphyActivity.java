@@ -37,11 +37,6 @@ public abstract class GiphyActivity extends ActionBarActivity {
 
 	protected int mTheme;
 
-	protected boolean isPinkTheme() {
-		return ThemeHelper.isPink(mTheme);
-	}
-
-
 	protected XYTileSource tileSource() {
 		return new XYTileSource("OpenStreetMap",
 				0, 19, 256, ".png", new String[] {

@@ -775,15 +775,7 @@ public class Message extends AbstractEntity {
 					fileParams.height = parseInt(parts[3]);
 				case 2:
 					fileParams.url = parseUrl(parts[0]);
-
-					if (fileParams.url.getHost() == GiphyHelper.GIPHY_HOST)
-                    {
-                        fileParams.size = -1;
-                        fileParams.width = GiphyHelper.GIPHY_MEDIA_WIDTH;
-                        fileParams.height = GiphyHelper.GIPHY_MEDIA_HEIGHT;
-                    } else {
-                        fileParams.size = parseLong(parts[1]);
-                    }
+                    fileParams.size = parseLong(parts[1]);
 					break;
 				case 3:
 					fileParams.size = parseLong(parts[0]);

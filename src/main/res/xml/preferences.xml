@@ -157,6 +157,13 @@
             android:key="theme"
             android:summary="@string/pref_theme_options_summary"
             android:title="@string/pref_theme_options"/>
+        <ListPreference
+            android:defaultValue="@string/themecolor"
+            android:entries="@array/themecolor"
+            android:entryValues="@array/themecolor_values"
+            android:key="themecolor"
+            android:summary="@string/pref_themecolor_options_summary"
+            android:title="@string/pref_themecolor_options"/>
         <CheckBoxPreference
             android:defaultValue="@bool/use_colored_background"
             android:key="use_colored_background"

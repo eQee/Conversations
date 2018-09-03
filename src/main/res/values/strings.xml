@@ -316,6 +316,7 @@
     <string name="notification_export_logs_title">Writing logs to SD card</string>
     <string name="choose_giphy">Choose Giphy</string>
     <string name="choose_file">Choose file</string>
+    <string name="giphy_id_not_found">Giphy ID was not found</string>
     <string name="receiving_x_file">Receiving %1$s (%2$d%% completed)</string>
     <string name="download_x_file">Download %s</string>
     <string name="delete_x_file">Delete %s</string>
@@ -545,10 +546,15 @@
     <string name="pref_broadcast_last_activity_summary">Let all your contacts know when you use Pn</string>
     <string name="pref_privacy">Privacy</string>
     <string name="pref_theme_options">Theme</string>
-    <string name="pref_theme_options_summary">Select the color palette</string>
+    <string name="pref_theme_options_summary">Select light or dark themes</string>
     <string name="pref_theme_light">Light theme</string>
     <string name="pref_theme_dark">Dark theme</string>
-    <string name="pref_theme_pink">Pink theme</string>
+    <string name="pref_theme_auto">Automatically set</string>
+    <string name="pref_themecolor_options">Theme color</string>
+    <string name="pref_themecolor_options_summary">Select the primary color palette</string>
+    <string name="pref_themecolor_blue">Blue theme</string>
+    <string name="pref_themecolor_pink">Pink theme</string>
+    <string name="pref_themecolor_grey">Grey theme</string>
     <string name="pref_use_colored_background">Colored Background</string>
     <string name="pref_use_colored_background_summary">Use colored background for received messages</string>
     <string name="unable_to_connect_to_keychain">Unable to connect to OpenKeychain</string>
